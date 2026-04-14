@@ -1,133 +1,606 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>mc-cbw</title>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>MC指令音乐站 · 红石音乐资源分享</title>
     <style>
-      *{
-        margin:0;
-        padding:0;
-       }
-      body{
-        background: #fcfcfc;
-        
-      }
-      .header{
-        height:280px;
-        background: skyblue;
-        color:white;
-        text-align:center;
-      }
-      .header h1{
-        font-size:60px;
-        font-weight:400;
-        padding-top:70px;
-       }
-     .header p{
-        font-size:30px;
-        font-weight:300;
-      }
-    
-    
-      .box{
-        
-        overflow:hidden;
-        width: 90%;
-        height: auto;
-        margin: 0 auto;
-        margin-top:20px;
-        border-radius:10px;
-        box-shadow:2px 2px 15px rgba(0,0,0,.5);
-       
-      }
-    
-      .box .top img{
-        width:100%;
-       }
-     
-     .bottom{
-       padding: 25px 30px;
-       
-      }
-     
-     .bottom h1{
-        font-size:22px;
-        font-weight:400;
-        padding: 10px 0;
-        color: #1f2d3d;
-      }
-    .bottom p{
-      font-size:14px;
-      color: #4c4948;
-      
-     }
-   
-   
-   .footer{
-     margin-top:3 0px;
-     height:70px;
-     background: skyblue;
-     color:white;
-     text-align:center;
-    }
-  
-   .footer  p{
-      line-height:70px;
-      
-     }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-body: #f8f9fc;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --border-light: #eef2f6;
+            --text-primary: #1e2a3e;
+            --text-secondary: #5b6e8c;
+            --text-tertiary: #8b9ab0;
+            --accent: #1e6f3f;
+            --accent-hover: #2c8e55;
+            --accent-soft: #e9f4ef;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 16px 28px rgba(0, 0, 0, 0.08);
+            --radius-card: 20px;
+            --radius-btn: 40px;
+            --transition: all 0.25s ease;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.45;
+            scroll-behavior: smooth;
+        }
+
+        .site-header {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding: 12px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.6rem;
+            font-weight: 620;
+            letter-spacing: -0.3px;
+            color: var(--text-primary);
+            transition: var(--transition);
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            text-decoration: none;
+            color: var(--accent);
+        }
+
+        .search-wrapper {
+            flex: 1;
+            max-width: 420px;
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+            font-size: 18px;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 48px;
+            padding: 0 48px 0 46px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 60px;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(30, 111, 63, 0.15);
+            outline: none;
+        }
+
+        .search-clear {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--bg-body);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .search-clear.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .search-clear:hover {
+            background: #e2e8f0;
+            color: var(--text-primary);
+        }
+
+        .main-content {
+            padding: 32px 0 48px;
+        }
+
+        .page-head {
+            margin-bottom: 32px;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 650;
+            letter-spacing: -0.4px;
+            background: linear-gradient(135deg, #1e2a3e 0%, #2c4b3c 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .page-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 12px;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 8px;
+        }
+
+        .resource-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: #dce5ef;
+        }
+
+        .card-body {
+            padding: 20px 20px 18px;
+            flex: 1;
+        }
+
+        .resource-title {
+            font-size: 1.25rem;
+            font-weight: 640;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .resource-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 12px 0 16px;
+        }
+
+        .meta-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-line i {
+            width: 20px;
+            font-size: 16px;
+            font-style: normal;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .author-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .file-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-light);
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+        }
+
+        .file-stats i {
+            font-style: normal;
+            margin-right: 4px;
+            font-size: 13px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 8px;
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .btn-download i {
+            font-size: 16px;
+            font-style: normal;
+        }
+
+        .btn-download:hover {
+            background: var(--accent-hover);
+            transform: scale(0.98);
+            box-shadow: 0 4px 12px rgba(30, 111, 63, 0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 70px 20px;
+            background: var(--bg-surface);
+            border-radius: 48px;
+            border: 1px solid var(--border-light);
+            margin-top: 20px;
+        }
+
+        .empty-icon {
+            font-size: 64px;
+            color: var(--text-tertiary);
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .empty-title {
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .empty-desc {
+            color: var(--text-secondary);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--border-light);
+            background: var(--bg-surface);
+            margin-top: 40px;
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+        }
+
+        .back2top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 44px;
+            height: 44px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            color: var(--text-secondary);
+            z-index: 99;
+            font-size: 22px;
+        }
+
+        .back2top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back2top:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                padding: 0 16px;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+                padding: 12px 0;
+            }
+            .search-wrapper {
+                max-width: 100%;
+            }
+            .logo {
+                justify-content: center;
+                font-size: 1.4rem;
+            }
+            .page-title {
+                font-size: 1.7rem;
+            }
+            .resources-grid {
+                gap: 18px;
+                grid-template-columns: 1fr;
+            }
+            .card-body {
+                padding: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .resource-title {
+                font-size: 1.1rem;
+            }
+            .btn-download {
+                padding: 8px 0;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 8px;
+        }
     </style>
-  </head>
-  <body>	
+</head>
+<body>
 
-     <div class="header">
-        <h1>MC-CBW</h1>
-        <p>hello reading</p>
-     </div>
-     
-     <div class="content">
-         <div class="box">
-            <div class="bottom">
-              <h1>使用指南与提示</h1>
-              <p>hi,我是陌生人这是我的指令网站，
-	这里有许多我写的文件，
-	随意观看吧(-^〇^-)，进入之后可选择继续浏览器下载，下载完成可选择QQ，我的电脑查看。</p>
-            </div>
-         </div>
-         
-         <div class="box">
-  
-            <div class="bottom">
-              <h1>联系我</h1>
-              <p>QQ:3148705846<br>QQ群聊:615333807</p>
-            </div>
-         </div>
-<div class="box">
-  
-            <div class="bottom">
-              <h1>命令文档</h1>
-		    <p>ps:仅为原理讲解,无附属指令</p>
-              <a href="https://docs.qq.com/scenario/export-download-app-guide.html?downloadUrl=https%3A%2F%2Ftencent-docs-1251316161.cos.ap-guangzhou.myqcloud.com%2Fc8786073103641f2ba3b3d344b06d09c%3Fq-sign-algorithm%3Dsha1%26q-ak%3DAKIDOaU77sym0yh8BzgXnmnvnPcq66qIKEOH%26q-sign-time%3D1710028420%3B1710030220%26q-key-time%3D1710028420%3B1710030220%26q-header-list%3D%26q-url-param-list%3Dresponse-content-disposition%3Bresponse-expires%26q-signature%3D6c21d7824c55b6b204f7e01d24935b4189587328%26response-content-disposition%3Dattachment%253Bfilename%253D%2525E7%2525A7%2525AF%2525E5%252588%252586%2525E7%252589%252588%2525E6%25258C%252587%2525E4%2525BB%2525A4%2525E5%25259F%2525BA%2525E7%2525A1%252580%2525E7%252590%252586%2525E8%2525AE%2525BA%2525E7%2525AF%252587%25255BPE%2525E7%2525AF%252587%25255D.pdf%253Bfilename%252A%253Dutf-8%2527%2527%2525E7%2525A7%2525AF%2525E5%252588%252586%2525E7%252589%252588%2525E6%25258C%252587%2525E4%2525BB%2525A4%2525E5%25259F%2525BA%2525E7%2525A1%252580%2525E7%252590%252586%2525E8%2525AE%2525BA%2525E7%2525AF%252587%25255BPE%2525E7%2525AF%252587%25255D.pdf%26response-expires%3D1800&ext=pdf&name=%E7%A7%AF%E5%88%86%E7%89%88%E6%8C%87%E4%BB%A4%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA%E7%AF%87%5BPE%E7%AF%87%5D">积分版基础理论</a><br>
-              
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="#" class="logo" id="logoHome">
+            MC指令音乐站
+        </a>
+        <div class="search-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="搜索指令音乐 / 作者...">
+            <button class="search-clear" id="searchClear">✖</button>
+        </div>
+    </div>
+</header>
 
+<main class="main-content">
+    <div class="container">
+        <div class="page-head">
+            <h1 class="page-title">🎵 指令音乐资源库</h1>
+            <p class="page-desc">红石音乐 · 音符盒编排 · 一键导入游戏</p>
+        </div>
 
+        <div id="resourcesGrid" class="resources-grid"></div>
 
+        <div id="emptyState" class="empty-state hidden">
+            <div class="empty-icon">🔍</div>
+            <div class="empty-title">没有找到相关资源</div>
+            <div class="empty-desc">试试其他关键词，或查看全部指令音乐～</div>
+        </div>
+    </div>
+</main>
 
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 MC指令音乐站 | 所有资源均为玩家自制分享，仅供学习交流</p>
+        <p style="margin-top: 8px; font-size: 0.7rem;">✨ 指令音乐 / 红石音乐 / 原版兼容 ✨</p>
+    </div>
+</footer>
 
+<button class="back2top" id="backToTopBtn">↑</button>
 
+<script src="music-data.js"></script>
+<script>
+    (function() {
+        const searchInput = document.getElementById('searchInput');
+        const searchClearBtn = document.getElementById('searchClear');
+        const gridContainer = document.getElementById('resourcesGrid');
+        const emptyStateDiv = document.getElementById('emptyState');
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        const logoHome = document.getElementById('logoHome');
 
-            </div>
-         </div>
-     
-     
-     </div>
-     
-     
-     <div class="footer">
-     
-      <p>©2024 陌生人</p>
-     
-     </div>
+        let currentKeyword = '';
 
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
 
-  </body>
+        function renderCards(data) {
+            let filtered = data;
+            if (currentKeyword.trim() !== '') {
+                const kw = currentKeyword.trim().toLowerCase();
+                filtered = data.filter(item => 
+                    item.title.toLowerCase().includes(kw) ||
+                    item.author.toLowerCase().includes(kw)
+                );
+            }
+
+            if (filtered.length === 0) {
+                gridContainer.classList.add('hidden');
+                emptyStateDiv.classList.remove('hidden');
+                return;
+            }
+
+            gridContainer.classList.remove('hidden');
+            emptyStateDiv.classList.add('hidden');
+
+            const cardsHTML = filtered.map(item => {
+                const safeTitle = escapeHtml(item.title);
+                const safeAuthor = escapeHtml(item.author);
+                const safeSize = item.size || "未知大小";
+                const safeDownloads = item.downloads || "0";
+                const downloadUrl = item.downloadUrl || "#";
+
+                return `
+                    <div class="resource-card" data-id="${item.id}">
+                        <div class="card-body">
+                            <div class="resource-title">
+                                ${safeTitle}
+                            </div>
+                            <div class="resource-meta">
+                                <div class="meta-line">
+                                    <i>👤</i>
+                                    <span>作者 · <span class="author-name">${safeAuthor}</span></span>
+                                </div>
+                                <div class="file-stats">
+                                    <span><i>📄</i> ${safeSize}</span>
+                                    <span><i>⬇️</i> ${safeDownloads} 次下载</span>
+                                </div>
+                            </div>
+                            <a href="${downloadUrl}" class="btn-download" data-title="${safeTitle}" target="_blank" rel="noopener noreferrer">
+                                <i>⬇️</i> 获取指令文件
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            gridContainer.innerHTML = cardsHTML;
+        }
+
+        function initSearch() {
+            searchInput.addEventListener('input', (e) => {
+                const val = e.target.value;
+                currentKeyword = val;
+                searchClearBtn.classList.toggle('visible', val.length > 0);
+                if (window.musicData) renderCards(window.musicData);
+            });
+
+            searchClearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                currentKeyword = '';
+                searchClearBtn.classList.remove('visible');
+                if (window.musicData) renderCards(window.musicData);
+                searchInput.focus();
+            });
+        }
+
+        function initBackToTop() {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        function initLogo() {
+            if (logoHome) {
+                logoHome.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    searchInput.value = '';
+                    currentKeyword = '';
+                    searchClearBtn.classList.remove('visible');
+                    if (window.musicData) renderCards(window.musicData);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        }
+
+        function firstRender() {
+            if (window.musicData && Array.isArray(window.musicData)) {
+                renderCards(window.musicData);
+            } else {
+                console.error('musicData 未正确加载，请确保 music-data.js 存在且格式正确');
+                emptyStateDiv.classList.remove('hidden');
+                gridContainer.classList.add('hidden');
+                document.querySelector('.empty-title').innerText = '数据加载失败';
+                document.querySelector('.empty-desc').innerText = '请检查 music-data.js 文件是否在同一目录下';
+            }
+        }
+
+        function init() {
+            initSearch();
+            initBackToTop();
+            initLogo();
+            firstRender();
+        }
+
+        init();
+
+        if ('ontouchstart' in window) {
+            searchInput.addEventListener('blur', () => {
+                setTimeout(() => {
+                    window.scrollTo(0, window.scrollY);
+                }, 100);
+            });
+        }
+    })();
+</script>
+</body>
 </html>
