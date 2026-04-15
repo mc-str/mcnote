@@ -3,140 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>MC指令音乐站 · 红石音乐资源分享</title>
+    <title>MC指令音乐站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: #f1f5f9;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --accent-glow: rgba(16, 185, 129, 0.2);
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-body: #f8f9fc;
-            --bg-surface: #ffffff;
-            --bg-card: #ffffff;
-            --border-light: #eef2f6;
-            --text-primary: #1e2a3e;
-            --text-secondary: #5b6e8c;
-            --text-tertiary: #8b9ab0;
-            --accent: #1e6f3f;
-            --accent-hover: #2c8e55;
-            --accent-soft: #e9f4ef;
-            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
-            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
-            --shadow-hover: 0 16px 28px rgba(0, 0, 0, 0.08);
-            --radius-card: 20px;
-            --radius-btn: 40px;
-            --transition: all 0.25s ease;
-        }
-
         body {
-            background-color: var(--bg-body);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.45;
-            scroll-behavior: smooth;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
         }
 
         .site-header {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-light);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
         }
 
         .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 28px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
-            flex-wrap: wrap;
-            padding: 12px 0;
+            gap: 32px;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.6rem;
-            font-weight: 620;
-            letter-spacing: -0.3px;
-            color: var(--text-primary);
-            transition: var(--transition);
-            white-space: nowrap;
-            text-decoration: none;
-        }
-
-        .logo:hover {
-            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--accent);
+            text-decoration: none;
+            white-space: nowrap;
         }
 
         .search-wrapper {
             flex: 1;
-            max-width: 420px;
+            max-width: 480px;
             position: relative;
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-tertiary);
-            font-size: 18px;
-            pointer-events: none;
-            line-height: 1;
         }
 
         .search-input {
             width: 100%;
             height: 48px;
-            padding: 0 48px 0 46px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 60px;
-            font-size: 0.95rem;
+            padding: 0 48px;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 24px;
             color: var(--text-primary);
-            transition: var(--transition);
-            box-shadow: var(--shadow-sm);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
         }
 
         .search-input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(30, 111, 63, 0.15);
             outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
         }
 
         .search-clear {
             position: absolute;
-            right: 16px;
+            right: 14px;
             top: 50%;
             transform: translateY(-50%);
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
-            background: var(--bg-body);
+            background: var(--bg-card);
+            border: none;
             color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: var(--transition);
-            border: none;
-            font-size: 14px;
-            font-weight: bold;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .search-clear.visible {
@@ -145,169 +121,220 @@
         }
 
         .search-clear:hover {
-            background: #e2e8f0;
-            color: var(--text-primary);
+            background: var(--accent);
+            color: white;
         }
 
-        .main-content {
-            padding: 32px 0 48px;
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px 28px;
         }
 
-        .page-head {
-            margin-bottom: 32px;
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
         }
 
-        .page-title {
+        .hero h1 {
             font-size: 2rem;
-            font-weight: 650;
-            letter-spacing: -0.4px;
-            background: linear-gradient(135deg, #1e2a3e 0%, #2c4b3c 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            margin-bottom: 8px;
-        }
-
-        .page-desc {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            border-left: 3px solid var(--accent);
-            padding-left: 12px;
+            font-weight: 700;
+            color: var(--text-primary);
         }
 
         .resources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 24px;
-            margin-top: 8px;
         }
 
         .resource-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-card);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid var(--border-light);
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            border: 1px solid var(--border);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
 
         .resource-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-            border-color: #dce5ef;
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--accent);
+        }
+
+        .card-visual {
+            height: 120px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-visual::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.1) 10px,
+                rgba(255,255,255,0.1) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .music-icon {
+            font-size: 3rem;
+            color: white;
+            z-index: 1;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
         }
 
         .card-body {
-            padding: 20px 20px 18px;
-            flex: 1;
+            padding: 24px;
         }
 
         .resource-title {
             font-size: 1.25rem;
-            font-weight: 640;
-            margin-bottom: 10px;
+            font-weight: 700;
+            margin-bottom: 16px;
             color: var(--text-primary);
+            line-height: 1.4;
         }
 
         .resource-meta {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin: 12px 0 16px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        .meta-line {
+        .meta-item {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
         }
 
-        .meta-line i {
-            width: 20px;
-            font-size: 16px;
-            font-style: normal;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .author-name {
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .file-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 6px;
-            padding-top: 12px;
-            border-top: 1px solid var(--border-light);
-            font-size: 0.75rem;
-            color: var(--text-tertiary);
-        }
-
-        .file-stats i {
-            font-style: normal;
-            margin-right: 4px;
-            font-size: 13px;
+        .meta-item i {
+            width: 18px;
+            color: var(--accent);
         }
 
         .btn-download {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            width: 100%;
+            padding: 14px 24px;
             background: var(--accent);
             color: white;
             border: none;
-            padding: 10px 0;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-radius: 40px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-            margin-top: 8px;
-            font-family: inherit;
-            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .btn-download i {
-            font-size: 16px;
-            font-style: normal;
+        .btn-download::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-download:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .btn-download:hover {
             background: var(--accent-hover);
+            transform: scale(1.02);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .btn-download:active {
             transform: scale(0.98);
-            box-shadow: 0 4px 12px rgba(30, 111, 63, 0.3);
+        }
+
+        .btn-download i {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-download:hover i {
+            transform: translateY(-2px);
+        }
+
+        .btn-download.loading {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .btn-download.loading i {
+            animation: bounce 0.6s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .btn-download.success {
+            background: #22c55e;
+        }
+
+        .btn-download.success i {
+            animation: checkPop 0.5s ease;
+        }
+
+        @keyframes checkPop {
+            0% { transform: scale(0) rotate(-45deg); }
+            50% { transform: scale(1.2) rotate(0); }
+            100% { transform: scale(1) rotate(0); }
         }
 
         .empty-state {
             text-align: center;
-            padding: 70px 20px;
-            background: var(--bg-surface);
-            border-radius: 48px;
-            border: 1px solid var(--border-light);
-            margin-top: 20px;
+            padding: 100px 20px;
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            border: 2px dashed var(--border);
         }
 
         .empty-icon {
             font-size: 64px;
-            color: var(--text-tertiary);
-            margin-bottom: 20px;
-            opacity: 0.6;
+            color: var(--border);
+            margin-bottom: 24px;
+            opacity: 0.5;
         }
 
         .empty-title {
-            font-size: 1.7rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
         .empty-desc {
@@ -315,39 +342,28 @@
         }
 
         .hidden {
-            display: none;
-        }
-
-        .site-footer {
-            border-top: 1px solid var(--border-light);
-            background: var(--bg-surface);
-            margin-top: 40px;
-            padding: 32px 0;
-            text-align: center;
-            color: var(--text-tertiary);
-            font-size: 0.8rem;
+            display: none !important;
         }
 
         .back2top {
             position: fixed;
-            bottom: 28px;
-            right: 28px;
-            width: 44px;
-            height: 44px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            color: var(--text-secondary);
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: var(--transition);
-            box-shadow: var(--shadow-sm);
-            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
             z-index: 99;
-            font-size: 22px;
         }
 
         .back2top.visible {
@@ -358,209 +374,208 @@
         .back2top:hover {
             background: var(--accent);
             color: white;
-            border-color: var(--accent);
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px -5px var(--accent-glow);
         }
 
-        @media (max-width: 720px) {
-            .container {
-                padding: 0 16px;
-            }
+        .site-footer {
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+            margin-top: 60px;
+            padding: 32px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
             .header-inner {
                 flex-direction: column;
-                align-items: stretch;
-                gap: 12px;
-                padding: 12px 0;
+                gap: 16px;
+                padding: 16px 20px;
             }
+
             .search-wrapper {
                 max-width: 100%;
+                width: 100%;
             }
-            .logo {
-                justify-content: center;
-                font-size: 1.4rem;
+
+            .hero h1 {
+                font-size: 1.5rem;
             }
-            .page-title {
-                font-size: 1.7rem;
-            }
+
             .resources-grid {
-                gap: 18px;
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
-            .card-body {
-                padding: 18px;
-            }
-        }
 
-        @media (max-width: 480px) {
-            .resource-title {
-                font-size: 1.1rem;
+            .container {
+                padding: 20px;
             }
-            .btn-download {
-                padding: 8px 0;
-            }
-        }
-
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f3;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-
-<header class="site-header">
-    <div class="container header-inner">
-        <a href="#" class="logo" id="logoHome">
-            MC指令音乐站
-        </a>
-        <div class="search-wrapper">
-            <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" class="search-input" placeholder="搜索指令音乐 / 作者...">
-            <button class="search-clear" id="searchClear">✖</button>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="logo" id="logoHome">MC指令音乐站</a>
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索音乐或作者...">
+                <button class="search-clear" id="searchClear">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<main class="main-content">
-    <div class="container">
-        <div class="page-head">
-            <h1 class="page-title">🎵 指令音乐资源库</h1>
-            <p class="page-desc">红石音乐 · 音符盒编排 · 一键导入游戏</p>
+    <main class="container">
+        <div class="hero">
+            <h1>MC指令音乐站</h1>
         </div>
 
         <div id="resourcesGrid" class="resources-grid"></div>
 
         <div id="emptyState" class="empty-state hidden">
-            <div class="empty-icon">🔍</div>
+            <div class="empty-icon"><i class="fas fa-search"></i></div>
             <div class="empty-title">没有找到相关资源</div>
-            <div class="empty-desc">试试其他关键词，或查看全部指令音乐～</div>
+            <div class="empty-desc">换个关键词试试，或者浏览全部</div>
         </div>
-    </div>
-</main>
+    </main>
 
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2025 MC指令音乐站 | 所有资源均为玩家自制分享，仅供学习交流</p>
-        <p style="margin-top: 8px; font-size: 0.7rem;">✨ 指令音乐 / 红石音乐 / 原版兼容 ✨</p>
-    </div>
-</footer>
+    <footer class="site-footer">
+        <p>© 2025 MC指令音乐站 · 玩家自制分享，仅供学习交流</p>
+    </footer>
 
-<button class="back2top" id="backToTopBtn">↑</button>
+    <button class="back2top" id="backToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-<script src="music-data.js"></script>
-<script>
-    (function() {
-        const searchInput = document.getElementById('searchInput');
-        const searchClearBtn = document.getElementById('searchClear');
-        const gridContainer = document.getElementById('resourcesGrid');
-        const emptyStateDiv = document.getElementById('emptyState');
-        const backToTopBtn = document.getElementById('backToTopBtn');
-        const logoHome = document.getElementById('logoHome');
+    <script src="music-data.js"></script>
+    <script>
+        (function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchClearBtn = document.getElementById('searchClear');
+            const gridContainer = document.getElementById('resourcesGrid');
+            const emptyStateDiv = document.getElementById('emptyState');
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            const logoHome = document.getElementById('logoHome');
 
-        let currentKeyword = '';
+            let currentKeyword = '';
 
-        function escapeHtml(str) {
-            if (!str) return '';
-            return str.replace(/[&<>]/g, function(m) {
-                if (m === '&') return '&amp;';
-                if (m === '<') return '&lt;';
-                if (m === '>') return '&gt;';
-                return m;
-            });
-        }
-
-        function renderCards(data) {
-            let filtered = data;
-            if (currentKeyword.trim() !== '') {
-                const kw = currentKeyword.trim().toLowerCase();
-                filtered = data.filter(item => 
-                    item.title.toLowerCase().includes(kw) ||
-                    item.author.toLowerCase().includes(kw)
-                );
+            function escapeHtml(str) {
+                if (!str) return '';
+                return str.replace(/[&<>]/g, function(m) {
+                    if (m === '&') return '&amp;';
+                    if (m === '<') return '&lt;';
+                    if (m === '>') return '&gt;';
+                    return m;
+                });
             }
 
-            if (filtered.length === 0) {
-                gridContainer.classList.add('hidden');
-                emptyStateDiv.classList.remove('hidden');
-                return;
-            }
-
-            gridContainer.classList.remove('hidden');
-            emptyStateDiv.classList.add('hidden');
-
-            const cardsHTML = filtered.map(item => {
-                const safeTitle = escapeHtml(item.title);
-                const safeAuthor = escapeHtml(item.author);
-                const safeSize = item.size || "未知大小";
-                const safeDownloads = item.downloads || "0";
-                const downloadUrl = item.downloadUrl || "#";
-
-                return `
-                    <div class="resource-card" data-id="${item.id}">
-                        <div class="card-body">
-                            <div class="resource-title">
-                                ${safeTitle}
-                            </div>
-                            <div class="resource-meta">
-                                <div class="meta-line">
-                                    <i>👤</i>
-                                    <span>作者 · <span class="author-name">${safeAuthor}</span></span>
-                                </div>
-                                <div class="file-stats">
-                                    <span><i>📄</i> ${safeSize}</span>
-                                    <span><i>⬇️</i> ${safeDownloads} 次下载</span>
-                                </div>
-                            </div>
-                            <a href="${downloadUrl}" class="btn-download" data-title="${safeTitle}" target="_blank" rel="noopener noreferrer">
-                                <i>⬇️</i> 获取指令文件
-                            </a>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-
-            gridContainer.innerHTML = cardsHTML;
-        }
-
-        function initSearch() {
-            searchInput.addEventListener('input', (e) => {
-                const val = e.target.value;
-                currentKeyword = val;
-                searchClearBtn.classList.toggle('visible', val.length > 0);
-                if (window.musicData) renderCards(window.musicData);
-            });
-
-            searchClearBtn.addEventListener('click', () => {
-                searchInput.value = '';
-                currentKeyword = '';
-                searchClearBtn.classList.remove('visible');
-                if (window.musicData) renderCards(window.musicData);
-                searchInput.focus();
-            });
-        }
-
-        function initBackToTop() {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 400) {
-                    backToTopBtn.classList.add('visible');
-                } else {
-                    backToTopBtn.classList.remove('visible');
+            function renderCards(data) {
+                let filtered = data;
+                if (currentKeyword.trim() !== '') {
+                    const kw = currentKeyword.trim().toLowerCase();
+                    filtered = data.filter(item =>
+                        item.title.toLowerCase().includes(kw) ||
+                        item.author.toLowerCase().includes(kw)
+                    );
                 }
-            });
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
 
-        function initLogo() {
-            if (logoHome) {
+                if (filtered.length === 0) {
+                    gridContainer.classList.add('hidden');
+                    emptyStateDiv.classList.remove('hidden');
+                    return;
+                }
+
+                gridContainer.classList.remove('hidden');
+                emptyStateDiv.classList.add('hidden');
+
+                const cardsHTML = filtered.map(item => {
+                    const safeTitle = escapeHtml(item.title);
+                    const safeAuthor = escapeHtml(item.author);
+                    const safeSize = item.size || "未知";
+                    const downloadUrl = item.downloadUrl || "#";
+
+                    return `
+                        <div class="resource-card">
+                            <div class="card-visual">
+                                <i class="fas fa-music music-icon"></i>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="resource-title">${safeTitle}</h3>
+                                <div class="resource-meta">
+                                    <div class="meta-item">
+                                        <i class="fas fa-user"></i>
+                                        <span>${safeAuthor}</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-file-archive"></i>
+                                        <span>${safeSize}</span>
+                                    </div>
+                                </div>
+                                <button class="btn-download" onclick="handleDownload(this, '${downloadUrl}')">
+                                    <i class="fas fa-download"></i>
+                                    <span>获取指令文件</span>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                gridContainer.innerHTML = cardsHTML;
+            }
+
+            window.handleDownload = function(btn, url) {
+                if (btn.classList.contains('loading') || btn.classList.contains('success')) return;
+                
+                btn.classList.add('loading');
+                btn.querySelector('span').textContent = '准备下载...';
+                
+                setTimeout(() => {
+                    btn.classList.remove('loading');
+                    btn.classList.add('success');
+                    btn.querySelector('i').className = 'fas fa-check';
+                    btn.querySelector('span').textContent = '下载完成';
+                    
+                    if (url !== '#') {
+                        window.open(url, '_blank');
+                    }
+                    
+                    setTimeout(() => {
+                        btn.classList.remove('success');
+                        btn.querySelector('i').className = 'fas fa-download';
+                        btn.querySelector('span').textContent = '获取指令文件';
+                    }, 2000);
+                }, 800);
+            };
+
+            function initSearch() {
+                searchInput.addEventListener('input', (e) => {
+                    currentKeyword = e.target.value;
+                    searchClearBtn.classList.toggle('visible', currentKeyword.length > 0);
+                    if (window.musicData) renderCards(window.musicData);
+                });
+
+                searchClearBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    currentKeyword = '';
+                    searchClearBtn.classList.remove('visible');
+                    if (window.musicData) renderCards(window.musicData);
+                    searchInput.focus();
+                });
+            }
+
+            function initBackToTop() {
+                window.addEventListener('scroll', () => {
+                    backToTopBtn.classList.toggle('visible', window.scrollY > 400);
+                });
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            function initLogo() {
                 logoHome.addEventListener('click', (e) => {
                     e.preventDefault();
                     searchInput.value = '';
@@ -570,37 +585,23 @@
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
-        }
 
-        function firstRender() {
-            if (window.musicData && Array.isArray(window.musicData)) {
-                renderCards(window.musicData);
-            } else {
-                console.error('musicData 未正确加载，请确保 music-data.js 存在且格式正确');
-                emptyStateDiv.classList.remove('hidden');
-                gridContainer.classList.add('hidden');
-                document.querySelector('.empty-title').innerText = '数据加载失败';
-                document.querySelector('.empty-desc').innerText = '请检查 music-data.js 文件是否在同一目录下';
+            function firstRender() {
+                if (window.musicData && Array.isArray(window.musicData)) {
+                    renderCards(window.musicData);
+                } else {
+                    emptyStateDiv.classList.remove('hidden');
+                    gridContainer.classList.add('hidden');
+                    document.querySelector('.empty-title').textContent = '数据加载失败';
+                    document.querySelector('.empty-desc').textContent = '请确保 music-data.js 存在且格式正确';
+                }
             }
-        }
 
-        function init() {
             initSearch();
             initBackToTop();
             initLogo();
             firstRender();
-        }
-
-        init();
-
-        if ('ontouchstart' in window) {
-            searchInput.addEventListener('blur', () => {
-                setTimeout(() => {
-                    window.scrollTo(0, window.scrollY);
-                }, 100);
-            });
-        }
-    })();
-</script>
+        })();
+    </script>
 </body>
 </html>
