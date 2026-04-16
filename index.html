@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>MC指令音乐站</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -16,35 +16,12 @@
             --text-primary: #1e293b;
             --text-secondary: #64748b;
             --border: #e2e8f0;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
-            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --accent-rgb:16,185,129;
-            --bg-secondary-rgb: 255,255,255;
-        }
-
-        /* 暗色模式适配（自动识别） */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-primary: #0f172a;
-                --bg-secondary: #1e293b;
-                --bg-card: #27374d;
-                --accent: #14b8a6;
-                --accent-hover: #0d9488;
-                --accent-glow: rgba(20, 184, 166, 0.2);
-                --text-primary: #f1f5f9;
-                --text-secondary: #94a3b8;
-                --border: #334155;
-                --accent-rgb:20,184,166;
-                --bg-secondary-rgb: 30,41,59;
-            }
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            touch-action: manipulation; /* 禁止移动端双击放大 */
         }
 
         body {
@@ -53,20 +30,15 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             min-height: 100vh;
-            padding-bottom: 80px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
         }
 
         .site-header {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(var(--bg-secondary-rgb), 0.85);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
         }
 
         .header-inner {
@@ -84,9 +56,6 @@
             color: var(--accent);
             text-decoration: none;
             white-space: nowrap;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .search-wrapper {
@@ -104,13 +73,13 @@
             border-radius: 22px;
             color: var(--text-primary);
             font-size: 0.95rem;
-            transition: var(--transition-base);
-            outline: none;
+            transition: all 0.2s ease;
         }
 
         .search-input:focus {
+            outline: none;
             border-color: var(--accent);
-            background: var(--bg-secondary);
+            background: #fff;
             box-shadow: 0 0 0 3px var(--accent-glow);
         }
 
@@ -125,7 +94,6 @@
             transform: translateY(-50%);
             color: var(--text-secondary);
             font-size: 0.9rem;
-            z-index: 1;
         }
 
         .search-clear {
@@ -142,11 +110,10 @@
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: var(--transition-base);
+            transition: all 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1;
         }
 
         .search-clear.visible {
@@ -176,36 +143,18 @@
             border-radius: 20px;
             border: 1px solid var(--border);
             overflow: hidden;
-            transition: var(--transition-base);
-            position: relative;
-        }
-
-        /* 卡片序号 */
-        .card-index {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            color: var(--text-secondary);
-            font-size: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .resource-card:hover {
-            transform: translateY(-6px) scale(1.02);
-            box-shadow: var(--shadow-md);
-            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+            border-color: #cbd5e1;
         }
 
         .card-visual {
             height: 140px;
-            background: linear-gradient(135deg, rgba(var(--accent-rgb),0.05), rgba(var(--accent-rgb),0.15));
+            background: linear-gradient(135deg, #f0f9f4 0%, #e8f5ee 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -213,16 +162,31 @@
             overflow: hidden;
         }
 
+        .card-visual::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 8px,
+                rgba(16, 185, 129, 0.03) 8px,
+                rgba(16, 185, 129, 0.03) 16px
+            );
+            animation: slide 25s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(0, 0); }
+        }
+
         .music-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--accent);
             z-index: 1;
-            opacity: 0.9;
-            transition: var(--transition-base);
-        }
-        .resource-card:hover .music-icon {
-            transform: scale(1.1) rotate(5deg);
-            opacity: 1;
+            opacity: 0.8;
         }
 
         .card-body {
@@ -230,21 +194,18 @@
         }
 
         .resource-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 12px;
             color: var(--text-primary);
             line-height: 1.4;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .resource-meta {
             display: flex;
             flex-direction: column;
             gap: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .meta-item {
@@ -258,7 +219,7 @@
         .meta-item i {
             width: 16px;
             font-size: 0.85rem;
-            color: var(--accent);
+            color: var(--text-secondary);
         }
 
         .btn-download {
@@ -267,8 +228,8 @@
             background: var(--accent);
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 0.95rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
             font-weight: 500;
             cursor: pointer;
             display: flex;
@@ -277,10 +238,7 @@
             gap: 8px;
             position: relative;
             overflow: hidden;
-            transition: var(--transition-base);
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            user-select: none;
+            transition: all 0.2s ease;
         }
 
         .btn-download::before {
@@ -293,17 +251,18 @@
             border-radius: 50%;
             background: rgba(255,255,255,0.2);
             transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            transition: width 0.5s, height 0.5s;
         }
 
         .btn-download:hover::before {
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 300px;
         }
 
         .btn-download:hover {
             background: var(--accent-hover);
-            box-shadow: 0 6px 16px var(--accent-glow);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--accent-glow);
         }
 
         .btn-download:active {
@@ -311,29 +270,36 @@
         }
 
         .btn-download i {
-            font-size: 1rem;
-            transition: var(--transition-base);
+            font-size: 0.9rem;
+            transition: transform 0.2s ease;
         }
 
-        /* 加载动画（旋转图标） */
+        .btn-download:hover i {
+            transform: translateY(-1px);
+        }
+
         .btn-download.loading {
             pointer-events: none;
-            opacity: 0.9;
+            opacity: 0.8;
         }
+
         .btn-download.loading i {
-            animation: spin 1s linear infinite;
+            animation: bounce 0.5s infinite;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
         }
 
         .btn-download.success {
             background: #22c55e;
         }
+
         .btn-download.success i {
             animation: checkPop 0.4s ease;
         }
+
         @keyframes checkPop {
             0% { transform: scale(0) rotate(-45deg); }
             50% { transform: scale(1.2) rotate(0); }
@@ -346,7 +312,6 @@
             background: var(--bg-secondary);
             border-radius: 20px;
             border: 1px dashed var(--border);
-            margin-top: 40px;
         }
 
         .empty-icon {
@@ -365,20 +330,18 @@
         .empty-desc {
             color: var(--text-secondary);
             font-size: 0.9rem;
-            line-height: 1.6;
         }
 
         .hidden {
             display: none !important;
         }
 
-        /* 返回顶部 */
         .back2top {
             position: fixed;
             bottom: 24px;
             right: 24px;
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             background: var(--bg-secondary);
             border: 1px solid var(--border);
             border-radius: 50%;
@@ -386,89 +349,62 @@
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: var(--transition-base);
+            transition: all 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             z-index: 99;
-            box-shadow: var(--shadow-sm);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
+
         .back2top.visible {
             opacity: 1;
             visibility: visible;
         }
+
         .back2top:hover {
             background: var(--accent);
             color: white;
             border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 4px 12px var(--accent-glow);
+            transform: translateY(-2px);
         }
 
         .site-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
             border-top: 1px solid var(--border);
             background: var(--bg-secondary);
-            padding: 16px 24px;
+            margin-top: 48px;
+            padding: 24px;
             text-align: center;
             color: var(--text-secondary);
             font-size: 0.85rem;
-            z-index: 90;
         }
 
-        /* 响应式优化 */
         @media (max-width: 768px) {
             .header-inner {
                 padding: 12px 20px;
                 gap: 16px;
             }
+
             .logo {
                 font-size: 1.2rem;
             }
+
             .search-wrapper {
                 max-width: 100%;
             }
+
             .resources-grid {
                 grid-template-columns: 1fr;
-                gap: 18px;
+                gap: 16px;
             }
+
             .container {
                 padding: 20px;
             }
+
             .card-visual {
                 height: 120px;
-            }
-            .music-icon {
-                font-size: 2.5rem;
-            }
-            .back2top {
-                width: 44px;
-                height: 44px;
-                font-size: 1rem;
-                bottom: 80px;
-                right: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-inner {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-            .search-input {
-                height: 40px;
-                border-radius: 20px;
-            }
-            .container {
-                padding: 16px;
-            }
-            .card-body {
-                padding: 16px;
             }
         }
     </style>
@@ -476,13 +412,10 @@
 <body>
     <header class="site-header">
         <div class="header-inner">
-            <a href="#" class="logo" id="logoHome">
-                <i class="fas fa-music"></i>
-                MC指令音乐站
-            </a>
+            <a href="#" class="logo" id="logoHome">MC指令音乐站</a>
             <div class="search-wrapper">
                 <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" id="searchInput" placeholder="搜索音乐/作者，回车快速检索...">
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索音乐或作者...">
                 <button class="search-clear" id="searchClear">
                     <i class="fas fa-times"></i>
                 </button>
@@ -492,24 +425,25 @@
 
     <main class="container">
         <div id="resourcesGrid" class="resources-grid"></div>
+
         <div id="emptyState" class="empty-state hidden">
             <div class="empty-icon"><i class="fas fa-search"></i></div>
             <div class="empty-title">没有找到相关资源</div>
-            <div class="empty-desc">换个关键词试试，或点击logo返回首页浏览全部资源</div>
+            <div class="empty-desc">换个关键词试试，或者浏览全部</div>
         </div>
     </main>
 
     <footer class="site-footer">
-        <p>© 2025 MC指令音乐站 · 玩家自制分享，仅供学习交流 | 适配电脑/手机/暗色模式</p>
+        <p>© 2025 MC指令音乐站 · 玩家自制分享，仅供学习交流</p>
     </footer>
 
     <button class="back2top" id="backToTopBtn">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="music-data.js"></script>
     <script>
         (function() {
-            // 全局元素
             const searchInput = document.getElementById('searchInput');
             const searchClearBtn = document.getElementById('searchClear');
             const gridContainer = document.getElementById('resourcesGrid');
@@ -518,74 +452,57 @@
             const logoHome = document.getElementById('logoHome');
 
             let currentKeyword = '';
-            let searchDebounce = null;
-            // 全局平滑滚动
-            document.documentElement.style.scrollBehavior = 'smooth';
-            // 页面初始化聚焦搜索框
-            searchInput.focus();
 
-            // HTML转义（防注入）
             function escapeHtml(str) {
                 if (!str) return '';
-                return str.replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'})[m]);
+                return str.replace(/[&<>]/g, function(m) {
+                    if (m === '&') return '&amp;';
+                    if (m === '<') return '&lt;';
+                    if (m === '>') return '&gt;';
+                    return m;
+                });
             }
 
-            // 搜索防抖
-            function debounce(fn, delay = 300) {
-                return (...args) => {
-                    clearTimeout(searchDebounce);
-                    searchDebounce = setTimeout(() => fn.apply(this, args), delay);
-                };
-            }
-
-            // 渲染卡片核心函数
-            function renderCards() {
-                // 直接获取window.musicData，无兜底检测
-                const musicData = window.musicData || [];
-                let filtered = [...musicData];
-
-                // 搜索关键词过滤（去空格+特殊字符）
+            function renderCards(data) {
+                let filtered = data;
                 if (currentKeyword.trim() !== '') {
-                    const kw = currentKeyword.trim().replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '').toLowerCase();
-                    filtered = musicData.filter(item =>
+                    const kw = currentKeyword.trim().toLowerCase();
+                    filtered = data.filter(item =>
                         item.title.toLowerCase().includes(kw) ||
                         item.author.toLowerCase().includes(kw)
                     );
                 }
 
-                // 显示/隐藏空状态
                 if (filtered.length === 0) {
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
                     return;
                 }
+
                 gridContainer.classList.remove('hidden');
                 emptyStateDiv.classList.add('hidden');
 
-                // 渲染卡片（带序号）
-                const cardsHTML = filtered.map((item, index) => {
+                const cardsHTML = filtered.map(item => {
                     const safeTitle = escapeHtml(item.title);
-                    const safeAuthor = escapeHtml(item.author) || "未知作者";
-                    const safeSize = item.size || "未知大小";
+                    const safeAuthor = escapeHtml(item.author);
+                    const safeSize = item.size || "未知";
                     const downloadUrl = item.downloadUrl || "#";
-                    const cardNo = index + 1;
 
                     return `
                         <div class="resource-card">
-                            <div class="card-index">${cardNo}</div>
                             <div class="card-visual">
                                 <i class="fas fa-music music-icon"></i>
                             </div>
                             <div class="card-body">
-                                <h3 class="resource-title" title="${safeTitle}">${safeTitle}</h3>
+                                <h3 class="resource-title">${safeTitle}</h3>
                                 <div class="resource-meta">
                                     <div class="meta-item">
                                         <i class="fas fa-user"></i>
-                                        <span>作者：${safeAuthor}</span>
+                                        <span>${safeAuthor}</span>
                                     </div>
                                     <div class="meta-item">
                                         <i class="fas fa-file-archive"></i>
-                                        <span>大小：${safeSize}</span>
+                                        <span>${safeSize}</span>
                                     </div>
                                 </div>
                                 <button class="btn-download" onclick="handleDownload(this, '${downloadUrl}')">
@@ -600,113 +517,81 @@
                 gridContainer.innerHTML = cardsHTML;
             }
 
-            // 下载按钮逻辑
             window.handleDownload = function(btn, url) {
                 if (btn.classList.contains('loading') || btn.classList.contains('success')) return;
                 
-                const icon = btn.querySelector('i');
-                const text = btn.querySelector('span');
-                const originalIcon = icon.className;
-                const originalText = text.textContent;
-
-                // 空链接兜底提示
-                if (url === '#' || !url) {
-                    alert('该资源暂未提供下载链接');
-                    return;
-                }
-
-                // 加载状态
                 btn.classList.add('loading');
-                icon.className = 'fas fa-spinner';
-                text.textContent = '正在准备...';
+                btn.querySelector('span').textContent = '准备下载...';
                 
                 setTimeout(() => {
-                    // 成功状态
                     btn.classList.remove('loading');
                     btn.classList.add('success');
-                    icon.className = 'fas fa-check';
-                    text.textContent = '下载成功';
+                    btn.querySelector('i').className = 'fas fa-check';
+                    btn.querySelector('span').textContent = '下载完成';
                     
-                    // 打开下载链接
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.target = '_blank';
-                    a.click();
+                    if (url !== '#') {
+                        window.open(url, '_blank');
+                    }
                     
-                    // 恢复初始状态
                     setTimeout(() => {
                         btn.classList.remove('success');
-                        icon.className = originalIcon;
-                        text.textContent = originalText;
+                        btn.querySelector('i').className = 'fas fa-download';
+                        btn.querySelector('span').textContent = '获取指令文件';
                     }, 2000);
                 }, 800);
             };
 
-            // 初始化搜索（防抖+回车+ESC清空）
             function initSearch() {
-                // 输入防抖过滤
-                searchInput.addEventListener('input', debounce(e => {
+                searchInput.addEventListener('input', (e) => {
                     currentKeyword = e.target.value;
                     searchClearBtn.classList.toggle('visible', currentKeyword.length > 0);
-                    renderCards();
-                }));
-
-                // 回车检索+ESC清空
-                searchInput.addEventListener('keydown', e => {
-                    // 回车检索并滚动到卡片区
-                    if (e.key === 'Enter') {
-                        currentKeyword = searchInput.value;
-                        renderCards();
-                        gridContainer.scrollIntoView({ behavior: 'smooth' });
-                    }
-                    // ESC键清空搜索
-                    if (e.key === 'Escape') {
-                        searchInput.value = '';
-                        currentKeyword = '';
-                        searchClearBtn.classList.remove('visible');
-                        renderCards();
-                        searchInput.focus();
-                    }
+                    if (window.musicData) renderCards(window.musicData);
                 });
 
-                // 清空搜索按钮
                 searchClearBtn.addEventListener('click', () => {
                     searchInput.value = '';
                     currentKeyword = '';
                     searchClearBtn.classList.remove('visible');
-                    renderCards();
+                    if (window.musicData) renderCards(window.musicData);
                     searchInput.focus();
                 });
             }
 
-            // 初始化返回顶部
             function initBackToTop() {
                 window.addEventListener('scroll', () => {
-                    backToTopBtn.classList.toggle('visible', window.scrollY > 200);
+                    backToTopBtn.classList.toggle('visible', window.scrollY > 400);
                 });
                 backToTopBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0 });
-                    searchInput.focus();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
 
-            // 初始化Logo（返回首页）
             function initLogo() {
                 logoHome.addEventListener('click', (e) => {
                     e.preventDefault();
                     searchInput.value = '';
                     currentKeyword = '';
                     searchClearBtn.classList.remove('visible');
-                    renderCards();
-                    window.scrollTo({ top: 0 });
+                    if (window.musicData) renderCards(window.musicData);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
 
-            // 初始化并首次渲染
+            function firstRender() {
+                if (window.musicData && Array.isArray(window.musicData)) {
+                    renderCards(window.musicData);
+                } else {
+                    emptyStateDiv.classList.remove('hidden');
+                    gridContainer.classList.add('hidden');
+                    document.querySelector('.empty-title').textContent = '数据加载失败';
+                    document.querySelector('.empty-desc').textContent = '请确保 music-data.js 存在且格式正确';
+                }
+            }
+
             initSearch();
             initBackToTop();
             initLogo();
-            renderCards();
+            firstRender();
         })();
     </script>
 </body>
