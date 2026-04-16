@@ -48,6 +48,7 @@
             display: flex;
             align-items: center;
             gap: 24px;
+            flex-wrap: wrap;
         }
 
         .logo {
@@ -124,6 +125,64 @@
         .search-clear:hover {
             background: var(--border);
             color: var(--text-primary);
+        }
+
+        .toolbar {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+
+        .sort-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sort-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .sort-select {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 8px 32px 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-weight: 500;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            transition: all 0.2s;
+        }
+
+        .sort-select:hover {
+            border-color: var(--accent);
+        }
+
+        .sort-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        .result-stats {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            padding: 6px 14px;
+            border-radius: 30px;
         }
 
         .container {
@@ -385,24 +444,23 @@
                 padding: 12px 20px;
                 gap: 16px;
             }
-
             .logo {
                 font-size: 1.2rem;
             }
-
             .search-wrapper {
                 max-width: 100%;
             }
-
+            .toolbar {
+                padding: 10px 20px;
+                justify-content: space-between;
+            }
             .resources-grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
-
             .container {
                 padding: 20px;
             }
-
             .card-visual {
                 height: 120px;
             }
@@ -423,13 +481,26 @@
         </div>
     </header>
 
+    <div class="toolbar">
+        <div class="sort-group">
+            <span class="sort-label"><i class="fas fa-arrow-down-wide-short"></i> 排序</span>
+            <select id="sortSelect" class="sort-select">
+                <option value="default">默认顺序</option>
+                <option value="nameAsc">名称 A → Z</option>
+                <option value="nameDesc">名称 Z → A</option>
+                <option value="dateDesc">最新发布</option>
+                <option value="dateAsc">最早发布</option>
+            </select>
+        </div>
+        <div class="result-stats" id="resultStats">加载中...</div>
+    </div>
+
     <main class="container">
         <div id="resourcesGrid" class="resources-grid"></div>
-
         <div id="emptyState" class="empty-state hidden">
-            <div class="empty-icon"><i class="fas fa-search"></i></div>
-            <div class="empty-title">没有找到相关资源</div>
-            <div class="empty-desc">换个关键词试试，或者浏览全部</div>
+            <div class="empty-icon"><i class="fas fa-database"></i></div>
+            <div class="empty-title">数据加载失败</div>
+            <div class="empty-desc">请确保 music-data.js 文件存在且格式正确</div>
         </div>
     </main>
 
@@ -441,17 +512,23 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- 外部数据文件 -->
     <script src="music-data.js"></script>
     <script>
         (function() {
+            // DOM 元素
             const searchInput = document.getElementById('searchInput');
             const searchClearBtn = document.getElementById('searchClear');
+            const sortSelect = document.getElementById('sortSelect');
             const gridContainer = document.getElementById('resourcesGrid');
             const emptyStateDiv = document.getElementById('emptyState');
+            const resultStatsSpan = document.getElementById('resultStats');
             const backToTopBtn = document.getElementById('backToTopBtn');
             const logoHome = document.getElementById('logoHome');
 
             let currentKeyword = '';
+            let currentSort = 'default';
+            let musicData = null;
 
             function escapeHtml(str) {
                 if (!str) return '';
@@ -463,31 +540,80 @@
                 });
             }
 
-            function renderCards(data) {
-                let filtered = data;
+            function getSortedData(data) {
+                const sorted = [...data];
+                switch (currentSort) {
+                    case 'nameAsc':
+                        sorted.sort((a, b) => (a.title || '').localeCompare(b.title || '', 'zh'));
+                        break;
+                    case 'nameDesc':
+                        sorted.sort((a, b) => (b.title || '').localeCompare(a.title || '', 'zh'));
+                        break;
+                    case 'dateDesc':
+                        sorted.sort((a, b) => {
+                            const da = a.date ? new Date(a.date) : new Date(0);
+                            const db = b.date ? new Date(b.date) : new Date(0);
+                            return db - da;
+                        });
+                        break;
+                    case 'dateAsc':
+                        sorted.sort((a, b) => {
+                            const da = a.date ? new Date(a.date) : new Date(0);
+                            const db = b.date ? new Date(b.date) : new Date(0);
+                            return da - db;
+                        });
+                        break;
+                    default:
+                        sorted.sort((a, b) => (a.id || 0) - (b.id || 0));
+                        break;
+                }
+                return sorted;
+            }
+
+            function renderCards() {
+                if (!musicData || !Array.isArray(musicData) || musicData.length === 0) {
+                    gridContainer.classList.add('hidden');
+                    emptyStateDiv.classList.remove('hidden');
+                    document.querySelector('.empty-title').textContent = '数据加载失败';
+                    document.querySelector('.empty-desc').textContent = '请确保 music-data.js 存在且格式正确';
+                    resultStatsSpan.textContent = '无数据';
+                    return;
+                }
+
+                let filtered = musicData;
                 if (currentKeyword.trim() !== '') {
                     const kw = currentKeyword.trim().toLowerCase();
-                    filtered = data.filter(item =>
-                        item.title.toLowerCase().includes(kw) ||
-                        item.author.toLowerCase().includes(kw)
+                    filtered = musicData.filter(item =>
+                        (item.title && item.title.toLowerCase().includes(kw)) ||
+                        (item.author && item.author.toLowerCase().includes(kw))
                     );
                 }
 
-                if (filtered.length === 0) {
+                const sortedFiltered = getSortedData(filtered);
+                const totalCount = sortedFiltered.length;
+
+                if (totalCount === 0) {
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
+                    document.querySelector('.empty-title').textContent = '没有找到相关资源';
+                    document.querySelector('.empty-desc').textContent = '换个关键词试试，或者浏览全部';
+                    resultStatsSpan.textContent = `共 0 个作品`;
                     return;
                 }
 
                 gridContainer.classList.remove('hidden');
                 emptyStateDiv.classList.add('hidden');
+                resultStatsSpan.textContent = `共 ${totalCount} 个作品${currentKeyword ? ' (匹配: ' + totalCount + ')' : ''}`;
 
-                const cardsHTML = filtered.map(item => {
+                const cardsHTML = sortedFiltered.map(item => {
                     const safeTitle = escapeHtml(item.title);
                     const safeAuthor = escapeHtml(item.author);
                     const safeSize = item.size || "未知";
+                    let dateHtml = '';
+                    if (item.date) {
+                        dateHtml = `<div class="meta-item"><i class="fas fa-calendar-alt"></i><span>${escapeHtml(item.date)}</span></div>`;
+                    }
                     const downloadUrl = item.downloadUrl || "#";
-
                     return `
                         <div class="resource-card">
                             <div class="card-visual">
@@ -504,8 +630,9 @@
                                         <i class="fas fa-file-archive"></i>
                                         <span>${safeSize}</span>
                                     </div>
+                                    ${dateHtml}
                                 </div>
-                                <button class="btn-download" onclick="handleDownload(this, '${downloadUrl}')">
+                                <button class="btn-download" data-url="${escapeHtml(downloadUrl)}">
                                     <i class="fas fa-download"></i>
                                     <span>获取指令文件</span>
                                 </button>
@@ -515,45 +642,60 @@
                 }).join('');
 
                 gridContainer.innerHTML = cardsHTML;
+                attachDownloadEvents();
             }
 
-            window.handleDownload = function(btn, url) {
-                if (btn.classList.contains('loading') || btn.classList.contains('success')) return;
-                
-                btn.classList.add('loading');
-                btn.querySelector('span').textContent = '准备下载...';
-                
-                setTimeout(() => {
-                    btn.classList.remove('loading');
-                    btn.classList.add('success');
-                    btn.querySelector('i').className = 'fas fa-check';
-                    btn.querySelector('span').textContent = '下载完成';
-                    
-                    if (url !== '#') {
-                        window.open(url, '_blank');
-                    }
-                    
-                    setTimeout(() => {
-                        btn.classList.remove('success');
-                        btn.querySelector('i').className = 'fas fa-download';
-                        btn.querySelector('span').textContent = '获取指令文件';
-                    }, 2000);
-                }, 800);
-            };
+            function attachDownloadEvents() {
+                const btns = document.querySelectorAll('.btn-download');
+                btns.forEach(btn => {
+                    if (btn._listenerAdded) return;
+                    const url = btn.getAttribute('data-url');
+                    const handler = function() {
+                        if (btn.classList.contains('loading') || btn.classList.contains('success')) return;
+                        btn.classList.add('loading');
+                        const span = btn.querySelector('span');
+                        const originalText = span.textContent;
+                        span.textContent = '准备下载...';
+                        setTimeout(() => {
+                            btn.classList.remove('loading');
+                            btn.classList.add('success');
+                            const icon = btn.querySelector('i');
+                            icon.className = 'fas fa-check';
+                            span.textContent = '下载完成';
+                            if (url && url !== '#') {
+                                window.open(url, '_blank');
+                            }
+                            setTimeout(() => {
+                                btn.classList.remove('success');
+                                icon.className = 'fas fa-download';
+                                span.textContent = originalText;
+                            }, 1800);
+                        }, 600);
+                    };
+                    btn.addEventListener('click', handler);
+                    btn._listenerAdded = true;
+                });
+            }
 
             function initSearch() {
-                searchInput.addEventListener('input', (e) => {
-                    currentKeyword = e.target.value;
+                searchInput.addEventListener('input', () => {
+                    currentKeyword = searchInput.value;
                     searchClearBtn.classList.toggle('visible', currentKeyword.length > 0);
-                    if (window.musicData) renderCards(window.musicData);
+                    renderCards();
                 });
-
                 searchClearBtn.addEventListener('click', () => {
                     searchInput.value = '';
                     currentKeyword = '';
                     searchClearBtn.classList.remove('visible');
-                    if (window.musicData) renderCards(window.musicData);
+                    renderCards();
                     searchInput.focus();
+                });
+            }
+
+            function initSort() {
+                sortSelect.addEventListener('change', (e) => {
+                    currentSort = e.target.value;
+                    renderCards();
                 });
             }
 
@@ -572,26 +714,35 @@
                     searchInput.value = '';
                     currentKeyword = '';
                     searchClearBtn.classList.remove('visible');
-                    if (window.musicData) renderCards(window.musicData);
+                    sortSelect.value = 'default';
+                    currentSort = 'default';
+                    renderCards();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
 
-            function firstRender() {
-                if (window.musicData && Array.isArray(window.musicData)) {
-                    renderCards(window.musicData);
+            function loadDataAndRender() {
+                if (window.musicData && Array.isArray(window.musicData) && window.musicData.length > 0) {
+                    musicData = window.musicData;
+                    renderCards();
                 } else {
-                    emptyStateDiv.classList.remove('hidden');
-                    gridContainer.classList.add('hidden');
-                    document.querySelector('.empty-title').textContent = '数据加载失败';
-                    document.querySelector('.empty-desc').textContent = '请确保 music-data.js 存在且格式正确';
+                    // 数据无效或未加载
+                    musicData = null;
+                    renderCards();
                 }
             }
 
+            // 等待外部脚本加载完成后读取数据
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', loadDataAndRender);
+            } else {
+                loadDataAndRender();
+            }
+
             initSearch();
+            initSort();
             initBackToTop();
             initLogo();
-            firstRender();
         })();
     </script>
 </body>
