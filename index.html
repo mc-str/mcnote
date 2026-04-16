@@ -19,6 +19,8 @@
             --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
             --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
             --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --accent-rgb:16,185,129;
+            --bg-secondary-rgb: 255,255,255;
         }
 
         /* 暗色模式适配（自动识别） */
@@ -33,6 +35,8 @@
                 --text-primary: #f1f5f9;
                 --text-secondary: #94a3b8;
                 --border: #334155;
+                --accent-rgb:20,184,166;
+                --bg-secondary-rgb: 30,41,59;
             }
         }
 
@@ -40,6 +44,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            touch-action: manipulation; /* 禁止移动端双击放大 */
         }
 
         body {
@@ -49,6 +54,9 @@
             line-height: 1.6;
             min-height: 100vh;
             padding-bottom: 80px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
         }
 
         .site-header {
@@ -59,14 +67,6 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
-        }
-
-        /* 背景色RGB提取，优化毛玻璃 */
-        :root {
-            --bg-secondary-rgb: 255,255,255;
-        }
-        @media (prefers-color-scheme: dark) {
-            --bg-secondary-rgb: 30,41,59;
         }
 
         .header-inner {
@@ -165,16 +165,6 @@
             padding: 32px 28px;
         }
 
-        /* 资源统计 */
-        .resource-stats {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
         .resources-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -222,8 +212,6 @@
             position: relative;
             overflow: hidden;
         }
-        :root { --accent-rgb:16,185,129; }
-        @media (prefers-color-scheme: dark) { --accent-rgb:20,184,166; }
 
         .music-icon {
             font-size: 3rem;
@@ -290,6 +278,9 @@
             position: relative;
             overflow: hidden;
             transition: var(--transition-base);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .btn-download::before {
@@ -324,7 +315,7 @@
             transition: var(--transition-base);
         }
 
-        /* 加载动画优化（旋转图标） */
+        /* 加载动画（旋转图标） */
         .btn-download.loading {
             pointer-events: none;
             opacity: 0.9;
@@ -381,7 +372,7 @@
             display: none !important;
         }
 
-        /* 返回顶部优化 */
+        /* 返回顶部 */
         .back2top {
             position: fixed;
             bottom: 24px;
@@ -429,19 +420,6 @@
             z-index: 90;
         }
 
-        /* 加载中状态 */
-        .loading-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-secondary);
-        }
-        .loading-state i {
-            font-size: 32px;
-            margin-bottom: 16px;
-            animation: spin 1s linear infinite;
-            color: var(--accent);
-        }
-
         /* 响应式优化 */
         @media (max-width: 768px) {
             .header-inner {
@@ -472,9 +450,7 @@
                 height: 44px;
                 font-size: 1rem;
                 bottom: 80px;
-            }
-            .resource-stats {
-                font-size: 0.85rem;
+                right: 16px;
             }
         }
 
@@ -515,20 +491,7 @@
     </header>
 
     <main class="container">
-        <!-- 资源数量统计 -->
-        <div class="resource-stats" id="resourceStats">
-            <i class="fas fa-database"></i>
-            <span>共 <span id="totalCount">0</span> 个MC指令音乐资源</span>
-        </div>
-
-        <!-- 加载中状态 -->
-        <div class="loading-state" id="loadingState">
-            <i class="fas fa-spinner"></i>
-            <p>正在加载资源数据...</p>
-        </div>
-
-        <div id="resourcesGrid" class="resources-grid hidden"></div>
-
+        <div id="resourcesGrid" class="resources-grid"></div>
         <div id="emptyState" class="empty-state hidden">
             <div class="empty-icon"><i class="fas fa-search"></i></div>
             <div class="empty-title">没有找到相关资源</div>
@@ -553,25 +516,21 @@
             const emptyStateDiv = document.getElementById('emptyState');
             const backToTopBtn = document.getElementById('backToTopBtn');
             const logoHome = document.getElementById('logoHome');
-            const loadingState = document.getElementById('loadingState');
-            const resourceStats = document.getElementById('resourceStats');
-            const totalCount = document.getElementById('totalCount');
 
             let currentKeyword = '';
-            let musicData = [];
-            // 搜索防抖（避免频繁触发）
             let searchDebounce = null;
+            // 全局平滑滚动
+            document.documentElement.style.scrollBehavior = 'smooth';
+            // 页面初始化聚焦搜索框
+            searchInput.focus();
 
-            // 初始化：先隐藏统计，显示加载
-            resourceStats.classList.add('hidden');
-
-            // 1. 工具函数：HTML转义（防注入）
+            // HTML转义（防注入）
             function escapeHtml(str) {
                 if (!str) return '';
                 return str.replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'})[m]);
             }
 
-            // 2. 工具函数：防抖
+            // 搜索防抖
             function debounce(fn, delay = 300) {
                 return (...args) => {
                     clearTimeout(searchDebounce);
@@ -579,21 +538,22 @@
                 };
             }
 
-            // 3. 渲染卡片核心函数
+            // 渲染卡片核心函数
             function renderCards() {
+                // 直接获取window.musicData，无兜底检测
+                const musicData = window.musicData || [];
                 let filtered = [...musicData];
-                // 搜索过滤
+
+                // 搜索关键词过滤（去空格+特殊字符）
                 if (currentKeyword.trim() !== '') {
-                    const kw = currentKeyword.trim().toLowerCase();
+                    const kw = currentKeyword.trim().replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '').toLowerCase();
                     filtered = musicData.filter(item =>
                         item.title.toLowerCase().includes(kw) ||
                         item.author.toLowerCase().includes(kw)
                     );
                 }
 
-                // 更新统计数量
-                totalCount.textContent = musicData.length;
-                // 显示/隐藏对应状态
+                // 显示/隐藏空状态
                 if (filtered.length === 0) {
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
@@ -602,10 +562,10 @@
                 gridContainer.classList.remove('hidden');
                 emptyStateDiv.classList.add('hidden');
 
-                // 渲染卡片（加序号）
+                // 渲染卡片（带序号）
                 const cardsHTML = filtered.map((item, index) => {
                     const safeTitle = escapeHtml(item.title);
-                    const safeAuthor = escapeHtml(item.author);
+                    const safeAuthor = escapeHtml(item.author) || "未知作者";
                     const safeSize = item.size || "未知大小";
                     const downloadUrl = item.downloadUrl || "#";
                     const cardNo = index + 1;
@@ -640,7 +600,7 @@
                 gridContainer.innerHTML = cardsHTML;
             }
 
-            // 4. 下载按钮逻辑（优化体验）
+            // 下载按钮逻辑
             window.handleDownload = function(btn, url) {
                 if (btn.classList.contains('loading') || btn.classList.contains('success')) return;
                 
@@ -648,6 +608,12 @@
                 const text = btn.querySelector('span');
                 const originalIcon = icon.className;
                 const originalText = text.textContent;
+
+                // 空链接兜底提示
+                if (url === '#' || !url) {
+                    alert('该资源暂未提供下载链接');
+                    return;
+                }
 
                 // 加载状态
                 btn.classList.add('loading');
@@ -661,13 +627,11 @@
                     icon.className = 'fas fa-check';
                     text.textContent = '下载成功';
                     
-                    // 打开下载链接（非空时）
-                    if (url && url !== '#') {
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.target = '_blank';
-                        a.click();
-                    }
+                    // 打开下载链接
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.target = '_blank';
+                    a.click();
                     
                     // 恢复初始状态
                     setTimeout(() => {
@@ -678,7 +642,7 @@
                 }, 800);
             };
 
-            // 5. 初始化搜索（防抖+回车检索）
+            // 初始化搜索（防抖+回车+ESC清空）
             function initSearch() {
                 // 输入防抖过滤
                 searchInput.addEventListener('input', debounce(e => {
@@ -687,17 +651,25 @@
                     renderCards();
                 }));
 
-                // 回车快速检索
+                // 回车检索+ESC清空
                 searchInput.addEventListener('keydown', e => {
+                    // 回车检索并滚动到卡片区
                     if (e.key === 'Enter') {
                         currentKeyword = searchInput.value;
                         renderCards();
-                        // 滚动到卡片区域
                         gridContainer.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    // ESC键清空搜索
+                    if (e.key === 'Escape') {
+                        searchInput.value = '';
+                        currentKeyword = '';
+                        searchClearBtn.classList.remove('visible');
+                        renderCards();
+                        searchInput.focus();
                     }
                 });
 
-                // 清空搜索
+                // 清空搜索按钮
                 searchClearBtn.addEventListener('click', () => {
                     searchInput.value = '';
                     currentKeyword = '';
@@ -707,18 +679,18 @@
                 });
             }
 
-            // 6. 初始化返回顶部（优化触发条件）
+            // 初始化返回顶部
             function initBackToTop() {
                 window.addEventListener('scroll', () => {
                     backToTopBtn.classList.toggle('visible', window.scrollY > 200);
                 });
                 backToTopBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    searchInput.focus(); // 回到顶部后聚焦搜索框
+                    window.scrollTo({ top: 0 });
+                    searchInput.focus();
                 });
             }
 
-            // 7. 初始化Logo（返回首页+清空搜索）
+            // 初始化Logo（返回首页）
             function initLogo() {
                 logoHome.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -726,47 +698,15 @@
                     currentKeyword = '';
                     searchClearBtn.classList.remove('visible');
                     renderCards();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.scrollTo({ top: 0 });
                 });
             }
 
-            // 8. 初始化数据（兜底+加载状态）
-            function initData() {
-                // 等待music-data.js加载，兜底处理
-                const checkData = setInterval(() => {
-                    if (window.musicData && Array.isArray(window.musicData) && window.musicData.length > 0) {
-                        clearInterval(checkData);
-                        musicData = window.musicData;
-                        // 隐藏加载，显示统计和卡片
-                        loadingState.classList.add('hidden');
-                        resourceStats.classList.remove('hidden');
-                        renderCards();
-                    }
-                }, 100);
-
-                // 超时兜底（5秒加载失败）
-                setTimeout(() => {
-                    if (musicData.length === 0) {
-                        clearInterval(checkData);
-                        loadingState.classList.add('hidden');
-                        emptyStateDiv.classList.remove('hidden');
-                        emptyStateDiv.querySelector('.empty-title').textContent = '数据加载失败';
-                        emptyStateDiv.querySelector('.empty-desc').textContent = '请检查music-data.js文件是否存在、格式是否正确（需为数组格式）';
-                    }
-                }, 5000);
-            }
-
-            // 9. 全局平滑滚动
-            function initSmoothScroll() {
-                document.documentElement.style.scrollBehavior = 'smooth';
-            }
-
-            // 初始化所有功能
+            // 初始化并首次渲染
             initSearch();
             initBackToTop();
             initLogo();
-            initData();
-            initSmoothScroll();
+            renderCards();
         })();
     </script>
 </body>
