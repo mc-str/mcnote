@@ -522,6 +522,9 @@
     <footer class="site-footer"><p>© 2026 矩阵方块 · 我的世界指令音乐库</p></footer>
     <button class="back2top" id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
+    <!-- 外部数据文件 -->
+    <script src="music-data.js"></script>
+
     <script>
         (function() {
             const searchInput = document.getElementById('searchInput');
@@ -542,7 +545,8 @@
             let currentKeyword = '';
             let currentSort = 'default';
             let currentView = 'grid';
-            let musicData = null;
+            let musicData = null;          // 存储有效数据
+            let isDataReady = false;
 
             const sortLabels = {
                 'default': '默认顺序',
@@ -613,10 +617,17 @@
             }
 
             function renderCards() {
-                const isValidData = musicData && Array.isArray(musicData) && musicData.length > 0;
+                const isValidData = isDataReady && musicData && Array.isArray(musicData) && musicData.length > 0;
                 if (!isValidData) {
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
+                    if (!isDataReady) {
+                        document.querySelector('#emptyState .empty-title').textContent = '加载音乐库中...';
+                        document.querySelector('#emptyState .empty-desc').textContent = '正在等待 music-data.js 加载';
+                    } else {
+                        document.querySelector('#emptyState .empty-title').textContent = '暂无音乐数据';
+                        document.querySelector('#emptyState .empty-desc').textContent = '请确保外部 music-data.js 存在且包含有效资源';
+                    }
                     resultStatsSpan.textContent = '无数据';
                     return;
                 }
@@ -636,9 +647,9 @@
                 if (total === 0) {
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
-                    document.querySelector('.empty-title').textContent = '没有找到相关资源';
-                    document.querySelector('.empty-desc').textContent = '试试其他关键词，或检查数据源';
-                    resultStatsSpan.textContent = '共 0 个作品';
+                    document.querySelector('#emptyState .empty-title').textContent = '没有找到相关资源';
+                    document.querySelector('#emptyState .empty-desc').textContent = '试试其他关键词，或检查数据源';
+                    resultStatsSpan.textContent = `共 0 个作品${currentKeyword ? ` · 匹配 0` : ''}`;
                     return;
                 }
 
@@ -780,13 +791,38 @@
                 });
             }
 
-            function loadExternalData() {
-                musicData = (window.musicData && Array.isArray(window.musicData) && window.musicData.length > 0) ? window.musicData : null;
-                renderCards();
+            // ---------- 关键修改：可靠的外部数据加载逻辑（轮询等待 window.musicData）----------
+            function tryLoadData() {
+                if (window.musicData && Array.isArray(window.musicData) && window.musicData.length > 0) {
+                    musicData = window.musicData;
+                    isDataReady = true;
+                    renderCards();
+                    return true;
+                }
+                return false;
             }
 
+            function initDataLoader() {
+                if (tryLoadData()) return;
+                let attempts = 0;
+                const maxAttempts = 60; // 3秒 (50ms间隔)
+                const interval = setInterval(() => {
+                    attempts++;
+                    if (tryLoadData()) {
+                        clearInterval(interval);
+                    } else if (attempts >= maxAttempts) {
+                        clearInterval(interval);
+                        isDataReady = false;
+                        musicData = null;
+                        renderCards(); // 展示错误状态
+                        console.warn('music-data.js 加载超时或数据无效');
+                    }
+                }, 50);
+            }
+            // ---------------------------------------------------------
+
             function init() {
-                loadExternalData();
+                initDataLoader();    // 等待外部数据
                 initSearch();
                 initSort();
                 initViewToggle();
