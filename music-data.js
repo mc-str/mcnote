@@ -2,10 +2,10 @@
 window.musicData = [
     {
         id: 1,
-        title: "卡农 - 红石版",
-        author: "红石工匠TNT",
-        size: "128 KB",
-        date: "2025-02-10",
+        title: "数据测试",
+        author: "数据测试",
+        size: "0 KB",
+        date: "9999-99-99",
         downloadUrl: "https://example.com/download/canon.nbs"
     },
     {
