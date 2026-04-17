@@ -2,11 +2,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>MC指令音乐站 · 资源库</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ---------- 浅色模式（默认） ---------- */
         :root {
             --bg-primary: #f8fafc;
             --bg-secondary: #ffffff;
@@ -23,9 +22,11 @@
             --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
             --gradient-visual: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
             --icon-filter: none;
+            --fs-base: clamp(0.85rem, 1vw, 0.95rem);
+            --fs-title: clamp(1rem, 1.5vw, 1.2rem);
+            --fs-logo: clamp(1.1rem, 2vw, 1.35rem);
+            --fs-card-title: clamp(0.9rem, 1.2vw, 1.1rem);
         }
-
-        /* ---------- 深色模式 ---------- */
         [data-theme="dark"] {
             --bg-primary: #0f172a;
             --bg-secondary: #1e293b;
@@ -43,9 +44,7 @@
             --gradient-visual: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
             --icon-filter: drop-shadow(0 0 6px rgba(16,185,129,0.4));
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             background: var(--bg-primary);
             color: var(--text-primary);
@@ -53,37 +52,33 @@
             line-height: 1.5;
             min-height: 100vh;
             transition: background 0.25s ease, color 0.2s ease;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
+            background-image: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
+            font-size: var(--fs-base);
         }
-
         .site-header {
             position: sticky;
             top: 0;
             z-index: 100;
             background: var(--bg-secondary);
             backdrop-filter: blur(16px);
-            background-color: rgba(var(--bg-secondary-rgb, 248, 250, 252), 0.85);
             border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            width: 100%;
         }
-        [data-theme="dark"] .site-header {
-            background: rgba(15, 23, 42, 0.85);
-        }
-
+        [data-theme="dark"] .site-header { background: rgba(15, 23, 42, 0.85); }
         .header-inner {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 14px 28px;
+            padding: 10px 16px;
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 16px;
             flex-wrap: wrap;
+            width: 100%;
         }
-
-        /* 主标题无图标 */
         .logo {
-            font-size: 1.35rem;
+            font-size: var(--fs-logo);
             font-weight: 700;
             background: linear-gradient(135deg, var(--accent) 0%, #34d399 100%);
             -webkit-background-clip: text;
@@ -93,34 +88,36 @@
             white-space: nowrap;
             transition: transform 0.2s ease;
             letter-spacing: -0.3px;
+            flex-shrink: 0;
         }
         .logo:hover { transform: scale(1.02); }
-
         .search-wrapper {
             flex: 1;
+            min-width: 200px;
             max-width: 480px;
             position: relative;
+            height: 42px;
         }
         .search-input {
             width: 100%;
-            height: 46px;
-            padding: 0 48px;
+            height: 100%;
+            padding: 0 44px;
             background: var(--bg-elevated);
             border: 1px solid var(--border);
             border-radius: 40px;
-            font-size: 0.95rem;
+            font-size: var(--fs-base);
             color: var(--text-primary);
             transition: all 0.25s;
+            outline: none;
         }
         .search-input:focus {
-            outline: none;
             border-color: var(--accent);
             box-shadow: 0 0 0 3px var(--accent-glow);
         }
         .search-input::placeholder { color: var(--text-secondary); }
         .search-icon {
             position: absolute;
-            left: 18px;
+            left: 16px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-secondary);
@@ -128,12 +125,12 @@
         }
         .search-clear {
             position: absolute;
-            right: 12px;
+            right: 8px;
             top: 50%;
             transform: translateY(-50%);
             width: 28px;
             height: 28px;
-            border-radius: 30px;
+            border-radius: 50%;
             background: transparent;
             border: none;
             color: var(--text-secondary);
@@ -147,95 +144,98 @@
         }
         .search-clear.visible { opacity: 1; visibility: visible; }
         .search-clear:hover { background: var(--border); color: var(--text-primary); }
-
         .toolbar {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 12px 28px;
+            padding: 8px 16px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 12px;
             flex-wrap: wrap;
             border-bottom: 1px solid var(--border);
             background: var(--bg-secondary);
+            width: 100%;
         }
         .view-toggle {
             display: flex;
             gap: 8px;
+            flex-shrink: 0;
         }
         .view-btn {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border: 1px solid var(--border);
             background: var(--bg-elevated);
             color: var(--text-secondary);
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
         .view-btn:hover { border-color: var(--accent); color: var(--accent); }
         .view-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
-
         .sort-group {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             position: relative;
-            margin-left: auto;  /* 靠右，消除空隙 */
+            margin-left: auto;
+            flex-shrink: 0;
         }
         .sort-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
             font-weight: 500;
             white-space: nowrap;
+            display: none;
         }
+        @media (min-width:720px) { .sort-label { display: block; } }
         .sort-select {
             background: var(--bg-elevated);
             border: 1px solid var(--border);
             color: var(--text-primary);
-            padding: 8px 32px 8px 16px;
+            padding: 6px 30px 6px 14px;
             border-radius: 40px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             cursor: pointer;
             appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 14px center;
+            background-position: right 12px center;
             transition: 0.2s;
+            min-width: 100px;
         }
         .sort-select:hover { border-color: var(--accent); }
         .sort-dropdown {
             position: absolute;
-            top: calc(100% + 8px);
+            top: calc(100% + 6px);
             right: 0;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 8px;
-            min-width: 190px;
+            border-radius: 16px;
+            padding: 6px;
+            min-width: 180px;
             opacity: 0;
             visibility: hidden;
             transition: 0.2s;
             box-shadow: var(--shadow-md);
             z-index: 60;
         }
-        .sort-dropdown.show {
-            opacity: 1;
-            visibility: visible;
-        }
+        .sort-dropdown.show { opacity: 1; visibility: visible; }
         .sort-option {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 14px;
-            border-radius: 12px;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.15s;
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            white-space: nowrap;
         }
         .sort-option:hover {
             background: var(--bg-elevated);
@@ -246,87 +246,89 @@
             color: white;
         }
         .result-stats {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-secondary);
             background: var(--bg-elevated);
-            padding: 6px 14px;
+            padding: 4px 12px;
             border-radius: 40px;
             border: 1px solid var(--border);
             white-space: nowrap;
+            flex-shrink: 0;
         }
-
         .theme-switch {
             background: var(--bg-elevated);
             border: 1px solid var(--border);
-            width: 40px;
-            height: 40px;
-            border-radius: 40px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             color: var(--text-secondary);
             transition: 0.2s;
+            flex-shrink: 0;
+            margin-left: 8px;
         }
         .theme-switch:hover {
             border-color: var(--accent);
             color: var(--accent);
             transform: scale(0.96);
         }
-
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 32px 28px;
+            padding: 20px 16px;
+            width: 100%;
         }
-        /* 网格视图 */
         .resources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 30vw, 310px), 1fr));
+            gap: clamp(12px, 2vw, 28px);
             transition: all 0.2s;
+            width: 100%;
         }
-        /* 列表视图 */
         .resources-grid.list-view {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
         .resources-grid.list-view .resource-card {
             display: flex;
             flex-direction: row;
-            min-height: 160px;
+            min-height: clamp(100px, 20vw, 160px);
             height: auto;
             width: 100%;
         }
         .resources-grid.list-view .card-visual {
-            width: 170px;
+            width: clamp(80px, 15vw, 170px);
             flex-shrink: 0;
-            height: auto;
-            border-radius: 20px 0 0 20px;
+            height: 100%;
+            border-radius: 16px 0 0 16px;
         }
         .resources-grid.list-view .card-body {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 16px;
         }
-
         .resource-card {
             background: var(--bg-card);
-            border-radius: 24px;
+            border-radius: 20px;
             border: 1px solid var(--border);
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
             box-shadow: var(--shadow-sm);
+            width: 100%;
         }
         .resource-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
             border-color: var(--accent);
         }
         .card-visual {
-            height: 160px;
+            height: clamp(80px, 20vw, 160px);
             background: var(--gradient-visual);
             display: flex;
             align-items: center;
@@ -335,7 +337,7 @@
             overflow: hidden;
         }
         .music-icon {
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 5vw, 3rem);
             color: var(--accent);
             filter: var(--icon-filter);
             animation: gentlePulse 3s infinite;
@@ -344,60 +346,93 @@
             0%, 100% { transform: scale(1); opacity: 0.9; }
             50% { transform: scale(1.08); opacity: 1; }
         }
-        .card-body { padding: 22px; }
+        .card-body { 
+            padding: clamp(12px, 2vw, 22px);
+            width: 100%;
+        }
         .resource-title {
-            font-size: 1.2rem;
+            font-size: var(--fs-card-title);
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: clamp(6px, 1vw, 12px);
             color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
         }
         .resource-meta {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-bottom: 20px;
+            gap: clamp(4px, 1vw, 8px);
+            margin-bottom: clamp(12px, 2vw, 20px);
         }
         .meta-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 0.85rem;
+            gap: clamp(6px, 1vw, 10px);
+            font-size: 0.8rem;
             color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
         }
-        .meta-item i { width: 18px; color: var(--accent); }
+        .meta-item i { 
+            width: 16px; 
+            color: var(--accent);
+            flex-shrink: 0;
+        }
         .btn-download {
             width: 100%;
-            padding: 12px;
+            padding: clamp(8px, 2vw, 12px);
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
             color: white;
             border: none;
-            border-radius: 14px;
+            border-radius: 12px;
             font-weight: 600;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             transition: 0.2s;
+            font-size: 0.85rem;
         }
-        .btn-download:hover { transform: translateY(-2px); box-shadow: 0 6px 14px var(--accent-glow); }
+        .btn-download:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 14px var(--accent-glow);
+        }
         .btn-download.loading { opacity: 0.7; pointer-events: none; }
         .btn-download.success { background: linear-gradient(135deg, #22c55e, #16a34a); }
         .empty-state {
             text-align: center;
-            padding: 70px 20px;
+            padding: clamp(40px, 10vw, 70px) 20px;
             background: var(--bg-card);
-            border-radius: 32px;
+            border-radius: 24px;
             border: 2px dashed var(--border);
+            width: 100%;
         }
-        .empty-icon { font-size: 64px; color: var(--border); margin-bottom: 20px; }
+        .empty-icon { 
+            font-size: clamp(3rem, 10vw, 64px); 
+            color: var(--border); 
+            margin-bottom: 16px;
+        }
+        .empty-title {
+            font-size: var(--fs-title);
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .empty-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
         .hidden { display: none !important; }
         .back2top {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 48px;
-            height: 48px;
+            bottom: clamp(16px, 3vw, 24px);
+            right: clamp(16px, 3vw, 24px);
+            width: clamp(40px, 5vw, 48px);
+            height: clamp(40px, 5vw, 48px);
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 50%;
@@ -410,58 +445,32 @@
             justify-content: center;
             box-shadow: var(--shadow-md);
             color: var(--text-primary);
+            z-index: 99;
         }
         .back2top.visible { opacity: 1; visibility: visible; }
-        .back2top:hover { background: var(--accent); color: white; border-color: var(--accent); transform: translateY(-3px); }
+        .back2top:hover { 
+            background: var(--accent); 
+            color: white; 
+            border-color: var(--accent); 
+            transform: translateY(-3px); 
+        }
         .site-footer {
             border-top: 1px solid var(--border);
             background: var(--bg-secondary);
-            margin-top: 64px;
-            padding: 28px;
+            margin-top: clamp(32px, 5vw, 64px);
+            padding: 20px 16px;
             text-align: center;
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            width: 100%;
         }
-
-        /* 响应式：手机网格两列，列表横排比例正确 */
-        @media (max-width: 720px) {
-            .container { padding: 20px 16px; }
-            .toolbar { padding: 12px 16px; gap: 12px; }
-            .sort-label { display: none; }
-            .result-stats { font-size: 0.7rem; padding: 4px 10px; }
-            
-            .resources-grid:not(.list-view) {
-                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-                gap: 16px;
-            }
-            .resources-grid:not(.list-view) .card-body { padding: 14px; }
-            .resources-grid:not(.list-view) .resource-title { font-size: 1rem; margin-bottom: 8px; }
-            .resources-grid:not(.list-view) .meta-item { font-size: 0.7rem; gap: 6px; }
-            .resources-grid:not(.list-view) .btn-download { padding: 10px; font-size: 0.75rem; }
-            .resources-grid:not(.list-view) .card-visual { height: 120px; }
-            .resources-grid:not(.list-view) .music-icon { font-size: 2.2rem; }
-
-            .resources-grid.list-view .resource-card {
-                min-height: 130px;
-            }
-            .resources-grid.list-view .card-visual {
-                width: 120px;
-            }
-            .resources-grid.list-view .card-body {
-                padding: 12px 14px;
-            }
-            .resources-grid.list-view .resource-title {
-                font-size: 0.95rem;
-            }
-            .resources-grid.list-view .meta-item {
-                font-size: 0.7rem;
-            }
-        }
-        @media (max-width: 480px) {
-            .resources-grid:not(.list-view) {
-                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-                gap: 12px;
-            }
+        @media (min-width:720px) {
+            .header-inner { padding: 14px 28px; }
+            .toolbar { padding: 12px 28px; gap: 20px; }
+            .container { padding: 32px 28px; }
+            .sort-label { font-size: 0.85rem; }
+            .sort-select { padding: 8px 32px 8px 16px; font-size: 0.85rem; }
+            .result-stats { font-size: 0.8rem; padding: 6px 14px; }
         }
     </style>
 </head>
@@ -506,28 +515,15 @@
         <div id="emptyState" class="empty-state hidden">
             <div class="empty-icon"><i class="fas fa-database"></i></div>
             <div class="empty-title">暂无音乐数据</div>
-            <div class="empty-desc">请确保外部 music-data.js 存在或刷新重试</div>
+            <div class="empty-desc">请确保外部 music-data.js 存在且包含有效资源</div>
         </div>
     </main>
 
     <footer class="site-footer"><p>© 2026 矩阵方块 · 我的世界指令音乐库</p></footer>
     <button class="back2top" id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- 外部数据脚本 -->
-    <script src="music-data.js"></script>
     <script>
         (function() {
-            // ---------- 内置后备数据 ----------
-            const FALLBACK_DATA = [
-                { id: 1, title: "Stal 唱片重置", author: "C418·Remix", size: "2.4 MB", date: "2025-12-01", downloadUrl: "#" },
-                { id: 2, title: "Pigstep 完整版", author: "Lena Raine", size: "3.1 MB", date: "2026-01-15", downloadUrl: "#" },
-                { id: 3, title: "otherside 指令音乐", author: "Samuel Åberg", size: "2.9 MB", date: "2026-02-10", downloadUrl: "#" },
-                { id: 4, title: "Cat 复古旋律", author: "C418", size: "2.1 MB", date: "2025-10-22", downloadUrl: "#" },
-                { id: 5, title: "Mellohi 氛围包", author: "Minecraft Studio", size: "3.4 MB", date: "2026-03-01", downloadUrl: "#" },
-                { id: 6, title: "Creator 电子狂想", author: "Lena Raine", size: "4.0 MB", date: "2026-03-18", downloadUrl: "#" }
-            ];
-
-            // DOM 元素
             const searchInput = document.getElementById('searchInput');
             const searchClearBtn = document.getElementById('searchClear');
             const sortBtn = document.getElementById('sortBtn');
@@ -556,7 +552,6 @@
                 'dateAsc': '最早发布'
             };
 
-            // 主题
             function initTheme() {
                 const saved = localStorage.getItem('mc_theme');
                 if (saved === 'dark') {
@@ -567,6 +562,7 @@
                     themeIcon.className = 'fas fa-moon';
                 }
             }
+
             function toggleTheme() {
                 const current = document.documentElement.getAttribute('data-theme');
                 if (current === 'dark') {
@@ -579,12 +575,13 @@
                     themeIcon.className = 'fas fa-sun';
                 }
             }
+
             themeToggle.addEventListener('click', toggleTheme);
             initTheme();
 
             function escapeHtml(str) {
                 if (!str) return '';
-                return str.replace(/[&<>]/g, function(m) {
+                return str.replace(/[&<>]/g, m => {
                     if (m === '&') return '&amp;';
                     if (m === '<') return '&lt;';
                     if (m === '>') return '&gt;';
@@ -616,8 +613,8 @@
             }
 
             function renderCards() {
-                const isValid = musicData && Array.isArray(musicData) && musicData.length > 0;
-                if (!isValid) {
+                const isValidData = musicData && Array.isArray(musicData) && musicData.length > 0;
+                if (!isValidData) {
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
                     resultStatsSpan.textContent = '无数据';
@@ -625,7 +622,7 @@
                 }
 
                 let filtered = musicData;
-                if (currentKeyword.trim()) {
+                if (currentKeyword.trim() !== '') {
                     const kw = currentKeyword.trim().toLowerCase();
                     filtered = musicData.filter(item =>
                         (item.title && item.title.toLowerCase().includes(kw)) ||
@@ -640,7 +637,7 @@
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
                     document.querySelector('.empty-title').textContent = '没有找到相关资源';
-                    document.querySelector('.empty-desc').textContent = '换个关键词试试吧';
+                    document.querySelector('.empty-desc').textContent = '试试其他关键词，或检查数据源';
                     resultStatsSpan.textContent = '共 0 个作品';
                     return;
                 }
@@ -707,7 +704,6 @@
                 });
             }
 
-            // 搜索
             function initSearch() {
                 searchInput.addEventListener('input', () => {
                     currentKeyword = searchInput.value;
@@ -723,7 +719,6 @@
                 });
             }
 
-            // 排序
             function initSort() {
                 sortBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
@@ -746,11 +741,8 @@
                 });
             }
 
-            // 视图切换
             function initViewToggle() {
                 if (currentView === 'list') gridContainer.classList.add('list-view');
-                else gridContainer.classList.remove('list-view');
-
                 viewBtns.forEach(btn => {
                     btn.addEventListener('click', () => {
                         const view = btn.getAttribute('data-view');
@@ -758,9 +750,8 @@
                         viewBtns.forEach(b => b.classList.remove('active'));
                         btn.classList.add('active');
                         currentView = view;
-                        if (currentView === 'list') gridContainer.classList.add('list-view');
-                        else gridContainer.classList.remove('list-view');
-                        renderCards(); // 重新渲染确保按钮事件绑定
+                        gridContainer.classList.toggle('list-view', view === 'list');
+                        renderCards();
                     });
                 });
             }
@@ -782,41 +773,31 @@
 
             function initBackToTop() {
                 window.addEventListener('scroll', () => {
-                    backToTopBtn.classList.toggle('visible', window.scrollY > 400);
+                    backToTopBtn.classList.toggle('visible', window.scrollY > 300);
                 });
                 backToTopBtn.addEventListener('click', () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
 
-            // 获取数据：优先外部，否则后备
-            function loadData() {
-                if (window.musicData && Array.isArray(window.musicData) && window.musicData.length > 0) {
-                    musicData = window.musicData;
-                } else {
-                    musicData = FALLBACK_DATA;
-                    console.log("未检测到外部 music-data.js，使用内置示例数据");
-                }
+            function loadExternalData() {
+                musicData = (window.musicData && Array.isArray(window.musicData) && window.musicData.length > 0) ? window.musicData : null;
                 renderCards();
             }
 
-            // 等待外部脚本加载完成（可能异步）
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => {
-                    loadData();
-                    initSearch();
-                    initSort();
-                    initViewToggle();
-                    initLogo();
-                    initBackToTop();
-                });
-            } else {
-                loadData();
+            function init() {
+                loadExternalData();
                 initSearch();
                 initSort();
                 initViewToggle();
                 initLogo();
                 initBackToTop();
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
             }
         })();
     </script>
