@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>MC指令音乐站</title>
+    <title>MC指令音乐站 · 资源库</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ---------- 浅色模式（默认） ---------- */
@@ -58,7 +58,6 @@
                 radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
         }
 
-        /* 头部 + 导航 */
         .site-header {
             position: sticky;
             top: 0;
@@ -82,7 +81,7 @@
             flex-wrap: wrap;
         }
 
-        /* 主标题已去掉图标，只有文字 */
+        /* 主标题无图标 */
         .logo {
             font-size: 1.35rem;
             font-weight: 700;
@@ -97,7 +96,6 @@
         }
         .logo:hover { transform: scale(1.02); }
 
-        /* 搜索框 */
         .search-wrapper {
             flex: 1;
             max-width: 480px;
@@ -150,7 +148,6 @@
         .search-clear.visible { opacity: 1; visibility: visible; }
         .search-clear:hover { background: var(--border); color: var(--text-primary); }
 
-        /* 工具栏 —— 紧凑且比例完美 */
         .toolbar {
             max-width: 1280px;
             margin: 0 auto;
@@ -182,13 +179,12 @@
         .view-btn:hover { border-color: var(--accent); color: var(--accent); }
         .view-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
 
-        /* 排序组 + 紧凑布局，消除空隙 */
         .sort-group {
             display: flex;
             align-items: center;
             gap: 12px;
             position: relative;
-            margin-left: auto;  /* 使排序组靠右，避免空隙 */
+            margin-left: auto;  /* 靠右，消除空隙 */
         }
         .sort-label {
             font-size: 0.85rem;
@@ -259,7 +255,6 @@
             white-space: nowrap;
         }
 
-        /* 主题切换按钮 */
         .theme-switch {
             background: var(--bg-elevated);
             border: 1px solid var(--border);
@@ -279,26 +274,24 @@
             transform: scale(0.96);
         }
 
-        /* 主容器 & 网格布局 */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 32px 28px;
         }
-        /* 网格视图核心：使用 grid 布局 */
+        /* 网格视图 */
         .resources-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
             gap: 28px;
             transition: all 0.2s;
         }
-        /* 列表视图：改为 flex 纵向排列 */
+        /* 列表视图 */
         .resources-grid.list-view {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-        /* 列表视图下的卡片样式 (横排) */
         .resources-grid.list-view .resource-card {
             display: flex;
             flex-direction: row;
@@ -319,7 +312,6 @@
             justify-content: center;
         }
 
-        /* 卡片通用样式 */
         .resource-card {
             background: var(--bg-card);
             border-radius: 24px;
@@ -431,19 +423,17 @@
             font-size: 0.85rem;
         }
 
-        /* ========= 响应式: 手机网格视图完美多列，列表视图比例自适应 ========= */
+        /* 响应式：手机网格两列，列表横排比例正确 */
         @media (max-width: 720px) {
             .container { padding: 20px 16px; }
             .toolbar { padding: 12px 16px; gap: 12px; }
-            .sort-label { display: none; }  /* 节省空间 */
+            .sort-label { display: none; }
             .result-stats { font-size: 0.7rem; padding: 4px 10px; }
             
-            /* 网格视图：手机两列布局 */
             .resources-grid:not(.list-view) {
                 grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
                 gap: 16px;
             }
-            /* 网格视图卡片内部紧凑 */
             .resources-grid:not(.list-view) .card-body { padding: 14px; }
             .resources-grid:not(.list-view) .resource-title { font-size: 1rem; margin-bottom: 8px; }
             .resources-grid:not(.list-view) .meta-item { font-size: 0.7rem; gap: 6px; }
@@ -451,7 +441,6 @@
             .resources-grid:not(.list-view) .card-visual { height: 120px; }
             .resources-grid:not(.list-view) .music-icon { font-size: 2.2rem; }
 
-            /* 列表视图在手机上：保持横向比例，高度自适应 */
             .resources-grid.list-view .resource-card {
                 min-height: 130px;
             }
@@ -468,8 +457,6 @@
                 font-size: 0.7rem;
             }
         }
-
-        /* 超小屏 (宽度小于 480px) 网格视图仍为两列，但若内容过窄可降为单列？为了更好的体验保持两列，通过 minmax 控制 */
         @media (max-width: 480px) {
             .resources-grid:not(.list-view) {
                 grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -481,7 +468,6 @@
 <body>
     <header class="site-header">
         <div class="header-inner">
-            <!-- 已去掉图标，纯文字logo -->
             <a href="#" class="logo" id="logoHome">MC指令音乐站</a>
             <div class="search-wrapper">
                 <i class="fas fa-search search-icon"></i>
@@ -520,17 +506,28 @@
         <div id="emptyState" class="empty-state hidden">
             <div class="empty-icon"><i class="fas fa-database"></i></div>
             <div class="empty-title">暂无音乐数据</div>
-            <div class="empty-desc">请确保外部 music-data.js 存在且包含有效资源</div>
+            <div class="empty-desc">请确保外部 music-data.js 存在或刷新重试</div>
         </div>
     </main>
 
     <footer class="site-footer"><p>© 2026 矩阵方块 · 我的世界指令音乐库</p></footer>
     <button class="back2top" id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
 
+    <!-- 外部数据脚本 -->
+    <script src="music-data.js"></script>
     <script>
         (function() {
-            // 完全依赖外部 music-data.js，不再内置任何后备数据
-            // 如果外部未定义或数据无效，展示空状态
+            // ---------- 内置后备数据 ----------
+            const FALLBACK_DATA = [
+                { id: 1, title: "Stal 唱片重置", author: "C418·Remix", size: "2.4 MB", date: "2025-12-01", downloadUrl: "#" },
+                { id: 2, title: "Pigstep 完整版", author: "Lena Raine", size: "3.1 MB", date: "2026-01-15", downloadUrl: "#" },
+                { id: 3, title: "otherside 指令音乐", author: "Samuel Åberg", size: "2.9 MB", date: "2026-02-10", downloadUrl: "#" },
+                { id: 4, title: "Cat 复古旋律", author: "C418", size: "2.1 MB", date: "2025-10-22", downloadUrl: "#" },
+                { id: 5, title: "Mellohi 氛围包", author: "Minecraft Studio", size: "3.4 MB", date: "2026-03-01", downloadUrl: "#" },
+                { id: 6, title: "Creator 电子狂想", author: "Lena Raine", size: "4.0 MB", date: "2026-03-18", downloadUrl: "#" }
+            ];
+
+            // DOM 元素
             const searchInput = document.getElementById('searchInput');
             const searchClearBtn = document.getElementById('searchClear');
             const sortBtn = document.getElementById('sortBtn');
@@ -549,7 +546,7 @@
             let currentKeyword = '';
             let currentSort = 'default';
             let currentView = 'grid';
-            let musicData = null;  // 从 window.musicData 获取
+            let musicData = null;
 
             const sortLabels = {
                 'default': '默认顺序',
@@ -559,7 +556,7 @@
                 'dateAsc': '最早发布'
             };
 
-            // 深浅主题
+            // 主题
             function initTheme() {
                 const saved = localStorage.getItem('mc_theme');
                 if (saved === 'dark') {
@@ -619,9 +616,8 @@
             }
 
             function renderCards() {
-                // 检查数据有效性
-                const isValidData = musicData && Array.isArray(musicData) && musicData.length > 0;
-                if (!isValidData) {
+                const isValid = musicData && Array.isArray(musicData) && musicData.length > 0;
+                if (!isValid) {
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
                     resultStatsSpan.textContent = '无数据';
@@ -629,7 +625,7 @@
                 }
 
                 let filtered = musicData;
-                if (currentKeyword.trim() !== '') {
+                if (currentKeyword.trim()) {
                     const kw = currentKeyword.trim().toLowerCase();
                     filtered = musicData.filter(item =>
                         (item.title && item.title.toLowerCase().includes(kw)) ||
@@ -644,7 +640,7 @@
                     gridContainer.classList.add('hidden');
                     emptyStateDiv.classList.remove('hidden');
                     document.querySelector('.empty-title').textContent = '没有找到相关资源';
-                    document.querySelector('.empty-desc').textContent = '试试其他关键词，或检查数据源';
+                    document.querySelector('.empty-desc').textContent = '换个关键词试试吧';
                     resultStatsSpan.textContent = '共 0 个作品';
                     return;
                 }
@@ -699,12 +695,7 @@
                             const icon = btn.querySelector('i');
                             icon.className = 'fas fa-check';
                             span.textContent = '下载完成';
-                            if (url && url !== '#') {
-                                window.open(url, '_blank');
-                            } else {
-                                // 演示提示，实际无链接无动作
-                                console.log('演示模式: 文件链接未配置');
-                            }
+                            if (url && url !== '#') window.open(url, '_blank');
                             setTimeout(() => {
                                 btn.classList.remove('success');
                                 icon.className = 'fas fa-download';
@@ -755,14 +746,10 @@
                 });
             }
 
-            // 视图切换 (修复比例)
+            // 视图切换
             function initViewToggle() {
-                // 设置初始视图样式
-                if (currentView === 'list') {
-                    gridContainer.classList.add('list-view');
-                } else {
-                    gridContainer.classList.remove('list-view');
-                }
+                if (currentView === 'list') gridContainer.classList.add('list-view');
+                else gridContainer.classList.remove('list-view');
 
                 viewBtns.forEach(btn => {
                     btn.addEventListener('click', () => {
@@ -771,18 +758,13 @@
                         viewBtns.forEach(b => b.classList.remove('active'));
                         btn.classList.add('active');
                         currentView = view;
-                        if (currentView === 'list') {
-                            gridContainer.classList.add('list-view');
-                        } else {
-                            gridContainer.classList.remove('list-view');
-                        }
-                        // 切换视图后无需重新渲染，但为了稳妥重新渲染一次（保持数据同步）
-                        renderCards();
+                        if (currentView === 'list') gridContainer.classList.add('list-view');
+                        else gridContainer.classList.remove('list-view');
+                        renderCards(); // 重新渲染确保按钮事件绑定
                     });
                 });
             }
 
-            // 重置与logo
             function initLogo() {
                 logoHome.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -807,31 +789,34 @@
                 });
             }
 
-            // 从外部获取数据并启动
-            function loadExternalData() {
+            // 获取数据：优先外部，否则后备
+            function loadData() {
                 if (window.musicData && Array.isArray(window.musicData) && window.musicData.length > 0) {
                     musicData = window.musicData;
                 } else {
-                    musicData = null;
+                    musicData = FALLBACK_DATA;
+                    console.log("未检测到外部 music-data.js，使用内置示例数据");
                 }
                 renderCards();
             }
 
-            // 初始化所有功能
-            function init() {
-                loadExternalData();
+            // 等待外部脚本加载完成（可能异步）
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    loadData();
+                    initSearch();
+                    initSort();
+                    initViewToggle();
+                    initLogo();
+                    initBackToTop();
+                });
+            } else {
+                loadData();
                 initSearch();
                 initSort();
                 initViewToggle();
                 initLogo();
                 initBackToTop();
-            }
-
-            // 等待外部脚本 music-data.js 加载完成（若动态加载）
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', init);
-            } else {
-                init();
             }
         })();
     </script>
