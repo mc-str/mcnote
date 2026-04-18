@@ -4,7 +4,7 @@ window.musicData = [
         title: "数据测试",
         author: "数据测试",
         size: "0 KB",
-        date: "9999-99-99",
+        date: "2099-01-01",
         downloadUrl: "music/id1.zip"
     },
     {
@@ -12,7 +12,7 @@ window.musicData = [
         title: "数据测试",
         author: "数据测试",
         size: "0 KB",
-        date: "9999-99-99",
+        date: "2199-01-01",
         downloadUrl: "music/id2.zip"
     },
     {
