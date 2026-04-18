@@ -9,7 +9,7 @@
         :root{--bg-primary:#f8fafc;--bg-secondary:#fff;--bg-card:#fff;--bg-elevated:#f1f5f9;--accent:#10b981;--accent-hover:#059669;--accent-glow:rgba(16,185,129,.2);--text-primary:#0f172a;--text-secondary:#475569;--border:#e2e8f0;--shadow-sm:0 4px 6px -1px rgba(0,0,0,.05);--shadow-md:0 10px 15px -3px rgba(0,0,0,.08),0 4px 6px -2px rgba(0,0,0,.05);--shadow-lg:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.02);--gradient-visual:linear-gradient(135deg,#d1fae5,#a7f3d0 50%,#6ee7b7)}
         [data-theme=dark]{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--bg-elevated:#1e293b;--accent:#10b981;--accent-hover:#34d399;--accent-glow:rgba(16,185,129,.3);--text-primary:#f1f5f9;--text-secondary:#94a3b8;--border:#475569;--shadow-sm:0 4px 6px -1px rgba(0,0,0,.4);--shadow-md:0 10px 15px -3px rgba(0,0,0,.5);--shadow-lg:0 25px 50px -12px rgba(0,0,0,.6);--gradient-visual:linear-gradient(135deg,#064e3b,#065f46 50%,#047857)}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;min-height:100vh;transition:background .25s ease,color .2s ease;background-image:radial-gradient(circle at 20% 50%,rgba(16,185,129,.04),transparent 50%),radial-gradient(circle at 80% 80%,rgba(59,130,246,.04),transparent 50%)}
+        body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;min-height:100vh;background-image:radial-gradient(circle at 20% 50%,rgba(16,185,129,.04),transparent 50%),radial-gradient(circle at 80% 80%,rgba(59,130,246,.04),transparent 50%)}
         .site-header{position:sticky;top:0;z-index:100;background:var(--bg-secondary);backdrop-filter:blur(16px);background-color:rgba(248,250,252,.85);border-bottom:1px solid var(--border)}
         [data-theme=dark] .site-header{background:rgba(15,23,42,.85)}
         .header-inner{max-width:1280px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
@@ -38,24 +38,22 @@
         .theme-switch{background:var(--bg-elevated);border:1px solid var(--border);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-secondary);transition:all .2s}
         .theme-switch:hover{transform:scale(.96);border-color:var(--accent);color:var(--accent)}
         .container{max-width:1280px;margin:0 auto;padding:24px 20px}
-        .resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;animation:fadeInUp .4s ease-out}
+        .resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
         .resources-grid.list-view{display:flex;flex-direction:column;gap:16px}
         .resources-grid.list-view .card-placeholder,
         .resources-grid.list-view .resource-card{display:flex;flex-direction:row;min-height:140px;width:100%}
         .resources-grid.list-view .card-visual{width:140px;flex-shrink:0;height:auto;border-radius:20px 0 0 20px}
         .resources-grid.list-view .card-body{flex:1;display:flex;flex-direction:column;justify-content:center}
-        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-        .resource-card{background:var(--bg-card);border-radius:24px;border:1px solid var(--border);overflow:hidden;transition:all .3s;box-shadow:var(--shadow-sm);animation:fadeInUp .3s ease-out}
+        .resource-card{background:var(--bg-card);border-radius:24px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .2s,transform .2s}
         .resource-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
         .card-visual{height:150px;background:var(--gradient-visual);display:flex;align-items:center;justify-content:center}
-        .music-icon{font-size:2.8rem;color:var(--accent);animation:gentlePulse 3s infinite}
-        @keyframes gentlePulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.05);opacity:1}}
+        .music-icon{font-size:2.8rem;color:var(--accent)}
         .card-body{padding:18px}
         .resource-title{font-size:1.1rem;font-weight:600;margin-bottom:10px}
         .resource-meta{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
         .meta-item{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-secondary)}
         .meta-item i{width:16px;color:var(--accent)}
-        .btn-download{width:100%;padding:10px;background:linear-gradient(135deg,var(--accent),var(--accent-hover));color:#fff;border:none;border-radius:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-size:.85rem;transition:all .2s;position:relative;overflow:hidden}
+        .btn-download{width:100%;padding:10px;background:linear-gradient(135deg,var(--accent),var(--accent-hover));color:#fff;border:none;border-radius:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-size:.85rem;transition:all .2s}
         .btn-download:hover{transform:translateY(-2px);box-shadow:0 6px 14px var(--accent-glow)}
         .btn-download.loading{pointer-events:none;opacity:.85}
         .btn-download.loading i{animation:spin 1s linear infinite}
@@ -63,15 +61,14 @@
         .btn-download.success{background:linear-gradient(135deg,#22c55e,#16a34a)}
         .btn-download.success i{animation:checkPop .4s cubic-bezier(0.34,1.2,0.64,1)}
         @keyframes checkPop{0%{transform:scale(0);opacity:0}50%{transform:scale(1.3)}100%{transform:scale(1);opacity:1}}
-        .card-placeholder{background:var(--bg-card);border-radius:24px;border:1px solid var(--border);overflow:hidden;animation:skeletonPulse 1.2s ease-in-out infinite}
-        @keyframes skeletonPulse{0%,100%{opacity:1}50%{opacity:.5}}
+        .card-placeholder{background:var(--bg-card);border-radius:24px;border:1px solid var(--border);overflow:hidden}
         .skeleton-visual{height:150px;background:var(--bg-elevated)}
         .skeleton-body{padding:18px}
         .skeleton-title{height:20px;width:70%;background:var(--border);border-radius:8px;margin-bottom:12px}
         .skeleton-meta{height:14px;width:90%;background:var(--border);border-radius:6px;margin-bottom:8px}
         .skeleton-meta.short{width:60%}
         .skeleton-btn{height:40px;background:var(--border);border-radius:12px;margin-top:12px}
-        .empty-state{text-align:center;padding:60px 20px;background:var(--bg-card);border-radius:28px;border:2px dashed var(--border);animation:fadeInUp .3s ease-out}
+        .empty-state{text-align:center;padding:60px 20px;background:var(--bg-card);border-radius:28px;border:2px dashed var(--border)}
         .empty-icon{font-size:56px;color:var(--border);margin-bottom:16px}
         .hidden{display:none!important}
         .back2top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-card);border:1px solid var(--border);border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:all .25s cubic-bezier(0.2,0.9,0.4,1.1);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.15),0 0 0 1px rgba(255,255,255,0.05) inset;color:var(--text-primary)}
@@ -121,18 +118,13 @@
 <script src="music-data.js"></script>
 <script>
 (function(){
-// DOM 元素
 const searchInput=document.getElementById('searchInput'),searchClear=document.getElementById('searchClear'),sortBtn=document.getElementById('sortBtn'),sortDropdown=document.getElementById('sortDropdown'),sortLabel=document.getElementById('sortLabel'),sortOptions=document.querySelectorAll('.sort-option'),grid=document.getElementById('resourcesGrid'),emptyState=document.getElementById('emptyState'),resultStats=document.getElementById('resultStats'),backBtn=document.getElementById('backToTopBtn'),logo=document.getElementById('logoHome'),viewBtns=document.querySelectorAll('.view-btn'),themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon'),emptyTitle=document.getElementById('emptyTitle'),emptyDesc=document.getElementById('emptyDesc'),copyrightSpan=document.getElementById('copyrightText'),runtimeSpan=document.getElementById('runtimeText');
 
-// 状态变量
 let keyword='',sort='default',view='grid',musicData=null;
 let currentFilteredSorted=[];
 let observer=null;
-let placeholderMap=new Map(); // 存储每个占位符对应的索引和是否加载的状态
-
 const sortMap={default:'默认顺序',nameAsc:'名称 A → Z',nameDesc:'名称 Z → A',dateDesc:'最新发布',dateAsc:'最早发布'};
 
-// 配置与运行时间
 const CONFIG=window.appConfig||{};
 const START_DATE=new Date(CONFIG.startDate||"2024-01-01");
 const COPYRIGHT_TEXT=CONFIG.copyright||"© 2026 矩阵方块 · 我的世界指令音乐库";
@@ -151,12 +143,10 @@ function updateRuntime(){
 updateRuntime();
 setInterval(updateRuntime,1000);
 
-// 主题
 function setTheme(){const saved=localStorage.getItem('mc_theme');if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');themeIcon.className='fas fa-sun';}else{document.documentElement.setAttribute('data-theme','light');themeIcon.className='fas fa-moon';}}
 function toggleTheme(){const cur=document.documentElement.getAttribute('data-theme');if(cur==='dark'){document.documentElement.setAttribute('data-theme','light');localStorage.setItem('mc_theme','light');themeIcon.className='fas fa-moon';}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('mc_theme','dark');themeIcon.className='fas fa-sun';}}
 themeToggle.addEventListener('click',toggleTheme);setTheme();
 
-// 辅助函数
 function escape(s){if(!s)return '';return s.replace(/[&<>]/g,function(m){if(m==='&')return '&amp;';if(m==='<')return '&lt;';if(m==='>')return '&gt;';return m;});}
 function getSorted(arr){const copy=[...arr];if(sort==='nameAsc')copy.sort((a,b)=>(a.title||'').localeCompare(b.title||'','zh'));
 else if(sort==='nameDesc')copy.sort((a,b)=>(b.title||'').localeCompare(a.title||'','zh'));
@@ -165,17 +155,14 @@ else if(sort==='dateAsc')copy.sort((a,b)=>new Date(a.date||0)-new Date(b.date||0
 else copy.sort((a,b)=>(a.id||0)-(b.id||0));
 return copy;}
 
-// 生成骨架占位符HTML
 function getSkeletonHTML(){
-    return `<div class="card-placeholder skeleton-card"><div class="skeleton-visual"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-meta"></div><div class="skeleton-meta short"></div><div class="skeleton-btn"></div></div></div>`;
+    return `<div class="skeleton-visual"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-meta"></div><div class="skeleton-meta short"></div><div class="skeleton-btn"></div></div>`;
 }
 
-// 根据数据项生成真实卡片HTML (不包含外层的.card-placeholder)
 function getCardHTML(item){
     return `<div class="resource-card"><div class="card-visual"><i class="fas fa-music music-icon"></i></div><div class="card-body"><h3 class="resource-title">${escape(item.title)}</h3><div class="resource-meta"><div class="meta-item"><i class="fas fa-user"></i><span>${escape(item.author)}</span></div><div class="meta-item"><i class="fas fa-file-archive"></i><span>${escape(item.size||'未知')}</span></div>${item.date?`<div class="meta-item"><i class="fas fa-calendar-alt"></i><span>${escape(item.date)}</span></div>`:''}</div><button class="btn-download" data-url="${escape(item.downloadUrl||'#')}"><i class="fas fa-download"></i><span>获取指令文件</span></button></div></div>`;
 }
 
-// 绑定下载按钮事件 (事件委托)
 function bindDownloadEvents(){
     grid.querySelectorAll('.btn-download').forEach(btn=>{
         if(btn.dataset.listener)return;
@@ -204,7 +191,6 @@ function bindDownloadEvents(){
     });
 }
 
-// 加载卡片（将占位符替换为真实内容）
 function loadCard(index){
     const placeholder=document.querySelector(`.card-placeholder[data-index='${index}']`);
     if(!placeholder) return;
@@ -214,24 +200,10 @@ function loadCard(index){
     const cardHTML=getCardHTML(item);
     placeholder.innerHTML=cardHTML;
     placeholder.classList.remove('skeleton-card');
-    placeholder.classList.add('resource-card-wrapper');
     placeholder.dataset.loaded='true';
-    // 重新绑定内部按钮事件
     bindDownloadEvents();
 }
 
-// 卸载卡片（恢复为骨架屏）
-function unloadCard(index){
-    const container=document.querySelector(`.card-placeholder[data-index='${index}']`);
-    if(!container) return;
-    if(container.dataset.loaded!=='true') return;
-    container.innerHTML=getSkeletonHTML();
-    container.classList.add('skeleton-card');
-    container.classList.remove('resource-card-wrapper');
-    container.dataset.loaded='false';
-}
-
-// 初始化 IntersectionObserver
 function initObserver(){
     if(observer) observer.disconnect();
     observer=new IntersectionObserver((entries)=>{
@@ -240,9 +212,8 @@ function initObserver(){
             if(isNaN(idx)) return;
             if(entry.isIntersecting){
                 loadCard(idx);
-            }else{
-                unloadCard(idx);
             }
+            // 不再卸载卡片，保持加载状态
         });
     },{rootMargin:'200px 0px 200px 0px',threshold:0.01});
     document.querySelectorAll('.card-placeholder').forEach(el=>{
@@ -250,7 +221,6 @@ function initObserver(){
     });
 }
 
-// 重建占位符列表（根据 currentFilteredSorted 和当前视图）
 function rebuildPlaceholders(){
     if(!currentFilteredSorted.length){
         grid.innerHTML='';
@@ -262,21 +232,17 @@ function rebuildPlaceholders(){
     grid.classList.remove('hidden');
     emptyState.classList.add('hidden');
     resultStats.textContent=`共 ${currentFilteredSorted.length} 个作品${keyword?` · 匹配 ${currentFilteredSorted.length}`:''}`;
-    // 生成占位符容器
     let html='';
     for(let i=0;i<currentFilteredSorted.length;i++){
         html+=`<div class="card-placeholder skeleton-card" data-index="${i}">${getSkeletonHTML()}</div>`;
     }
     grid.innerHTML=html;
-    // 设置视图类
     if(view==='list') grid.classList.add('list-view');
     else grid.classList.remove('list-view');
-    // 重新开始观察
     if(observer) observer.disconnect();
     initObserver();
 }
 
-// 更新筛选排序数据并重建
 function updateDataAndRender(){
     if(!musicData||!Array.isArray(musicData)||!musicData.length){
         currentFilteredSorted=[];
@@ -307,12 +273,8 @@ function updateDataAndRender(){
     rebuildPlaceholders();
 }
 
-// 搜索、排序、视图切换时调用
-function refresh(){
-    updateDataAndRender();
-}
+function refresh(){ updateDataAndRender(); }
 
-// 事件绑定
 function initSearch(){
     searchInput.addEventListener('input',()=>{
         keyword=searchInput.value;
@@ -351,9 +313,7 @@ function initView(){
             view=v;
             if(view==='list') grid.classList.add('list-view');
             else grid.classList.remove('list-view');
-            // 视图切换不需要重新加载数据，但需要刷新样式（已经通过 class 控制）
-            // 确保已加载卡片的布局正确（因为 CSS 自适应，无需额外操作）
-            refresh(); // 重新构建占位符确保列表/网格样式彻底刷新
+            refresh();
         });
     });
 }
@@ -372,8 +332,6 @@ function initBack(){
     window.addEventListener('scroll',()=>{backBtn.classList.toggle('visible',window.scrollY>400);});
     backBtn.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
 }
-
-// 加载外部数据
 function loadData(){
     if(window.musicData&&Array.isArray(window.musicData)&&window.musicData.length){
         musicData=window.musicData;
@@ -394,7 +352,6 @@ window.addEventListener('error',function(e){
         refresh();
     }
 });
-
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{loadData();initSearch();initSort();initView();initLogo();initBack();});
 else{loadData();initSearch();initSort();initView();initLogo();initBack();}
 if(window.innerWidth<=380){searchInput.placeholder='搜索...';}
