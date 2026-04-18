@@ -12,75 +12,97 @@
         body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;min-height:100vh;transition:background .25s ease,color .2s ease;background-image:radial-gradient(circle at 20% 50%,rgba(16,185,129,.04),transparent 50%),radial-gradient(circle at 80% 80%,rgba(59,130,246,.04),transparent 50%)}
         .site-header{position:sticky;top:0;z-index:100;background:var(--bg-secondary);backdrop-filter:blur(16px);background-color:rgba(248,250,252,.85);border-bottom:1px solid var(--border)}
         [data-theme=dark] .site-header{background:rgba(15,23,42,.85)}
-        .header-inner{max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-        .logo{font-size:1.35rem;font-weight:700;background:linear-gradient(135deg,var(--accent),#34d399);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none;white-space:nowrap;transition:transform .2s}
-        .logo:hover{transform:scale(1.02)}
-        .search-wrapper{flex:1;max-width:480px;position:relative}
-        .search-input{width:100%;height:46px;padding:0 48px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:40px;font-size:.95rem;color:var(--text-primary);transition:all .25s}
+        .header-inner{max-width:1280px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+        .logo{font-size:1.25rem;font-weight:700;background:linear-gradient(135deg,var(--accent),#34d399);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none;white-space:nowrap}
+        .search-wrapper{flex:1;min-width:160px;position:relative}
+        .search-input{width:100%;height:44px;padding:0 40px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:40px;font-size:.9rem;color:var(--text-primary);transition:all .25s}
         .search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
-        .search-input::placeholder{color:var(--text-secondary)}
-        .search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--text-secondary);pointer-events:none}
-        .search-clear{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:30px;background:0 0;border:none;color:var(--text-secondary);cursor:pointer;opacity:0;visibility:hidden;display:flex;align-items:center;justify-content:center;transition:.2s}
+        .search-input::placeholder{color:var(--text-secondary);font-size:.85rem}
+        .search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-secondary);font-size:.9rem}
+        .search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:0 0;border:none;color:var(--text-secondary);cursor:pointer;opacity:0;visibility:hidden;display:flex;align-items:center;justify-content:center}
         .search-clear.visible{opacity:1;visibility:visible}
         .search-clear:hover{background:var(--border);color:var(--text-primary)}
-        .toolbar{max-width:1280px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--border);background:var(--bg-secondary)}
-        .view-toggle{display:flex;gap:8px}
-        .view-btn{width:40px;height:40px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text-secondary);border-radius:12px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;justify-content:center}
-        .view-btn:hover{border-color:var(--accent);color:var(--accent)}
+        .toolbar{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:1px solid var(--border);background:var(--bg-secondary)}
+        .view-toggle{display:flex;gap:6px}
+        .view-btn{width:38px;height:38px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text-secondary);border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
         .view-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-        .sort-group{display:flex;align-items:center;gap:12px;position:relative;margin-left:auto}
-        .sort-label{font-size:.85rem;color:var(--text-secondary);font-weight:500;white-space:nowrap}
-        .sort-select{background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-primary);padding:8px 32px 8px 16px;border-radius:40px;font-size:.85rem;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;transition:.2s}
-        .sort-select:hover{border-color:var(--accent)}
-        .sort-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:8px;min-width:190px;opacity:0;visibility:hidden;transition:.2s;box-shadow:var(--shadow-md);z-index:60}
+        .sort-group{display:flex;align-items:center;gap:8px;position:relative;flex-wrap:wrap}
+        .sort-label{font-size:.8rem;color:var(--text-secondary);white-space:nowrap}
+        .sort-select{background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-primary);padding:6px 28px 6px 12px;border-radius:30px;font-size:.8rem;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+        .sort-dropdown{position:absolute;top:calc(100% + 6px);right:0;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:6px;min-width:170px;opacity:0;visibility:hidden;transition:.2s;box-shadow:var(--shadow-md);z-index:60}
         .sort-dropdown.show{opacity:1;visibility:visible}
-        .sort-option{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;cursor:pointer;transition:.15s;color:var(--text-secondary);font-size:.85rem}
+        .sort-option{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;cursor:pointer;color:var(--text-secondary);font-size:.8rem}
         .sort-option:hover{background:var(--bg-elevated);color:var(--text-primary)}
         .sort-option.active{background:var(--accent);color:#fff}
-        .result-stats{font-size:.8rem;color:var(--text-secondary);background:var(--bg-elevated);padding:6px 14px;border-radius:40px;border:1px solid var(--border);white-space:nowrap}
-        .theme-switch{background:var(--bg-elevated);border:1px solid var(--border);width:40px;height:40px;border-radius:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-secondary);transition:.2s}
-        .theme-switch:hover{border-color:var(--accent);color:var(--accent);transform:scale(.96)}
-        .container{max-width:1280px;margin:0 auto;padding:32px 28px}
-        .resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:28px;transition:all .2s}
-        .resources-grid.list-view{display:flex;flex-direction:column;gap:20px}
-        .resources-grid.list-view .resource-card{display:flex;flex-direction:row;min-height:160px;width:100%}
-        .resources-grid.list-view .card-visual{width:170px;flex-shrink:0;height:auto;border-radius:20px 0 0 20px}
+        .result-stats{font-size:.75rem;color:var(--text-secondary);background:var(--bg-elevated);padding:4px 12px;border-radius:30px;border:1px solid var(--border);white-space:nowrap}
+        .theme-switch{background:var(--bg-elevated);border:1px solid var(--border);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-secondary)}
+        .container{max-width:1280px;margin:0 auto;padding:24px 20px}
+        .resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+        .resources-grid.list-view{display:flex;flex-direction:column;gap:16px}
+        .resources-grid.list-view .resource-card{display:flex;flex-direction:row;min-height:140px}
+        .resources-grid.list-view .card-visual{width:140px;flex-shrink:0;height:auto;border-radius:20px 0 0 20px}
         .resources-grid.list-view .card-body{flex:1;display:flex;flex-direction:column;justify-content:center}
-        .resource-card{background:var(--bg-card);border-radius:24px;border:1px solid var(--border);overflow:hidden;transition:all .3s cubic-bezier(0.2,0,0,1);box-shadow:var(--shadow-sm)}
-        .resource-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
-        .card-visual{height:160px;background:var(--gradient-visual);display:flex;align-items:center;justify-content:center;overflow:hidden}
-        .music-icon{font-size:3rem;color:var(--accent);animation:gentlePulse 3s infinite}
-        @keyframes gentlePulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.08);opacity:1}}
-        .card-body{padding:22px}
-        .resource-title{font-size:1.2rem;font-weight:600;margin-bottom:12px;color:var(--text-primary)}
-        .resource-meta{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
-        .meta-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary)}
-        .meta-item i{width:18px;color:var(--accent)}
-        .btn-download{width:100%;padding:12px;background:linear-gradient(135deg,var(--accent),var(--accent-hover));color:#fff;border:none;border-radius:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
-        .btn-download:hover{transform:translateY(-2px);box-shadow:0 6px 14px var(--accent-glow)}
+        .resource-card{background:var(--bg-card);border-radius:24px;border:1px solid var(--border);overflow:hidden;transition:all .3s;box-shadow:var(--shadow-sm)}
+        .resource-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+        .card-visual{height:150px;background:var(--gradient-visual);display:flex;align-items:center;justify-content:center}
+        .music-icon{font-size:2.8rem;color:var(--accent);animation:gentlePulse 3s infinite}
+        @keyframes gentlePulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.05);opacity:1}}
+        .card-body{padding:18px}
+        .resource-title{font-size:1.1rem;font-weight:600;margin-bottom:10px}
+        .resource-meta{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+        .meta-item{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-secondary)}
+        .meta-item i{width:16px;color:var(--accent)}
+        .btn-download{width:100%;padding:10px;background:linear-gradient(135deg,var(--accent),var(--accent-hover));color:#fff;border:none;border-radius:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-size:.85rem}
         .btn-download.loading{opacity:.7;pointer-events:none}
         .btn-download.success{background:linear-gradient(135deg,#22c55e,#16a34a)}
-        .empty-state{text-align:center;padding:70px 20px;background:var(--bg-card);border-radius:32px;border:2px dashed var(--border)}
-        .empty-icon{font-size:64px;color:var(--border);margin-bottom:20px}
+        .empty-state{text-align:center;padding:60px 20px;background:var(--bg-card);border-radius:28px;border:2px dashed var(--border)}
+        .empty-icon{font-size:56px;color:var(--border);margin-bottom:16px}
         .hidden{display:none!important}
-        .back2top{position:fixed;bottom:24px;right:24px;width:48px;height:48px;background:var(--bg-card);border:1px solid var(--border);border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:.2s;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);color:var(--text-primary)}
+        .back2top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;background:var(--bg-card);border:1px solid var(--border);border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:.2s;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);color:var(--text-primary)}
         .back2top.visible{opacity:1;visibility:visible}
-        .back2top:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-3px)}
-        .site-footer{border-top:1px solid var(--border);background:var(--bg-secondary);margin-top:64px;padding:28px;text-align:center;color:var(--text-secondary);font-size:.85rem}
-        @media (max-width:720px){.container{padding:20px 16px}.toolbar{padding:12px 16px;gap:12px}.sort-label{display:none}.result-stats{font-size:.7rem;padding:4px 10px}.resources-grid:not(.list-view){grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}.resources-grid:not(.list-view) .card-body{padding:14px}.resources-grid:not(.list-view) .resource-title{font-size:1rem;margin-bottom:8px}.resources-grid:not(.list-view) .meta-item{font-size:.7rem;gap:6px}.resources-grid:not(.list-view) .btn-download{padding:10px;font-size:.75rem}.resources-grid:not(.list-view) .card-visual{height:120px}.resources-grid:not(.list-view) .music-icon{font-size:2.2rem}.resources-grid.list-view .resource-card{min-height:130px}.resources-grid.list-view .card-visual{width:120px}.resources-grid.list-view .card-body{padding:12px 14px}.resources-grid.list-view .resource-title{font-size:.95rem}.resources-grid.list-view .meta-item{font-size:.7rem}}
-        @media (max-width:480px){.resources-grid:not(.list-view){grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}}
+        .back2top:hover{background:var(--accent);color:#fff}
+        .site-footer{margin-top:56px;padding:20px;text-align:center;color:var(--text-secondary);font-size:.75rem;border-top:1px solid var(--border);background:var(--bg-secondary)}
+        @media (max-width:640px){
+            .toolbar{gap:10px}
+            .sort-label{display:none}
+            .result-stats{order:2;margin-left:0}
+            .theme-switch{order:2}
+            .sort-group{margin-left:0;flex:1;justify-content:flex-end}
+        }
+        @media (max-width:480px){
+            .header-inner{padding:10px 16px}
+            .logo{font-size:1.1rem}
+            .search-input{height:40px;font-size:.85rem;padding:0 36px}
+            .search-icon{left:12px;font-size:.8rem}
+            .search-clear{right:8px}
+            .toolbar{padding:8px 16px}
+            .view-btn{width:34px;height:34px}
+            .sort-select{padding:5px 26px 5px 10px;font-size:.75rem}
+            .result-stats{font-size:.7rem;padding:3px 10px}
+            .theme-switch{width:32px;height:32px}
+            .resources-grid:not(.list-view){grid-template-columns:1fr;gap:16px}
+            .resources-grid.list-view .card-visual{width:110px}
+            .resources-grid.list-view .resource-card{min-height:120px}
+            .card-body{padding:14px}
+            .resource-title{font-size:1rem}
+            .meta-item{font-size:.75rem}
+            .btn-download{padding:8px;font-size:.8rem}
+        }
+        @media (max-width:380px){
+            .search-input::placeholder{font-size:.75rem}
+        }
     </style>
 </head>
 <body>
 <header class="site-header"><div class="header-inner"><a href="#" class="logo" id="logoHome">MC指令音乐站</a><div class="search-wrapper"><i class="fas fa-search search-icon"></i><input type="text" class="search-input" id="searchInput" placeholder="搜索音乐或作者..."><button class="search-clear" id="searchClear"><i class="fas fa-times"></i></button></div></div></header>
 <div class="toolbar"><div class="view-toggle"><button class="view-btn active" data-view="grid"><i class="fas fa-th-large"></i></button><button class="view-btn" data-view="list"><i class="fas fa-list"></i></button></div><div class="sort-group"><span class="sort-label"><i class="fas fa-arrow-down-wide-short"></i> 排序</span><div class="sort-select" id="sortBtn"><span id="sortLabel">默认顺序</span></div><div class="sort-dropdown" id="sortDropdown"><div class="sort-option active" data-value="default"><i class="fas fa-sort"></i> 默认顺序</div><div class="sort-option" data-value="nameAsc"><i class="fas fa-sort-alpha-down"></i> 名称 A → Z</div><div class="sort-option" data-value="nameDesc"><i class="fas fa-sort-alpha-up"></i> 名称 Z → A</div><div class="sort-option" data-value="dateDesc"><i class="fas fa-calendar"></i> 最新发布</div><div class="sort-option" data-value="dateAsc"><i class="fas fa-history"></i> 最早发布</div></div></div><div class="result-stats" id="resultStats">加载中...</div><button class="theme-switch" id="themeToggle"><i class="fas fa-moon" id="themeIcon"></i></button></div>
-<main class="container"><div id="resourcesGrid" class="resources-grid"></div><div id="emptyState" class="empty-state hidden"><div class="empty-icon"><i class="fas fa-database"></i></div><div class="empty-title">暂无音乐数据</div><div class="empty-desc">请确保外部 music-data.js 存在且格式正确</div></div></main>
+<main class="container"><div id="resourcesGrid" class="resources-grid"></div><div id="emptyState" class="empty-state hidden"><div class="empty-icon"><i class="fas fa-database"></i></div><div class="empty-title" id="emptyTitle">暂无音乐数据</div><div class="empty-desc" id="emptyDesc">请确保外部 music-data.js 存在且格式正确</div></div></main>
 <footer class="site-footer"><p>© 2026 矩阵方块 · 我的世界指令音乐库</p></footer>
 <button class="back2top" id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
 <script src="music-data.js"></script>
 <script>
 (function(){
-const searchInput=document.getElementById('searchInput'),searchClear=document.getElementById('searchClear'),sortBtn=document.getElementById('sortBtn'),sortDropdown=document.getElementById('sortDropdown'),sortLabel=document.getElementById('sortLabel'),sortOptions=document.querySelectorAll('.sort-option'),grid=document.getElementById('resourcesGrid'),emptyState=document.getElementById('emptyState'),resultStats=document.getElementById('resultStats'),backBtn=document.getElementById('backToTopBtn'),logo=document.getElementById('logoHome'),viewBtns=document.querySelectorAll('.view-btn'),themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon');
+const searchInput=document.getElementById('searchInput'),searchClear=document.getElementById('searchClear'),sortBtn=document.getElementById('sortBtn'),sortDropdown=document.getElementById('sortDropdown'),sortLabel=document.getElementById('sortLabel'),sortOptions=document.querySelectorAll('.sort-option'),grid=document.getElementById('resourcesGrid'),emptyState=document.getElementById('emptyState'),resultStats=document.getElementById('resultStats'),backBtn=document.getElementById('backToTopBtn'),logo=document.getElementById('logoHome'),viewBtns=document.querySelectorAll('.view-btn'),themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon'),emptyTitle=document.getElementById('emptyTitle'),emptyDesc=document.getElementById('emptyDesc');
 let keyword='',sort='default',view='grid',musicData=null;
 const sortMap={default:'默认顺序',nameAsc:'名称 A → Z',nameDesc:'名称 Z → A',dateDesc:'最新发布',dateAsc:'最早发布'};
 function setTheme(){const saved=localStorage.getItem('mc_theme');if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');themeIcon.className='fas fa-sun';}else{document.documentElement.setAttribute('data-theme','light');themeIcon.className='fas fa-moon';}}
@@ -96,7 +118,7 @@ return copy;}
 function attachEvents(){document.querySelectorAll('.btn-download').forEach(btn=>{if(btn.dataset.listener)return;const url=btn.getAttribute('data-url');btn.addEventListener('click',function(e){e.preventDefault();if(btn.classList.contains('loading')||btn.classList.contains('success'))return;btn.classList.add('loading');const span=btn.querySelector('span'),orig=span.textContent;span.textContent='准备下载...';setTimeout(()=>{btn.classList.remove('loading');btn.classList.add('success');const icon=btn.querySelector('i');icon.className='fas fa-check';span.textContent='下载完成';if(url&&url!=='#')window.open(url,'_blank');setTimeout(()=>{btn.classList.remove('success');icon.className='fas fa-download';span.textContent=orig;},1800);},600);});btn.dataset.listener='true';});}
 function render(){const valid=musicData&&Array.isArray(musicData)&&musicData.length;if(!valid){grid.classList.add('hidden');emptyState.classList.remove('hidden');resultStats.textContent='无数据';return;}
 let filtered=musicData;if(keyword.trim()){const kw=keyword.trim().toLowerCase();filtered=musicData.filter(item=>(item.title&&item.title.toLowerCase().includes(kw))||(item.author&&item.author.toLowerCase().includes(kw)));}
-const sorted=getSorted(filtered);const total=sorted.length;if(total===0){grid.classList.add('hidden');emptyState.classList.remove('hidden');document.querySelector('.empty-title').textContent='没有找到相关资源';document.querySelector('.empty-desc').textContent='换个关键词试试吧';resultStats.textContent='共 0 个作品';return;}
+const sorted=getSorted(filtered);const total=sorted.length;if(total===0){grid.classList.add('hidden');emptyState.classList.remove('hidden');emptyTitle.textContent='没有找到相关资源';emptyDesc.textContent='换个关键词试试吧';resultStats.textContent='共 0 个作品';return;}
 grid.classList.remove('hidden');emptyState.classList.add('hidden');resultStats.textContent=`共 ${total} 个作品${keyword?` · 匹配 ${total}`:''}`;
 grid.innerHTML=sorted.map(item=>{const title=escape(item.title),author=escape(item.author),size=item.size||'未知',dateHtml=item.date?`<div class="meta-item"><i class="fas fa-calendar-alt"></i><span>${escape(item.date)}</span></div>`:'',url=item.downloadUrl||'#';return `<div class="resource-card"><div class="card-visual"><i class="fas fa-music music-icon"></i></div><div class="card-body"><h3 class="resource-title">${title}</h3><div class="resource-meta"><div class="meta-item"><i class="fas fa-user"></i><span>${author}</span></div><div class="meta-item"><i class="fas fa-file-archive"></i><span>${size}</span></div>${dateHtml}</div><button class="btn-download" data-url="${escape(url)}"><i class="fas fa-download"></i><span>获取指令文件</span></button></div></div>`;}).join('');
 attachEvents();}
@@ -105,9 +127,12 @@ function initSort(){sortBtn.addEventListener('click',(e)=>{e.stopPropagation();s
 function initView(){if(view==='list')grid.classList.add('list-view');else grid.classList.remove('list-view');viewBtns.forEach(btn=>{btn.addEventListener('click',()=>{const v=btn.getAttribute('data-view');if(view===v)return;viewBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');view=v;if(view==='list')grid.classList.add('list-view');else grid.classList.remove('list-view');render();});});}
 function initLogo(){logo.addEventListener('click',(e)=>{e.preventDefault();searchInput.value='';keyword='';searchClear.classList.remove('visible');sort='default';sortLabel.textContent=sortMap.default;sortOptions.forEach(o=>o.classList.remove('active'));document.querySelector('.sort-option[data-value="default"]')?.classList.add('active');render();window.scrollTo({top:0,behavior:'smooth'});});}
 function initBack(){window.addEventListener('scroll',()=>{backBtn.classList.toggle('visible',window.scrollY>400);});backBtn.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});}
-function loadData(){if(window.musicData&&Array.isArray(window.musicData)&&window.musicData.length)musicData=window.musicData;else musicData=null;render();}
+function loadData(){if(window.musicData&&Array.isArray(window.musicData)&&window.musicData.length){musicData=window.musicData;emptyTitle.textContent='暂无音乐数据';emptyDesc.textContent='请确保外部 music-data.js 存在且格式正确';}else{musicData=null;emptyTitle.textContent='外部数据无效';emptyDesc.textContent='检测到 window.musicData 不存在或不是有效数组，请检查 music-data.js 是否正确导出 (window.musicData = [...])';console.error('music-data.js 未正确加载或数据格式错误');}render();}
+window.addEventListener('error',function(e){if(e.target.tagName==='SCRIPT'&&e.target.src.includes('music-data.js')){emptyTitle.textContent='外部脚本加载失败';emptyDesc.textContent='music-data.js 文件不存在或网络错误，请检查文件路径。';resultStats.textContent='加载失败';grid.classList.add('hidden');emptyState.classList.remove('hidden');}});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{loadData();initSearch();initSort();initView();initLogo();initBack();});
 else{loadData();initSearch();initSort();initView();initLogo();initBack();}
+if(window.innerWidth<=380){searchInput.placeholder='搜索...';}
+window.addEventListener('resize',function(){if(window.innerWidth<=380)searchInput.placeholder='搜索...';else searchInput.placeholder='搜索音乐或作者...';});
 })();
 </script>
 </body>
