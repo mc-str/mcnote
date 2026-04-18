@@ -2,7 +2,7 @@ window.musicData = [
 {
 id: 1,
 title: "义勇军进行曲",
-author: "聂耳/田汉/中国交响乐、军乐团、国音合唱团",
+author: "聂耳/田汉/中国音乐学院合唱团、中国交响乐团、解放军军乐团",
 size: "4.47 KB",
 date: "2026-04-18",
 downloadUrl: "music/义勇军进行曲.zip"
