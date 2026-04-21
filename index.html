@@ -9,7 +9,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg-primary:#f8fafc;--bg-secondary:#fff;--bg-card:#fff;--bg-elevated:#f1f5f9;--accent:#10b981;--accent-hover:#059669;--accent-glow:rgba(16,185,129,.2);--text-primary:#0f172a;--text-secondary:#475569;--border:#e2e8f0;--shadow-sm:0 4px 6px -1px rgba(0,0,0,.05);--shadow-md:0 10px 15px -3px rgba(0,0,0,.08);--shadow-lg:0 20px 25px -5px rgba(0,0,0,.1);--gradient-visual:linear-gradient(135deg,#d1fae5,#a7f3d0 50%,#6ee7b7);--card-radius:24px;--focus-ring:0 0 0 3px rgba(16,185,129,.4);--transition-normal:0.2s cubic-bezier(0.2,0.9,0.4,1.1)}
 [data-theme="dark"]{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--bg-elevated:#1e293b;--accent:#10b981;--accent-hover:#34d399;--accent-glow:rgba(16,185,129,.3);--text-primary:#f1f5f9;--text-secondary:#94a3b8;--border:#475569;--shadow-sm:0 4px 6px -1px rgba(0,0,0,.4);--shadow-md:0 10px 15px -3px rgba(0,0,0,.5);--shadow-lg:0 25px 50px -12px rgba(0,0,0,.6);--gradient-visual:linear-gradient(135deg,#064e3b,#065f46 50%,#047857);--focus-ring:0 0 0 3px rgba(52,211,153,.4)}
-body, .site-header, .toolbar, .resource-card, .card-visual, .btn-download, .search-input, .sort-select, .view-btn, .theme-switch, .back2top, .sort-dropdown, .empty-state, .kbd-hint, .toast{transition:background-color var(--transition-normal),border-color var(--transition-normal),color .15s,box-shadow var(--transition-normal),transform var(--transition-normal)}
+body,.site-header,.toolbar,.resource-card,.card-visual,.btn-download,.search-input,.sort-select,.view-btn,.theme-switch,.back2top,.sort-dropdown,.empty-state,.kbd-hint,.toast{transition:background-color var(--transition-normal),border-color var(--transition-normal),color .15s,box-shadow var(--transition-normal),transform var(--transition-normal)}
 body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;min-height:100vh;background-image:radial-gradient(circle at 20% 50%,rgba(16,185,129,.04),transparent 50%),radial-gradient(circle at 80% 80%,rgba(59,130,246,.04),transparent 50%)}
 .site-header{position:sticky;top:0;z-index:100;background:var(--bg-secondary);backdrop-filter:blur(16px);background-color:rgba(248,250,252,.85);border-bottom:1px solid var(--border)}[data-theme="dark"] .site-header{background:rgba(15,23,42,.85)}
 .header-inner{max-width:1440px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
@@ -53,37 +53,15 @@ body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-s
 .theme-switch i{transition:transform 0.3s cubic-bezier(0.34,1.2,0.64,1),color 0.2s}
 .theme-switch:active i{transform:rotate(180deg) scale(0.85)}
 .container{max-width:1440px;margin:0 auto;padding:32px 24px}
-.resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;transition:all 0.2s cubic-bezier(0.2,0.9,0.4,1.1)}
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;transition:opacity 0.06s linear;opacity:1}
 @media (min-width:1600px){.resources-grid{grid-template-columns:repeat(4,minmax(290px,1fr))}.container{max-width:1600px}}
 @media (min-width:1200px) and (max-width:1599px){.resources-grid{grid-template-columns:repeat(3,minmax(290px,1fr))}}
 .resources-grid.list-view{display:flex;flex-direction:column;gap:18px}
-.resource-card, .card-placeholder{transition:all 0.3s cubic-bezier(0.2,0.9,0.4,1.1),transform 0.2s ease,box-shadow 0.2s ease,border-color 0.2s ease;will-change:transform,width,height,margin,padding}
-.resources-grid.list-view .resource-card,.resources-grid.list-view .card-placeholder{display:flex;flex-direction:row;min-height:140px;width:100%;animation:slideInFromRight 0.25s cubic-bezier(0.2,0.9,0.4,1.1) forwards;opacity:0}
-.resources-grid:not(.list-view) .resource-card,.resources-grid:not(.list-view) .card-placeholder{animation:scaleIn 0.25s cubic-bezier(0.2,0.9,0.4,1.1) forwards;opacity:0}
-.resources-grid.list-view .resource-card:nth-child(1),.resources-grid.list-view .card-placeholder:nth-child(1){animation-delay:0.01s}
-.resources-grid.list-view .resource-card:nth-child(2),.resources-grid.list-view .card-placeholder:nth-child(2){animation-delay:0.02s}
-.resources-grid.list-view .resource-card:nth-child(3),.resources-grid.list-view .card-placeholder:nth-child(3){animation-delay:0.03s}
-.resources-grid.list-view .resource-card:nth-child(4),.resources-grid.list-view .card-placeholder:nth-child(4){animation-delay:0.04s}
-.resources-grid.list-view .resource-card:nth-child(5),.resources-grid.list-view .card-placeholder:nth-child(5){animation-delay:0.05s}
-.resources-grid.list-view .resource-card:nth-child(6),.resources-grid.list-view .card-placeholder:nth-child(6){animation-delay:0.06s}
-.resources-grid.list-view .resource-card:nth-child(7),.resources-grid.list-view .card-placeholder:nth-child(7){animation-delay:0.07s}
-.resources-grid.list-view .resource-card:nth-child(8),.resources-grid.list-view .card-placeholder:nth-child(8){animation-delay:0.08s}
-.resources-grid.list-view .resource-card:nth-child(9),.resources-grid.list-view .card-placeholder:nth-child(9){animation-delay:0.09s}
-.resources-grid.list-view .resource-card:nth-child(10),.resources-grid.list-view .card-placeholder:nth-child(10){animation-delay:0.10s}
-.resources-grid:not(.list-view) .resource-card:nth-child(1),.resources-grid:not(.list-view) .card-placeholder:nth-child(1){animation-delay:0.02s}
-.resources-grid:not(.list-view) .resource-card:nth-child(2),.resources-grid:not(.list-view) .card-placeholder:nth-child(2){animation-delay:0.04s}
-.resources-grid:not(.list-view) .resource-card:nth-child(3),.resources-grid:not(.list-view) .card-placeholder:nth-child(3){animation-delay:0.06s}
-.resources-grid:not(.list-view) .resource-card:nth-child(4),.resources-grid:not(.list-view) .card-placeholder:nth-child(4){animation-delay:0.08s}
-.resources-grid:not(.list-view) .resource-card:nth-child(5),.resources-grid:not(.list-view) .card-placeholder:nth-child(5){animation-delay:0.10s}
-.resources-grid:not(.list-view) .resource-card:nth-child(6),.resources-grid:not(.list-view) .card-placeholder:nth-child(6){animation-delay:0.12s}
-.resources-grid:not(.list-view) .resource-card:nth-child(7),.resources-grid:not(.list-view) .card-placeholder:nth-child(7){animation-delay:0.14s}
-.resources-grid:not(.list-view) .resource-card:nth-child(8),.resources-grid:not(.list-view) .card-placeholder:nth-child(8){animation-delay:0.16s}
-@keyframes slideInFromRight{0%{opacity:0;transform:translateX(30px) scale(0.96);filter:blur(1px)}100%{opacity:1;transform:translateX(0) scale(1);filter:blur(0)}}
-@keyframes scaleIn{0%{opacity:0;transform:scale(0.92) translateY(12px);filter:blur(1px)}100%{opacity:1;transform:scale(1) translateY(0);filter:blur(0)}}
-.resources-grid.list-view .card-visual{width:140px;flex-shrink:0;height:auto;border-radius:var(--card-radius) 0 0 var(--card-radius);transition:all 0.3s cubic-bezier(0.2,0.9,0.4,1.1)}
-.resources-grid:not(.list-view) .card-visual{transition:all 0.3s cubic-bezier(0.2,0.9,0.4,1.1)}
-.resources-grid.list-view .card-body{flex:1;display:flex;flex-direction:column;justify-content:center;transition:all 0.3s ease}
-.resources-grid.list-view .btn-download{width:auto;align-self:flex-start;padding:10px 24px;transition:all 0.3s cubic-bezier(0.2,0.9,0.4,1.1)}
+.resources-grid.fade-out{opacity:0;pointer-events:none}
+.resource-card,.card-placeholder{transition:all 0.2s cubic-bezier(0.2,0.9,0.4,1.1),transform 0.2s ease,box-shadow 0.2s ease,border-color 0.2s ease}
+.resources-grid.list-view .card-visual{width:140px;flex-shrink:0;height:auto;border-radius:var(--card-radius) 0 0 var(--card-radius)}
+.resources-grid.list-view .card-body{flex:1;display:flex;flex-direction:column;justify-content:center}
+.resources-grid.list-view .btn-download{width:auto;align-self:flex-start;padding:10px 24px}
 .resource-card{background:var(--bg-card);border-radius:var(--card-radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm);outline:none;cursor:pointer}
 .resource-card:focus-visible{box-shadow:var(--focus-ring),var(--shadow-lg);transform:translateY(-2px)}
 .resource-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--accent);z-index:5}
@@ -92,11 +70,11 @@ body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-s
 .music-icon{font-size:3rem;color:var(--accent);filter:drop-shadow(0 4px 6px rgba(0,0,0,.1));transition:transform var(--transition-normal)}
 .resource-card:hover .music-icon{transform:scale(1.05) rotate(2deg)}
 .card-body{padding:20px}
-.resource-title{font-size:1.15rem;font-weight:600;margin-bottom:12px;line-height:1.4;transition:font-size 0.2s ease}
+.resource-title{font-size:1.15rem;font-weight:600;margin-bottom:12px;line-height:1.4}
 .resources-grid.list-view .resource-title{font-size:1.25rem;margin-bottom:8px}
-.resource-meta{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;transition:all 0.2s ease}
+.resource-meta{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
 .resources-grid.list-view .resource-meta{flex-direction:row;flex-wrap:wrap;gap:16px;margin-bottom:16px}
-.meta-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary);transition:all 0.2s ease}
+.meta-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary)}
 .meta-item i{width:18px;color:var(--accent)}
 mark.highlight{background:rgba(16,185,129,0.3);color:inherit;border-radius:4px;padding:0 2px;font-weight:500}
 [data-theme="dark"] mark.highlight{background:rgba(52,211,153,0.4)}
@@ -111,7 +89,7 @@ mark.highlight{background:rgba(16,185,129,0.3);color:inherit;border-radius:4px;p
 .btn-download.success i{animation:checkPop .4s cubic-bezier(0.34,1.2,0.64,1)}
 @keyframes checkPop{0%{transform:scale(0);opacity:0}50%{transform:scale(1.3)}100%{transform:scale(1);opacity:1}}
 .card-placeholder{background:var(--bg-card);border-radius:var(--card-radius);border:1px solid var(--border);overflow:hidden}
-.skeleton-visual{height:150px;background:var(--bg-elevated);animation:pulse 1.5s infinite;transition:all 0.2s ease}
+.skeleton-visual{height:150px;background:var(--bg-elevated);animation:pulse 1.5s infinite}
 .resources-grid.list-view .skeleton-visual{width:140px;height:auto;flex-shrink:0}
 .skeleton-body{padding:20px}
 .skeleton-title{height:22px;width:70%;background:var(--border);border-radius:10px;margin-bottom:14px;animation:pulse 1.5s infinite}
@@ -139,25 +117,35 @@ mark.highlight{background:rgba(16,185,129,0.3);color:inherit;border-radius:4px;p
 .toast{position:fixed;top:24px;left:50%;transform:translateX(-50%) translateY(-100px);background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:12px 20px;box-shadow:var(--shadow-lg);z-index:200;transition:transform var(--transition-normal);font-size:.9rem;color:var(--text-primary);display:flex;align-items:center;gap:10px}
 .toast.show{transform:translateX(-50%) translateY(0)}
 .toast-icon{color:var(--accent)}.toast.error .toast-icon{color:#ef4444}
-.resources-grid.switching{opacity:0.65;transform:scale(0.97);transition:opacity 0.1s cubic-bezier(0.2,0.9,0.4,1.1),transform 0.1s cubic-bezier(0.2,0.9,0.4,1.1);pointer-events:none}
+/* 新增底部按钮样式 */
+.footer-buttons{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:12px 0 8px}
+.footer-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 24px;border-radius:40px;background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-primary);text-decoration:none;font-size:.85rem;font-weight:500;transition:all 0.2s ease;cursor:pointer}
+.footer-btn i{font-size:1rem;color:var(--accent);transition:transform 0.2s}
+.footer-btn:hover{transform:translateY(-3px);border-color:var(--accent);background:var(--bg-card);box-shadow:var(--shadow-sm)}
+.footer-btn:hover i{transform:scale(1.1)}
 </style>
 </head>
 <body>
-<header class="site-header"><div class="header-inner"><a href="#" class="logo" id="logoHome" aria-label="返回首页">MC指令音乐站</a><div class="search-wrapper" role="search"><i class="fas fa-search search-icon" aria-hidden="true"></i><input type="text" class="search-input" id="searchInput" placeholder="搜索音乐或作者..." aria-label="搜索音乐或作者" autocomplete="off"><button class="search-clear" id="searchClear" aria-label="清除搜索"><i class="fas fa-times" aria-hidden="true"></i></button></div></div></header>
-<div class="toolbar"><div class="view-toggle" role="group" aria-label="视图切换"><button class="view-btn active" data-view="grid" aria-label="网格视图" aria-pressed="true"><i class="fas fa-th-large" aria-hidden="true"></i></button><button class="view-btn" data-view="list" aria-label="列表视图" aria-pressed="false"><i class="fas fa-list" aria-hidden="true"></i></button></div><div class="sort-group"><span class="sort-label"><i class="fas fa-arrow-down-wide-short" aria-hidden="true"></i> 排序</span><button class="sort-select" id="sortBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="排序选项"><span id="sortLabel">默认顺序</span></button><div class="sort-dropdown" id="sortDropdown" role="listbox" aria-label="排序方式"><button class="sort-option active" data-value="default" role="option" aria-selected="true"><i class="fas fa-sort" aria-hidden="true"></i> 默认顺序</button><button class="sort-option" data-value="nameAsc" role="option" aria-selected="false"><i class="fas fa-sort-alpha-down" aria-hidden="true"></i> 名称 A → Z</button><button class="sort-option" data-value="nameDesc" role="option" aria-selected="false"><i class="fas fa-sort-alpha-up" aria-hidden="true"></i> 名称 Z → A</button><button class="sort-option" data-value="dateDesc" role="option" aria-selected="false"><i class="fas fa-calendar" aria-hidden="true"></i> 最新发布</button><button class="sort-option" data-value="dateAsc" role="option" aria-selected="false"><i class="fas fa-history" aria-hidden="true"></i> 最早发布</button></div></div><div class="result-stats" id="resultStats" aria-live="polite" aria-atomic="true">加载中...</div><button class="theme-switch" id="themeToggle" aria-label="切换主题"><i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i></button></div>
-<main class="container"><div id="resourcesGrid" class="resources-grid"></div><div id="emptyState" class="empty-state hidden"><div class="empty-icon"><i class="fas fa-database" aria-hidden="true"></i></div><div class="empty-title" id="emptyTitle">暂无音乐数据</div><div class="empty-desc" id="emptyDesc">请确保外部 music-data.js 存在且格式正确</div></div></main>
-<footer class="site-footer"><div id="copyrightArea" class="copyright"></div><div><span class="runtime" id="runtimeText" aria-live="off"></span></div></footer>
-<button class="back2top" id="backToTopBtn" aria-label="返回顶部"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
-<div class="kbd-hint" id="kbdHint" role="dialog" aria-label="键盘快捷键"><div class="kbd-hint-title"><i class="fas fa-keyboard"></i> 快捷键指南</div><div class="kbd-hint-row"><span><kbd>/</kbd> 聚焦搜索</span><span><kbd>Esc</kbd> 取消</span></div><div class="kbd-hint-row"><span><kbd>G</kbd> 网格视图</span><span><kbd>L</kbd> 列表视图</span></div><div class="kbd-hint-row"><span><kbd>T</kbd> 切换主题</span><span><kbd>?</kbd> 显示帮助</span></div><div class="kbd-hint-row"><span><kbd>↑</kbd> <kbd>↓</kbd> 导航</span><span><kbd>Enter</kbd> 选择</span></div></div>
-<div class="toast" id="toast" role="status" aria-live="polite"><i class="fas fa-info-circle toast-icon"></i><span id="toastMsg"></span></div>
+<header class="site-header"><div class="header-inner"><a href="#" class="logo" id="logoHome" aria-label="返回首页">MC指令音乐站</a><div class="search-wrapper"><i class="fas fa-search search-icon"></i><input type="text" class="search-input" id="searchInput" placeholder="搜索音乐或作者..." autocomplete="off"><button class="search-clear" id="searchClear" aria-label="清除搜索"><i class="fas fa-times"></i></button></div></div></header>
+<div class="toolbar"><div class="view-toggle"><button class="view-btn active" data-view="grid" aria-label="网格视图" aria-pressed="true"><i class="fas fa-th-large"></i></button><button class="view-btn" data-view="list" aria-label="列表视图" aria-pressed="false"><i class="fas fa-list"></i></button></div><div class="sort-group"><span class="sort-label"><i class="fas fa-arrow-down-wide-short"></i> 排序</span><button class="sort-select" id="sortBtn" aria-haspopup="listbox" aria-expanded="false"><span id="sortLabel">默认顺序</span></button><div class="sort-dropdown" id="sortDropdown" role="listbox"><button class="sort-option active" data-value="default" role="option" aria-selected="true"><i class="fas fa-sort"></i> 默认顺序</button><button class="sort-option" data-value="nameAsc" role="option"><i class="fas fa-sort-alpha-down"></i> 名称 A → Z</button><button class="sort-option" data-value="nameDesc" role="option"><i class="fas fa-sort-alpha-up"></i> 名称 Z → A</button><button class="sort-option" data-value="dateDesc" role="option"><i class="fas fa-calendar"></i> 最新发布</button><button class="sort-option" data-value="dateAsc" role="option"><i class="fas fa-history"></i> 最早发布</button></div></div><div class="result-stats" id="resultStats">加载中...</div><button class="theme-switch" id="themeToggle" aria-label="切换主题"><i class="fas fa-moon" id="themeIcon"></i></button></div>
+<main class="container"><div id="resourcesGrid" class="resources-grid"></div><div id="emptyState" class="empty-state hidden"><div class="empty-icon"><i class="fas fa-database"></i></div><div class="empty-title" id="emptyTitle">暂无音乐数据</div><div class="empty-desc" id="emptyDesc">请确保外部 music-data.js 存在且格式正确</div></div></main>
+<footer class="site-footer">
+    <div id="copyrightArea" class="copyright"></div>
+    <div class="footer-buttons" id="footerButtons"></div>
+    <div><span class="runtime" id="runtimeText"></span></div>
+</footer>
+<button class="back2top" id="backToTopBtn" aria-label="返回顶部"><i class="fas fa-arrow-up"></i></button>
+<div class="kbd-hint" id="kbdHint"><div class="kbd-hint-title"><i class="fas fa-keyboard"></i> 快捷键指南</div><div class="kbd-hint-row"><span><kbd>/</kbd> 聚焦搜索</span><span><kbd>Esc</kbd> 取消</span></div><div class="kbd-hint-row"><span><kbd>G</kbd> 网格视图</span><span><kbd>L</kbd> 列表视图</span></div><div class="kbd-hint-row"><span><kbd>T</kbd> 切换主题</span><span><kbd>?</kbd> 显示帮助</span></div><div class="kbd-hint-row"><span><kbd>↑</kbd> <kbd>↓</kbd> 导航</span><span><kbd>Enter</kbd> 选择</span></div></div>
+<div class="toast" id="toast"><i class="fas fa-info-circle toast-icon"></i><span id="toastMsg"></span></div>
 <div class="dropdown-backdrop" id="dropdownBackdrop"></div>
+<!-- 外部配置脚本：包含按钮文字、链接以及版权等信息 -->
 <script src="config.js"></script>
 <script src="music-data.js"></script>
 <script>
 (function(){
 const C={debounceDelay:150,startDate:window.appConfig?.startDate||"2024-01-01"};
 const S={keyword:'',sort:'default',view:'grid',musicData:null,filteredSorted:[],currentFocusIndex:-1,isTyping:false,isSwitchingView:false};
-const D={s:document.getElementById('searchInput'),sc:document.getElementById('searchClear'),sb:document.getElementById('sortBtn'),sd:document.getElementById('sortDropdown'),sl:document.getElementById('sortLabel'),so:document.querySelectorAll('.sort-option'),g:document.getElementById('resourcesGrid'),e:document.getElementById('emptyState'),rs:document.getElementById('resultStats'),bb:document.getElementById('backToTopBtn'),lg:document.getElementById('logoHome'),vb:document.querySelectorAll('.view-btn'),tt:document.getElementById('themeToggle'),ti:document.getElementById('themeIcon'),et:document.getElementById('emptyTitle'),ed:document.getElementById('emptyDesc'),rt:document.getElementById('runtimeText'),ca:document.getElementById('copyrightArea'),kh:document.getElementById('kbdHint'),toast:document.getElementById('toast'),tm:document.getElementById('toastMsg'),bd:document.getElementById('dropdownBackdrop')};
+const D={s:document.getElementById('searchInput'),sc:document.getElementById('searchClear'),sb:document.getElementById('sortBtn'),sd:document.getElementById('sortDropdown'),sl:document.getElementById('sortLabel'),so:document.querySelectorAll('.sort-option'),g:document.getElementById('resourcesGrid'),e:document.getElementById('emptyState'),rs:document.getElementById('resultStats'),bb:document.getElementById('backToTopBtn'),lg:document.getElementById('logoHome'),vb:document.querySelectorAll('.view-btn'),tt:document.getElementById('themeToggle'),ti:document.getElementById('themeIcon'),et:document.getElementById('emptyTitle'),ed:document.getElementById('emptyDesc'),rt:document.getElementById('runtimeText'),ca:document.getElementById('copyrightArea'),kh:document.getElementById('kbdHint'),toast:document.getElementById('toast'),tm:document.getElementById('toastMsg'),bd:document.getElementById('dropdownBackdrop'),fb:document.getElementById('footerButtons')};
 const sortMap={default:'默认顺序',nameAsc:'名称 A → Z',nameDesc:'名称 Z → A',dateDesc:'最新发布',dateAsc:'最早发布'};
 let obs=null,debTimer=null,toTimer=null;
 const deb=(fn,d)=>{clearTimeout(debTimer);debTimer=setTimeout(fn,d);};
@@ -165,7 +153,7 @@ const esc=s=>s?s.replace(/[&<>]/g,m=>m==='&'?'&amp;':m==='<'?'&lt;':'&gt;'):'';
 const escRegex=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const highlight=(t,k)=>{if(!k||!t)return esc(t);const kw=k.trim().toLowerCase();if(!kw)return esc(t);const et=esc(t);return et.replace(new RegExp(`(${escRegex(kw)})`,'gi'),'<mark class="highlight">$1</mark>');};
 const toast=(msg,type='info')=>{D.tm.textContent=msg;D.toast.className='toast '+(type==='error'?'error ':'')+'show';clearTimeout(toTimer);toTimer=setTimeout(()=>D.toast.classList.remove('show'),3000);};
-const updRuntime=()=>{const n=new Date(),d=n-new Date(C.startDate);if(isNaN(d)||d<0){D.rt.textContent='';return;}const s=Math.floor(d/1000),dd=Math.floor(s/86400),hh=Math.floor((s%86400)/3600),mm=Math.floor((s%3600)/60),ss=s%60;D.rt.textContent=`⚡ 本站已运行 ${dd}天 ${hh}小时 ${mm}分钟 ${ss}秒`;};
+const updRuntime=()=>{const n=new Date(),d=n-new Date(C.startDate);if(isNaN(d)||d<0){D.rt.textContent='';return;}const s=Math.floor(d/1000),dd=Math.floor(s/86400),hh=Math.floor((s%86400)/3600),mm=Math.floor((s%3600)/60),ss=s%60;D.rt.textContent=`本站已运行 ${dd}天 ${hh}小时 ${mm}分钟 ${ss}秒`;};
 const updCopyright=()=>{const cp=window.appConfig?.copyright;if(cp&&cp.trim()){D.ca.innerHTML=cp;}else{D.ca.style.display='none';}};
 updRuntime();setInterval(updRuntime,1000);updCopyright();
 const setTheme=()=>{const dark=localStorage.getItem('mc_theme')==='dark';document.documentElement.setAttribute('data-theme',dark?'dark':'light');D.ti.className=dark?'fas fa-sun':'fas fa-moon';D.tt.setAttribute('aria-label',dark?'切换为浅色模式':'切换为深色模式');};
@@ -179,7 +167,7 @@ const initObs=()=>{if(obs)obs.disconnect();obs=new IntersectionObserver(entries=
 const rebuild=()=>{if(!S.filteredSorted.length){D.g.innerHTML='';D.g.classList.add('hidden');D.e.classList.remove('hidden');D.rs.textContent='共 0 个作品';return;}D.g.classList.remove('hidden');D.e.classList.add('hidden');D.rs.textContent=`共 ${S.filteredSorted.length} 个作品${S.keyword?` · 匹配 "${S.keyword}"`:''}`;let html='';for(let i=0;i<S.filteredSorted.length;i++){html+=`<div class="card-placeholder skeleton-card" data-index="${i}"><div class="skeleton-visual"></div><div class="skeleton-body"><div class="skeleton-title"></div><div class="skeleton-meta"></div><div class="skeleton-meta short"></div><div class="skeleton-btn"></div></div></div>`;}D.g.innerHTML=html;D.g.classList.toggle('list-view',S.view==='list');if(obs)obs.disconnect();initObs();};
 const updateRender=()=>{if(!S.musicData||!Array.isArray(S.musicData)){S.filteredSorted=[];D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent='暂无音乐数据';D.ed.textContent='请确保外部 music-data.js 存在且格式正确';D.rs.textContent='无数据';return;}let filtered=S.musicData;if(S.keyword.trim()){const kw=S.keyword.trim().toLowerCase();filtered=S.musicData.filter(i=>(i.title&&i.title.toLowerCase().includes(kw))||(i.author&&i.author.toLowerCase().includes(kw)));}S.filteredSorted=getSorted(filtered);if(!S.filteredSorted.length){D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent='没有找到相关资源';D.ed.textContent=`没有找到包含 "${S.keyword}" 的音乐`;D.rs.textContent='共 0 个作品';return;}rebuild();};
 const refresh=()=>updateRender();
-const switchView=(newView)=>{if(S.view===newView||S.isSwitchingView)return;S.isSwitchingView=true;D.g.classList.add('switching');setTimeout(()=>{S.view=newView;D.g.classList.toggle('list-view',newView==='list');D.g.classList.remove('switching');S.isSwitchingView=false;},100);};
+const switchView=(newView)=>{if(S.view===newView||S.isSwitchingView)return;S.isSwitchingView=true;D.g.classList.add('fade-out');setTimeout(()=>{S.view=newView;D.g.classList.toggle('list-view',newView==='list');D.g.classList.remove('fade-out');S.isSwitchingView=false;},60);};
 D.s.addEventListener('input',()=>{S.keyword=D.s.value;S.isTyping=true;D.sc.classList.toggle('visible',S.keyword.length>0);deb(()=>{S.isTyping=false;refresh();},C.debounceDelay);});
 D.sc.addEventListener('click',()=>{D.s.value='';S.keyword='';D.sc.classList.remove('visible');refresh();D.s.focus();});
 const closeSort=()=>{D.sd.classList.remove('show');D.bd.classList.remove('show');D.sb.setAttribute('aria-expanded','false');};
@@ -197,7 +185,32 @@ const loadData=()=>{if(window.musicData&&Array.isArray(window.musicData)&&window
 window.addEventListener('error',function(e){if(e.target.tagName==='SCRIPT'&&e.target.src&&e.target.src.includes('music-data.js')){S.musicData=null;D.et.textContent='外部脚本加载失败';D.ed.textContent='music-data.js 文件不存在或网络错误';D.rs.textContent='加载失败';toast('无法加载音乐数据文件','error');refresh();}});
 const updPlaceholder=()=>{D.s.placeholder=window.innerWidth<=380?'搜索...':'搜索音乐或作者...';};
 window.addEventListener('resize',updPlaceholder);
-if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{updPlaceholder();loadData();});}else{updPlaceholder();loadData();}
+// 动态创建底部按钮（文字和链接来自 config.js）
+const initFooterButtons=()=>{
+    if(!D.fb) return;
+    const cfg=window.appConfig || {};
+    const groupBtn=cfg.communityButton || { text:'加入交流群', url:'#', icon:'fab fa-qq' };
+    const matrixBtn=cfg.matrixButton || { text:'矩阵方块软件网', url:'#', icon:'fas fa-cubes' };
+    const createLink=(btnData)=>{
+        const a=document.createElement('a');
+        a.href=btnData.url;
+        a.className='footer-btn';
+        a.target='_blank';
+        a.rel='noopener noreferrer';
+        a.setAttribute('aria-label',btnData.text);
+        const icon=document.createElement('i');
+        icon.className=btnData.icon || (btnData.text.includes('QQ')?'fab fa-qq':'fas fa-external-link-alt');
+        a.appendChild(icon);
+        a.appendChild(document.createTextNode(' '+btnData.text));
+        return a;
+    };
+    D.fb.innerHTML='';
+    D.fb.appendChild(createLink(groupBtn));
+    D.fb.appendChild(createLink(matrixBtn));
+};
+if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>{updPlaceholder();initFooterButtons();loadData();});
+}else{updPlaceholder();initFooterButtons();loadData();}
 })();
 </script>
 </body>
