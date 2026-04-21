@@ -9,7 +9,7 @@ window.appConfig = {
     },
     matrixButton: {
         text: "矩阵方块软件网",
-        url: "jzfk.indevs.in",
+        url: "https://jzfk.indevs.in",
         icon: "fas fa-cubes"
     }
 };
