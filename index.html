@@ -9,6 +9,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg-primary:#f8fafc;--bg-secondary:#fff;--bg-card:#fff;--bg-elevated:#f1f5f9;--accent:#10b981;--accent-hover:#059669;--accent-glow:rgba(16,185,129,.2);--text-primary:#0f172a;--text-secondary:#475569;--border:#e2e8f0;--shadow-sm:0 4px 6px -1px rgba(0,0,0,.05);--shadow-md:0 10px 15px -3px rgba(0,0,0,.08);--shadow-lg:0 20px 25px -5px rgba(0,0,0,.1);--gradient-visual:linear-gradient(135deg,#d1fae5,#a7f3d0 50%,#6ee7b7);--card-radius:24px;--focus-ring:0 0 0 3px rgba(16,185,129,.4);--transition-normal:0.2s cubic-bezier(0.2,0.9,0.4,1.1)}
 [data-theme="dark"]{--bg-primary:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--bg-elevated:#1e293b;--accent:#10b981;--accent-hover:#34d399;--accent-glow:rgba(16,185,129,.3);--text-primary:#f1f5f9;--text-secondary:#94a3b8;--border:#475569;--shadow-sm:0 4px 6px -1px rgba(0,0,0,.4);--shadow-md:0 10px 15px -3px rgba(0,0,0,.5);--shadow-lg:0 25px 50px -12px rgba(0,0,0,.6);--gradient-visual:linear-gradient(135deg,#064e3b,#065f46 50%,#047857);--focus-ring:0 0 0 3px rgba(52,211,153,.4)}
+html{transition:background-color 0.3s ease,color 0.2s ease}
 body,.site-header,.toolbar,.resource-card,.card-visual,.btn-download,.search-input,.sort-select,.view-btn,.theme-switch,.back2top,.sort-dropdown,.empty-state,.kbd-hint,.toast{transition:background-color var(--transition-normal),border-color var(--transition-normal),color .15s,box-shadow var(--transition-normal),transform var(--transition-normal)}
 body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;min-height:100vh;background-image:radial-gradient(circle at 20% 50%,rgba(16,185,129,.04),transparent 50%),radial-gradient(circle at 80% 80%,rgba(59,130,246,.04),transparent 50%)}
 .site-header{position:sticky;top:0;z-index:100;background:var(--bg-secondary);backdrop-filter:blur(16px);background-color:rgba(248,250,252,.85);border-bottom:1px solid var(--border)}[data-theme="dark"] .site-header{background:rgba(15,23,42,.85)}
@@ -46,16 +47,17 @@ body{background:var(--bg-primary);color:var(--text-primary);font-family:-apple-s
 .dropdown-backdrop{position:fixed;top:0;left:0;right:0;bottom:0;background:transparent;z-index:55;opacity:0;visibility:hidden;transition:opacity 0.2s}
 .dropdown-backdrop.show{opacity:1;visibility:visible}
 .result-stats{font-size:.8rem;color:var(--text-secondary);background:var(--bg-elevated);padding:5px 14px;border-radius:40px;border:1px solid var(--border);white-space:nowrap;flex-shrink:1;min-width:0}
-.theme-switch{background:var(--bg-elevated);border:1px solid var(--border);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-secondary);outline:none;flex-shrink:0}
+.theme-switch{background:var(--bg-elevated);border:1px solid var(--border);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-secondary);outline:none;flex-shrink:0;transition:transform 0.2s ease,background-color 0.2s,border-color 0.2s}
 .theme-switch:focus-visible{box-shadow:var(--focus-ring)}
-.theme-switch:hover{transform:scale(.96);border-color:var(--accent);color:var(--accent)}
+.theme-switch:hover{transform:scale(0.96);border-color:var(--accent);color:var(--accent)}
 .theme-switch:active{transform:scale(0.92)}
-.theme-switch i{transition:transform 0.3s cubic-bezier(0.34,1.2,0.64,1),color 0.2s}
+.theme-switch i{transition:transform 0.4s cubic-bezier(0.34,1.2,0.64,1),color 0.2s}
 .theme-switch:active i{transform:rotate(180deg) scale(0.85)}
 .toolbar-btn{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:40px;background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-primary);text-decoration:none;font-size:.85rem;font-weight:500;transition:all 0.2s ease;cursor:pointer;outline:none}
 .toolbar-btn:focus-visible{box-shadow:var(--focus-ring)}
-.toolbar-btn i{font-size:.9rem;color:var(--accent)}
+.toolbar-btn i{font-size:.9rem;color:var(--accent);transition:transform 0.2s}
 .toolbar-btn:hover{transform:translateY(-2px);border-color:var(--accent);background:var(--bg-card);box-shadow:var(--shadow-sm)}
+.toolbar-btn:hover i{transform:scale(1.1)}
 .toolbar-btn:active{transform:translateY(0)}
 .container{max-width:1440px;margin:0 auto;padding:32px 24px}
 .resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;transition:opacity 0.2s ease,transform 0.2s ease;opacity:1;transform:scale(1)}
@@ -155,7 +157,7 @@ const esc=s=>s?s.replace(/[&<>]/g,m=>m==='&'?'&amp;':m==='<'?'&lt;':'&gt;'):'';
 const escRegex=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const highlight=(t,k)=>{if(!k||!t)return esc(t);const kw=k.trim().toLowerCase();if(!kw)return esc(t);const et=esc(t);return et.replace(new RegExp(`(${escRegex(kw)})`,'gi'),'<mark class="highlight">$1</mark>');};
 const toast=(msg,type='info')=>{D.tm.textContent=msg;D.toast.className='toast '+(type==='error'?'error ':'')+'show';clearTimeout(toTimer);toTimer=setTimeout(()=>D.toast.classList.remove('show'),3000);};
-const updRuntime=()=>{const n=new Date(),d=n-new Date(C.startDate);if(isNaN(d)||d<0){D.rt.textContent='';return;}const s=Math.floor(d/1000),dd=Math.floor(s/86400),hh=Math.floor((s%86400)/3600),mm=Math.floor((s%3600)/60),ss=s%60;D.rt.textContent=`本站已运行 ${dd}天 ${hh}小时 ${mm}分钟 ${ss}秒`;};
+const updRuntime=()=>{const n=new Date(),d=n-new Date(C.startDate);if(isNaN(d)||d<0){D.rt.textContent='';return;}const s=Math.floor(d/1000),dd=Math.floor(s/86400),hh=Math.floor((s%86400)/3600),mm=Math.floor((s%3600)/60),ss=s%60;D.rt.textContent=`⚡ 本站已运行 ${dd}天 ${hh}小时 ${mm}分钟 ${ss}秒`;};
 const updCopyright=()=>{const cp=window.appConfig?.copyright;if(cp&&cp.trim()){D.ca.innerHTML=cp;}else{D.ca.style.display='none';}};
 updRuntime();setInterval(updRuntime,1000);updCopyright();
 const setTheme=()=>{const dark=localStorage.getItem('mc_theme')==='dark';document.documentElement.setAttribute('data-theme',dark?'dark':'light');D.ti.className=dark?'fas fa-sun':'fas fa-moon';D.tt.setAttribute('aria-label',dark?'切换为浅色模式':'切换为深色模式');};
@@ -170,7 +172,8 @@ const rebuild=()=>{if(!S.filteredSorted.length){D.g.innerHTML='';D.g.classList.a
 const updateRender=()=>{if(!S.musicData||!Array.isArray(S.musicData)){S.filteredSorted=[];D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent='暂无音乐数据';D.ed.textContent='请确保外部 music-data.js 存在且格式正确';D.rs.textContent='无数据';return;}let filtered=S.musicData;if(S.keyword.trim()){const kw=S.keyword.trim().toLowerCase();filtered=S.musicData.filter(i=>(i.title&&i.title.toLowerCase().includes(kw))||(i.author&&i.author.toLowerCase().includes(kw)));}S.filteredSorted=getSorted(filtered);if(!S.filteredSorted.length){D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent='没有找到相关资源';D.ed.textContent=`没有找到包含 "${S.keyword}" 的音乐`;D.rs.textContent='共 0 个作品';return;}rebuild();};
 const refresh=()=>updateRender();
 const switchView=(newView)=>{if(S.view===newView||S.isSwitchingView)return;S.isSwitchingView=true;D.g.classList.add('view-transition');setTimeout(()=>{S.view=newView;const isList=newView==='list';if(isList) D.g.classList.add('list-view'); else D.g.classList.remove('list-view');setTimeout(()=>{D.g.classList.remove('view-transition');S.isSwitchingView=false;},50);},150);};
-const initToolbarButtons=()=>{if(!D.tb) return;const cfg=window.appConfig||{};const groupBtn=cfg.communityButton||{text:'加入交流群',url:'#',icon:'fab fa-qq'};const matrixBtn=cfg.matrixButton||{text:'矩阵方块软件网',url:'#',icon:'fas fa-cubes'};const createBtn=(data)=>{const a=document.createElement('a');a.href=data.url;a.className='toolbar-btn';a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',data.text);const i=document.createElement('i');i.className=data.icon;const span=document.createElement('span');span.textContent=data.text;a.appendChild(i);a.appendChild(span);return a;};D.tb.innerHTML='';D.tb.appendChild(createBtn(groupBtn));D.tb.appendChild(createBtn(matrixBtn));};
+const normalizeUrl=(url)=>{if(!url||url==='#')return '#';if(url.startsWith('http://')||url.startsWith('https://'))return url;if(url.startsWith('//'))return 'https:'+url;console.warn('URL缺少协议，已自动补充 https://',url);return 'https://'+url;};
+const initToolbarButtons=()=>{if(!D.tb) return;const cfg=window.appConfig||{};const groupBtn=cfg.communityButton||{text:'加入交流群',url:'#',icon:'fab fa-qq'};const matrixBtn=cfg.matrixButton||{text:'矩阵方块软件网',url:'#',icon:'fas fa-cubes'};const createBtn=(data)=>{const a=document.createElement('a');a.href=normalizeUrl(data.url);a.className='toolbar-btn';a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',data.text);const i=document.createElement('i');i.className=data.icon;const span=document.createElement('span');span.textContent=data.text;a.appendChild(i);a.appendChild(span);return a;};D.tb.innerHTML='';D.tb.appendChild(createBtn(groupBtn));D.tb.appendChild(createBtn(matrixBtn));};
 D.s.addEventListener('input',()=>{S.keyword=D.s.value;S.isTyping=true;D.sc.classList.toggle('visible',S.keyword.length>0);deb(()=>{S.isTyping=false;refresh();},C.debounceDelay);});
 D.sc.addEventListener('click',()=>{D.s.value='';S.keyword='';D.sc.classList.remove('visible');refresh();D.s.focus();});
 const closeSort=()=>{D.sd.classList.remove('show');D.bd.classList.remove('show');D.sb.setAttribute('aria-expanded','false');};
