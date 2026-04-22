@@ -735,5 +735,206 @@ author: "BY2",
 size: "7.25 KB",
 date: "2026-04-19",
 downloadUrl: "music/凑热闹.zip"
+},
+{
+id: 93,
+title: "Clock Paradox (时钟悖论)",
+author: "WyvernP",
+size: "3.86 KB",
+date: "2026-04-22",
+downloadUrl: "music/时钟悖论.zip"
+},
+{
+id: 94,
+title: "弥渡山歌",
+author: "云南民歌 / 阿音坊组合",
+size: "3.52 KB",
+date: "2026-04-22",
+downloadUrl: "music/弥渡山歌.zip"
+},
+{
+id: 95,
+title: "爱情讯息",
+author: "郭静",
+size: "5.05 KB",
+date: "2026-04-22",
+downloadUrl: "music/爱情讯息.zip"
+},
+{
+id: 96,
+title: "Wonderful U",
+author: "AGA (江海迦)",
+size: "5.65 KB",
+date: "2026-04-22",
+downloadUrl: "music/Wonderful U.zip"
+},
+{
+id: 97,
+title: "Way Back Home",
+author: "SHAUN (숀)",
+size: "1.2 KB",
+date: "2026-04-22",
+downloadUrl: "music/Way Back Home.zip"
+},
+{
+id: 98,
+title: "Umbrella",
+author: "Rihanna (蕾哈娜) ft. Jay-Z",
+size: "2.53 KB",
+date: "2026-04-22",
+downloadUrl: "music/Umbrella.zip"
+},
+{
+id: 99,
+title: "Ticking",
+author: "TIN",
+size: "7.38 KB",
+date: "2026-04-22",
+downloadUrl: "music/Ticking.zip"
+},
+{
+id: 100,
+title: "The Truth That You Leave",
+author: "Pianoboy (高至豪)",
+size: "4.74 KB",
+date: "2026-04-22",
+downloadUrl: "music/The Truth That You Leave.zip"
+},
+{
+id: 101,
+title: "The Entertainer",
+author: "Scott Joplin (斯科特·乔普林)",
+size: "1.77 KB",
+date: "2026-04-22",
+downloadUrl: "music/The Entertainer.zip"
+},
+{
+id: 102,
+title: "Stay Alive",
+author: "José González",
+size: "6.39 KB",
+date: "2026-04-22",
+downloadUrl: "music/Stay Alive.zip"
+},
+{
+id: 103,
+title: "See You Again",
+author: "Wiz Khalifa ft. Charlie Puth",
+size: "2.77 KB",
+date: "2026-04-22",
+downloadUrl: "music/See You Again.zip"
+},
+{
+id: 104,
+title: "Ring of Fortune",
+author: "佐佐木惠梨",
+size: "2.82 KB",
+date: "2026-04-22",
+downloadUrl: "music/Ring of Fortune.zip"
+},
+{
+id: 105,
+title: "Normal No More",
+author: "TYNAN & Laxcity",
+size: "2.4 KB",
+date: "2026-04-22",
+downloadUrl: "music/Normal no more.zip"
+},
+{
+id: 106,
+title: "nop",
+author: "陈越龙",
+size: "811 B",
+date: "2026-04-22",
+downloadUrl: "music/nop.zip"
+},
+{
+id: 107,
+title: "Never Gonna Give You Up（瑞克摇）",
+author: "Rick Astley",
+size: "12.72 KB",
+date: "2026-04-22",
+downloadUrl: "music/Never Gonna Give You Up(瑞克瑶).zip"
+},
+{
+id: 108,
+title: "Nevada",
+author: "Vicetone ft. Cozi Zuehlsdorff",
+size: "5.26 KB",
+date: "2026-04-22",
+downloadUrl: "music/nevada.zip"
+},
+{
+id: 109,
+title: "Mine",
+author: "Taylor Swift (泰勒·斯威夫特)",
+size: "3.22 KB",
+date: "2026-04-22",
+downloadUrl: "music/mine.zip"
+},
+{
+id: 110,
+title: "Love Story",
+author: "Taylor Swift (泰勒·斯威夫特)",
+size: "2.36 KB",
+date: "2026-04-22",
+downloadUrl: "music/Love Story.zip"
+},
+{
+id: 111,
+title: "Letter That Writing In The Wind (写在风中的信)",
+author: "Jannik",
+size: "3.46 KB",
+date: "2026-04-22",
+downloadUrl: "music/Letter That Writing In The Wind(写在风中的信).zip"
+},
+{
+id: 112,
+title: "Lemon",
+author: "米津玄师 (Yonezu Kenshi)",
+size: "2.27 KB",
+date: "2026-04-22",
+downloadUrl: "music/lemon.zip"
+},
+{
+id: 113,
+title: "Komorebi (叶隙间洒落的阳光)",
+author: "m-taku",
+size: "5.58 KB",
+date: "2026-04-22",
+downloadUrl: "music/Komoreb(叶隙间洒落的阳光)i.zip"
+},
+{
+id: 114,
+title: "His Theme",
+author: "Toby Fox",
+size: "2.12 KB",
+date: "2026-04-22",
+downloadUrl: "music/His_theme.zip"
+},
+{
+id: 115,
+title: "Everywhere We Go",
+author: "陈冠希 / MC 仁 / 厨房仔 / 应采儿",
+size: "2.57 KB",
+date: "2026-04-22",
+downloadUrl: "music/everywhere we go.zip"
+},
+{
+id: 116,
+title: "Dawn (黎明将至)",
+author: "Blues Saraceno",
+size: "2.56 KB",
+date: "2026-04-22",
+downloadUrl: "music/Dawn(黎明将至).zip"
+},
+{
+id: 117,
+title: "Are You Lost (你迷失了吗)",
+author: "Park Bird",
+size: "1.02 KB",
+date: "2026-04-22",
+downloadUrl: "music/Are You Lost(你迷失了吗).zip"
 }
 ];
+
