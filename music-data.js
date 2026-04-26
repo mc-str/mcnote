@@ -179,7 +179,7 @@ downloadUrl: "music/最后一页.zip"
 {
 id: 23,
 title: "最后攻势",
-author: "游戏原声",
+author: "Westwood Studios(西木工作室)",
 size: "2.72 KB",
 date: "2026-04-19",
 downloadUrl: "music/最后攻势.zip"
@@ -187,7 +187,7 @@ downloadUrl: "music/最后攻势.zip"
 {
 id: 24,
 title: "植物大战僵尸",
-author: "游戏原声",
+author: "PopCap Games(宝开游戏)",
 size: "2.14 KB",
 date: "2026-04-19",
 downloadUrl: "music/植物大战僵尸.zip"
@@ -395,7 +395,7 @@ downloadUrl: "music/青花瓷.zip"
 {
 id: 50,
 title: "千恋万花",
-author: "游戏原声",
+author: "Yuzu-Soft(柚子社)",
 size: "5.57 KB",
 date: "2026-04-19",
 downloadUrl: "music/千恋万花.zip"
@@ -475,7 +475,7 @@ downloadUrl: "music/莫愁乡.zip"
 {
 id: 60,
 title: "迷你世界大厅音乐",
-author: "迷你世界游戏原声",
+author: "迷你玩",
 size: "815 B",
 date: "2026-04-19",
 downloadUrl: "music/迷你世界大厅音乐.zip"
@@ -611,7 +611,7 @@ downloadUrl: "music/幻想是痛的延续.zip"
 {
 id: 77,
 title: "欢乐斗地主",
-author: "游戏原声",
+author: "腾讯游戏",
 size: "674 B",
 date: "2026-04-19",
 downloadUrl: "music/欢乐斗地主.zip"
@@ -935,6 +935,150 @@ author: "Park Bird",
 size: "1.02 KB",
 date: "2026-04-22",
 downloadUrl: "music/Are You Lost(你迷失了吗).zip"
+}
+{
+id: 118,
+title: "Aria Math",
+author: "C418",
+size: "4.41 KB",
+date: "2026-04-26",
+downloadUrl: "music/Aria Math.zip"
+},
+{
+id: 119,
+title: "Automaton Waltz",
+author: "Pigeon Games(鸽游)",
+size: "4.41 KB",
+date: "2026-04-26",
+downloadUrl: "music/Automaton Waltz.zip"
+},
+{
+id: 120,
+title: "Billie Jean",
+author: "Michael Jackson",
+size: "11.13 KB",
+date: "2026-04-26",
+downloadUrl: "music/Billie Jean.zip"
+},
+{
+id: 121,
+title: "Episode 33",
+author: "Lowiro(洛维罗工作室)",
+size: "6.66 KB",
+date: "2026-04-26",
+downloadUrl: "music/Episode 33.zip"
+},
+{
+id: 122,
+title: "Minecraft主题曲",
+author: "C418",
+size: "0.97 KB",
+date: "2026-04-26",
+downloadUrl: "music/Minecraft主题曲.zip"
+},
+{
+id: 123,
+title: "On My Eay",
+author: "Eminem/Rihanna",
+size: "3.18 KB",
+date: "2026-04-26",
+downloadUrl: "music/On My Eay.zip"
+},
+{
+id: 124,
+title: "Rrhar'il",
+author: "Camellia",
+size: "14.88 KB",
+date: "2026-04-26",
+downloadUrl: "music/Rrhar'il.zip"
+},
+{
+id: 125,
+title: "Wellerman",
+author: "Nathan Evans",
+size: "2.26 KB",
+date: "2026-04-26",
+downloadUrl: "music/Wellerman.zip"
+},
+{
+id: 126,
+title: "北京欢迎你",
+author: "群星",
+size: "4.89 KB",
+date: "2026-04-26",
+downloadUrl: "music/北京欢迎你.zip"
+},
+{
+id: 127,
+title: "伯虎说",
+author: "伯爵Johnny/唐伯虎Annie",
+size: "2.78 KB",
+date: "2026-04-26",
+downloadUrl: "music/伯虎说.zip"
+},
+{
+id: 128,
+title: "出山",
+author: "花粥/王胜娚",
+size: "1.58 KB",
+date: "2026-04-26",
+downloadUrl: "music/出山.zip"
+},
+{
+id: 129,
+title: "春娇与志明",
+author: "街道办GDC/欧阳耀莹",
+size: "3.21 KB",
+date: "2026-04-26",
+downloadUrl: "music/春娇与志明.zip"
+},
+{
+id: 130,
+title: "春节序曲片段",
+author: "李焕之",
+size: "1.23 KB",
+date: "2026-04-26",
+downloadUrl: "music/春节序曲片段.zip"
+},
+{
+id: 131,
+title: "神的随波逐流",
+author: "初音未来",
+size: "6.61 KB",
+date: "2026-04-26",
+downloadUrl: "music/神的随波逐流.zip"
+},
+{
+id: 132,
+title: "五五天在北京",
+author: "网络改编曲",
+size: "0.96 KB",
+date: "2026-04-26",
+downloadUrl: "music/五五天在北京.zip"
+},
+{
+id: 133,
+title: "新时期的力量",
+author: "网络改编曲",
+size: "1.93 KB",
+date: "2026-04-26",
+downloadUrl: "music/新时期的力量.zip"
+},
+{
+id: 134,
+title: "游山恋",
+author: "海伦",
+size: "3.35 KB",
+date: "2026-04-26",
+downloadUrl: "music/游山恋.zip"
+},
+{
+id: 135,
+title: "谪仙",
+author: "伊格赛听/叶里",
+size: "18.23 KB",
+date: "2026-04-26",
+downloadUrl: "music/谪仙.zip"
 }
 ];
 
