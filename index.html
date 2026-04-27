@@ -127,8 +127,8 @@ mark.highlight{background:rgba(16,185,129,0.3);color:inherit;border-radius:4px;p
 .toast{position:fixed;top:24px;left:50%;transform:translateX(-50%) translateY(-100px);background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:12px 20px;box-shadow:var(--shadow-lg);z-index:200;transition:transform var(--transition-normal);font-size:.9rem;color:var(--text-primary);display:flex;align-items:center;gap:10px}
 .toast.show{transform:translateX(-50%) translateY(0)}
 .toast-icon{color:var(--accent)}.toast.error .toast-icon{color:#ef4444}
-/* 每日推荐 - 优化边框融合与动画 */
-.daily-section{margin-bottom:32px;background:var(--bg-card);border:1px solid var(--border);padding:20px 20px 16px 20px;box-shadow:var(--shadow-sm)}
+/* 每日推荐 - 柔和圆角+细腻阴影 */
+.daily-section{margin-bottom:32px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 16px 20px;box-shadow:var(--shadow-sm)}
 .daily-header{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;flex-wrap:wrap}
 .daily-header h2{font-size:1.2rem;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:8px}
 .daily-header h2 i{font-size:1.2rem}
@@ -137,9 +137,9 @@ mark.highlight{background:rgba(16,185,129,0.3);color:inherit;border-radius:4px;p
 .daily-scroll::-webkit-scrollbar{height:4px}
 .daily-scroll::-webkit-scrollbar-track{background:var(--border);border-radius:2px}
 .daily-scroll::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
-.daily-card{flex:0 0 260px;background:var(--bg-elevated);border:1px solid var(--border);display:flex;flex-direction:column;padding:14px;transition:box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;box-shadow:0 1px 2px rgba(0,0,0,0.02);scroll-margin-top:80px}
+.daily-card{flex:0 0 260px;background:var(--bg-elevated);border-radius:8px;border:1px solid var(--border);display:flex;flex-direction:column;padding:14px;transition:box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;box-shadow:0 2px 4px rgba(0,0,0,0.02);scroll-margin-top:80px}
 .daily-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--accent)}
-.daily-card-visual{height:90px;background:var(--gradient-visual);display:flex;align-items:center;justify-content:center;margin-bottom:14px;transition:filter 0.2s}
+.daily-card-visual{height:90px;background:var(--gradient-visual);border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;transition:filter 0.2s}
 .daily-card:hover .daily-card-visual{filter:brightness(1.02)}
 .daily-card-visual i{font-size:2.5rem;color:var(--accent);filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
 .daily-card-info{flex:1;margin-bottom:12px}
@@ -148,7 +148,6 @@ mark.highlight{background:rgba(16,185,129,0.3);color:inherit;border-radius:4px;p
 .daily-card .btn-download{padding:8px 12px;font-size:.7rem;gap:6px;border-radius:6px;margin-top:auto;align-self:flex-end;width:auto;background:linear-gradient(135deg,var(--accent),var(--accent-hover));transition:all 0.2s}
 .daily-card .btn-download:hover{transform:translateY(-1px);box-shadow:0 4px 8px var(--accent-glow)}
 @media (max-width:680px){.daily-card{flex:0 0 220px}.daily-card-visual{height:70px}.daily-card-visual i{font-size:2rem}}
-/* 资源卡片滚动偏移，避免被固定头部遮挡 */
 .resource-card{scroll-margin-top:80px}
 </style>
 </head>
@@ -219,7 +218,7 @@ const highlight=(t,k)=>{if(!k||!t)return esc(t);const kw=k.trim().toLowerCase();
 const toast=(msg,type='info')=>{D.tm.textContent=msg;D.toast.className='toast '+(type==='error'?'error ':'')+'show';clearTimeout(toTimer);toTimer=setTimeout(()=>D.toast.classList.remove('show'),3000);};
 function triggerDownload(url,btn){if(!url||url==='#')return;if(btn.classList.contains('loading')||btn.classList.contains('success'))return;btn.classList.add('loading');const sp=btn.querySelector('span'),orig=sp?sp.textContent:T.downloadBtnText;if(sp)sp.textContent=T.downloadPreparing;setTimeout(()=>{btn.classList.remove('loading');btn.classList.add('success');const ic=btn.querySelector('i');if(ic)ic.className='fas fa-check';if(sp)sp.textContent=T.downloadComplete;window.open(url,'_blank');setTimeout(()=>{btn.classList.remove('success');if(ic)ic.className='fas fa-download';if(sp)sp.textContent=orig;},1800);},600);}
 const getSorted=a=>{const c=[...a];switch(S.sort){case'nameAsc':c.sort((x,y)=>(x.title||'').localeCompare(y.title||'','zh'));break;case'nameDesc':c.sort((x,y)=>(y.title||'').localeCompare(x.title||'','zh'));break;case'dateDesc':c.sort((x,y)=>new Date(y.date||0)-new Date(x.date||0));break;case'dateAsc':c.sort((x,y)=>new Date(x.date||0)-new Date(y.date||0));break;default:c.sort((x,y)=>(x.id||0)-(y.id||0));}return c;};
-const getCard=(i,idx)=>{const kw=S.keyword.trim();const th=kw?highlight(i.title,kw):esc(i.title);const ah=kw?highlight(i.author,kw):esc(i.author);const sz=esc(i.size||'未知');const dt=i.date?`<div class="meta-item"><i class="fas fa-calendar-alt"></i><span>${esc(i.date)}</span></div>`:'';return`<article class="resource-card" tabindex="0" data-index="${idx}" aria-label="${esc(i.title)} 作者 ${esc(i.author)}"><div class="card-visual"><i class="fas fa-music music-icon"></i></div><div class="card-body"><h3 class="resource-title">${th}</h3><div class="resource-meta"><div class="meta-item"><i class="fas fa-user"></i><span>${ah}</span></div><div class="meta-item"><i class="fas fa-file-archive"></i><span>${sz}</span></div>${dt}</div><button class="btn-download" data-url="${esc(i.downloadUrl||'#')}" aria-label="下载 ${esc(i.title)}"><i class="fas fa-download"></i><span>${T.downloadBtnText}</span></button></div></article>`;};
+const getCard=(i,idx)=>{const kw=S.keyword.trim();const th=kw?highlight(i.title,kw):esc(i.title);const ah=kw?highlight(i.author,kw):esc(i.author);const sz=esc(i.size||'未知');const dt=i.date?`<div class="meta-item"><i class="fas fa-calendar-alt"></i><span>${esc(i.date)}</span></div>`:'';return`<article class="resource-card" tabindex="0" data-index="${idx}" data-id="${i.id||idx}" aria-label="${esc(i.title)} 作者 ${esc(i.author)}"><div class="card-visual"><i class="fas fa-music music-icon"></i></div><div class="card-body"><h3 class="resource-title">${th}</h3><div class="resource-meta"><div class="meta-item"><i class="fas fa-user"></i><span>${ah}</span></div><div class="meta-item"><i class="fas fa-file-archive"></i><span>${sz}</span></div>${dt}</div><button class="btn-download" data-url="${esc(i.downloadUrl||'#')}" aria-label="下载 ${esc(i.title)}"><i class="fas fa-download"></i><span>${T.downloadBtnText}</span></button></div></article>`;};
 const bindEvents=()=>{D.g.querySelectorAll('.btn-download').forEach(btn=>{if(btn.dataset.listener)return;const url=btn.getAttribute('data-url');btn.addEventListener('click',function(e){e.preventDefault();triggerDownload(url,this);});btn.dataset.listener='true';});D.g.querySelectorAll('.resource-card').forEach(c=>{c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.querySelector('.btn-download')?.click();}});});};
 const loadCard=idx=>{const ph=document.querySelector(`.card-placeholder[data-index='${idx}']`);if(!ph||ph.dataset.loaded==='true')return;const it=S.filteredSorted[idx];if(!it)return;ph.outerHTML=getCard(it,idx);bindEvents();};
 const initObs=()=>{if(obs)obs.disconnect();obs=new IntersectionObserver(entries=>{entries.forEach(e=>{const idx=parseInt(e.target.getAttribute('data-index'));if(!isNaN(idx)&&e.isIntersecting)loadCard(idx);});},{rootMargin:'200px 0px',threshold:0.01});document.querySelectorAll('.card-placeholder').forEach(el=>obs.observe(el));};
@@ -234,13 +233,11 @@ function randomRecommend(){
     const targetSong=pool[randomIndex];
     let targetCard=null;
     const cards=document.querySelectorAll('.resource-card');
-    if(cards[randomIndex])targetCard=cards[randomIndex];
-    else{
-        for(let i=0;i<pool.length;i++){
-            if(pool[i].id===targetSong.id){
-                targetCard=cards[i];
-                break;
-            }
+    for(let i=0;i<cards.length;i++){
+        const cardId=cards[i].getAttribute('data-id');
+        if(cardId==targetSong.id||cards[i].querySelector('.resource-title')?.innerText===targetSong.title){
+            targetCard=cards[i];
+            break;
         }
     }
     if(targetCard){
@@ -254,7 +251,11 @@ function randomRecommend(){
         setTimeout(()=>{targetCard.style.boxShadow=originalShadow;},1500);
         toast(typeof T.toastRandomSuccess==='function'?T.toastRandomSuccess(targetSong.title):`随机推荐：${targetSong.title}`,'success');
     }else{
-        toast(typeof T.toastRandomSuccess==='function'?T.toastRandomSuccess(targetSong.title):`随机推荐：${targetSong.title}`,'success');
+        D.s.value=targetSong.title;
+        S.keyword=targetSong.title;
+        D.sc.classList.toggle('visible',true);
+        refresh();
+        toast(typeof T.toastRandomSuccess==='function'?T.toastRandomSuccess(targetSong.title):`已填入搜索框：${targetSong.title}`,'success');
     }
 }
 const updateRender=()=>{if(!S.musicData||!Array.isArray(S.musicData)){S.filteredSorted=[];D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent=T.emptyTitleDefault;D.ed.textContent=T.emptyDescDefault;D.rs.textContent=T.statsZero;return;}let filtered=S.musicData;if(S.keyword.trim()){const kw=S.keyword.trim().toLowerCase();filtered=S.musicData.filter(item=>{const matchTitle=item.title.toLowerCase().includes(kw);const matchAuthor=item.author.toLowerCase().includes(kw);const matchPinyinTitle=item._pinyin&&item._pinyin.title.includes(kw);const matchPinyinAuthor=item._pinyin&&item._pinyin.author.includes(kw);return matchTitle||matchAuthor||matchPinyinTitle||matchPinyinAuthor;});}S.filteredSorted=getSorted(filtered);if(!S.filteredSorted.length){D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent=T.emptyTitleNoResult;D.ed.textContent=`没有找到包含 "${S.keyword}" 的音乐`;D.rs.textContent=T.statsZero;return;}rebuild();};
