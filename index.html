@@ -247,13 +247,12 @@ function randomRecommend(){
         const originalShadow=targetCard.style.boxShadow;
         targetCard.style.boxShadow='0 0 0 3px var(--accent),0 10px 25px rgba(0,0,0,0.2)';
         setTimeout(()=>{targetCard.style.boxShadow=originalShadow;},1500);
-        toast('随机推荐成功','success');
+        toast(`随机推荐成功：${targetSong.title}`,'success');
     }else{
         D.s.value=targetSong.title;
         S.keyword=targetSong.title;
         D.sc.classList.toggle('visible',true);
         refresh();
-        toast('已填入搜索框，请手动查找','success');
     }
 }
 const updateRender=()=>{if(!S.musicData||!Array.isArray(S.musicData)){S.filteredSorted=[];D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent=T.emptyTitleDefault;D.ed.textContent=T.emptyDescDefault;D.rs.textContent=T.statsZero;return;}let filtered=S.musicData;if(S.keyword.trim()){const kw=S.keyword.trim().toLowerCase();filtered=S.musicData.filter(item=>{const matchTitle=item.title.toLowerCase().includes(kw);const matchAuthor=item.author.toLowerCase().includes(kw);const matchPinyinTitle=item._pinyin&&item._pinyin.title.includes(kw);const matchPinyinAuthor=item._pinyin&&item._pinyin.author.includes(kw);return matchTitle||matchAuthor||matchPinyinTitle||matchPinyinAuthor;});}S.filteredSorted=getSorted(filtered);if(!S.filteredSorted.length){D.g.classList.add('hidden');D.e.classList.remove('hidden');D.et.textContent=T.emptyTitleNoResult;D.ed.textContent=`没有找到包含 "${S.keyword}" 的音乐`;D.rs.textContent=T.statsZero;return;}rebuild();};
