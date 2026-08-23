@@ -1058,9 +1058,9 @@ window.musicData = [
     {
         id: 133,
         title: "再次与你同行",
-        author: "熊大/熊二/光头强",
+        author: "熊大/熊二/光头强（《熊出没》电影十周年主题曲）",
         size: "4.46 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/再次与你同行.zip"
     },
     {
@@ -1068,7 +1068,7 @@ window.musicData = [
         title: "星辰大海",
         author: "黄霄雲",
         size: "5.77 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/星辰大海.zip"
     },
     {
@@ -1076,7 +1076,7 @@ window.musicData = [
         title: "如愿",
         author: "王菲",
         size: "4 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/如愿.zip"
     },
     {
@@ -1084,7 +1084,7 @@ window.musicData = [
         title: "千与千寻",
         author: "久石让",
         size: "4.74 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/千与千寻.zip"
     },
     {
@@ -1092,7 +1092,7 @@ window.musicData = [
         title: "千年之恋",
         author: "飞儿乐团 F.I.R.",
         size: "16.26 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/千年之恋.zip"
     },
     {
@@ -1100,23 +1100,23 @@ window.musicData = [
         title: "梦中的婚礼",
         author: "Richard Clayderman (理查德·克莱德曼)",
         size: "3.37 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/梦中的婚礼.zip"
     },
     {
         id: 139,
         title: "鹿 be free",
-        author: "尚雯婕",
+        author: "尚雯婕（《熊出没·奇幻空间》主题曲）",
         size: "2.39 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/鹿 be free.zip"
     },
     {
         id: 140,
         title: "荒天帝",
-        author: "何涛",
+        author: "何涛（《完美世界》荒天帝主题曲《荒》）",
         size: "2.89 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/荒天帝.zip"
     },
     {
@@ -1124,7 +1124,7 @@ window.musicData = [
         title: "沈园外",
         author: "阿YueYue/戾格/小田音乐社",
         size: "1.61 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/沈园外.zip"
     },
     {
@@ -1132,7 +1132,7 @@ window.musicData = [
         title: "大鱼",
         author: "周深",
         size: "4.54 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/大鱼.zip"
     },
     {
@@ -1140,7 +1140,7 @@ window.musicData = [
         title: "可不可以",
         author: "张紫豪",
         size: "8.98 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/可不可以.zip"
     },
     {
@@ -1148,7 +1148,7 @@ window.musicData = [
         title: "夜空中最亮的星",
         author: "逃跑计划",
         size: "3.31 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/夜空中最亮的星.zip"
     },
     {
@@ -1156,7 +1156,7 @@ window.musicData = [
         title: "海屿你",
         author: "马也_Crabbit / Cole先生",
         size: "31.56 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/海屿你.txt"
     },
     {
@@ -1164,7 +1164,7 @@ window.musicData = [
         title: "刺客伍六七主题曲",
         author: "大主宰乐团（《剪刀刺客》）",
         size: "34.42 KB",
-        date: "2026-08-23",
+        date: "2026-08-24",
         downloadUrl: "music/刺客伍六七主题曲.txt"
     },
     {
@@ -1172,7 +1172,7 @@ window.musicData = [
         title: "致爱丽丝",
         author: "贝多芬 (Beethoven)",
         size: "7.02 KB",
-        date: "2026-07-23",
+        date: "2026-08-24",
         downloadUrl: "music/致爱丽丝.txt"
     },
     {
@@ -1180,7 +1180,7 @@ window.musicData = [
         title: "只要平凡",
         author: "张杰/张碧晨",
         size: "12.38 KB",
-        date: "2026-07-23",
+        date: "2026-08-24",
         downloadUrl: "music/只要平凡.txt"
     },
     {
@@ -1188,7 +1188,7 @@ window.musicData = [
         title: "人间烟火",
         author: "程响",
         size: "9.98 KB",
-        date: "2026-05-05",
+        date: "2026-08-24",
         downloadUrl: "music/人间烟火.txt"
     },
     {
@@ -1196,7 +1196,7 @@ window.musicData = [
         title: "游京",
         author: "海伦",
         size: "14.1 KB",
-        date: "2026-05-05",
+        date: "2026-08-24",
         downloadUrl: "music/游京.txt"
     },
     {
@@ -1204,7 +1204,7 @@ window.musicData = [
         title: "520AM",
         author: "soldier（原唱）/ 队长AIa（翻唱）",
         size: "18.61 KB",
-        date: "2026-05-05",
+        date: "2026-08-24",
         downloadUrl: "music/520AM.txt"
     },
     {
@@ -1212,7 +1212,7 @@ window.musicData = [
         title: "世界这么大还是遇见你",
         author: "程响",
         size: "6.61 KB",
-        date: "2026-05-05",
+        date: "2026-08-24",
         downloadUrl: "music/世界这么大还是遇见你.txt"
     },
     {
@@ -1220,7 +1220,7 @@ window.musicData = [
         title: "微微",
         author: "傅如乔",
         size: "7.03 KB",
-        date: "2026-05-05",
+        date: "2026-08-24",
         downloadUrl: "music/微微.txt"
     },
     {
@@ -1228,7 +1228,7 @@ window.musicData = [
         title: "体面",
         author: "于文文",
         size: "8.99 KB",
-        date: "2026-05-05",
+        date: "2026-08-24",
         downloadUrl: "music/体面.txt"
     },
     {
@@ -1236,7 +1236,7 @@ window.musicData = [
         title: "寂寞烟火",
         author: "朱婧汐（原唱）/ 品冠、王赫野（翻唱）",
         size: "27.29 KB",
-        date: "2026-05-05",
+        date: "2026-08-24",
         downloadUrl: "music/寂寞烟火.txt"
     },
     {
@@ -1244,7 +1244,7 @@ window.musicData = [
         title: "忘川彼岸",
         author: "零一九零贰",
         size: "9.57 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/忘川彼岸.txt"
     },
     {
@@ -1252,7 +1252,7 @@ window.musicData = [
         title: "下山",
         author: "要不要买菜",
         size: "33.93 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/下山.txt"
     },
     {
@@ -1260,7 +1260,7 @@ window.musicData = [
         title: "追光者",
         author: "岑宁儿",
         size: "17.6 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/追光者.txt"
     },
     {
@@ -1268,7 +1268,7 @@ window.musicData = [
         title: "江湖之间",
         author: "曹雨航/朝歌夜弦",
         size: "21.83 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/江湖之间.txt"
     },
     {
@@ -1276,7 +1276,7 @@ window.musicData = [
         title: "破茧",
         author: "张韶涵",
         size: "17.19 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/破茧.txt"
     },
     {
@@ -1284,7 +1284,7 @@ window.musicData = [
         title: "wake",
         author: "Hillsong Young & Free",
         size: "27.85 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/wake.txt"
     },
     {
@@ -1292,7 +1292,7 @@ window.musicData = [
         title: "出现又离开",
         author: "梁博",
         size: "15.95 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/出现又离开.txt"
     },
     {
@@ -1300,7 +1300,7 @@ window.musicData = [
         title: "清空",
         author: "王忻辰/苏星婕",
         size: "14.9 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/清空.txt"
     },
     {
@@ -1308,7 +1308,7 @@ window.musicData = [
         title: "暮色回响",
         author: "吉星出租（原唱）/ 张韶涵（翻唱）",
         size: "35.12 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/暮色回响.txt"
     },
     {
@@ -1316,7 +1316,7 @@ window.musicData = [
         title: "芒种",
         author: "音阙诗听/赵方婧",
         size: "17.07 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/芒种.txt"
     },
     {
@@ -1324,7 +1324,7 @@ window.musicData = [
         title: "爱过错过",
         author: "告五人（原曲《爱人错过》）",
         size: "24.51 KB",
-        date: "2026-05-04",
+        date: "2026-08-24",
         downloadUrl: "music/爱过错过.txt"
     },
     {
@@ -1332,7 +1332,7 @@ window.musicData = [
         title: "知我",
         author: "哦漏/国风堂（动画《剑来》片尾曲）",
         size: "22.76 KB",
-        date: "2026-05-03",
+        date: "2026-08-24",
         downloadUrl: "music/知我.txt"
     },
     {
@@ -1340,7 +1340,7 @@ window.musicData = [
         title: "A Little Story",
         author: "Valentin (纯音乐)",
         size: "29.35 KB",
-        date: "2026-05-02",
+        date: "2026-08-24",
         downloadUrl: "music/A Little Story.txt"
     },
     {
@@ -1348,7 +1348,7 @@ window.musicData = [
         title: "天气之子 - 幻",
         author: "RADWIMPS (电影《天气之子》原声)",
         size: "9.52 KB",
-        date: "2026-05-02",
+        date: "2026-08-24",
         downloadUrl: "music/天气之子.幻.txt"
     },
     {
@@ -1356,7 +1356,7 @@ window.musicData = [
         title: "不怕",
         author: "赵蓓/赵蕾（动画《神兵小将》片尾曲）",
         size: "20.54 KB",
-        date: "2026-05-01",
+        date: "2026-08-24",
         downloadUrl: "music/不怕.txt"
     },
     {
@@ -1364,7 +1364,7 @@ window.musicData = [
         title: "潮汐",
         author: "安苏羽/傅梦彤/IN-K",
         size: "12.92 KB",
-        date: "2026-03-20",
+        date: "2026-08-24",
         downloadUrl: "music/潮汐.txt"
     }
 ];
