@@ -237,7 +237,7 @@ window.musicData = [
         author: "葛东琪",
         size: "3.1 KB",
         date: "2026-04-19",
-        downloadUrl: "music/悬溺原琴版.zip"
+        downloadUrl: "music/悬溺一原琴版.zip"
     },
     {
         id: 31,
@@ -333,7 +333,7 @@ window.musicData = [
         author: "网络古风",
         size: "4.28 KB",
         date: "2026-04-19",
-        downloadUrl: "music/辞青.zip"
+        downloadUrl: "music/悬溺一原琴版.zip"
     },
     {
         id: 43,
@@ -440,14 +440,6 @@ window.musicData = [
         downloadUrl: "music/你离开的事实.zip"
     },
     {
-        id: 56,
-        title: "鸢之诗",
-        author: "网络古风",
-        size: "2.51 KB",
-        date: "2026-04-19",
-        downloadUrl: "music/鸢之诗.zip"
-    },
-    {
         id: 57,
         title: "莫愁乡",
         author: "亚细亚旷世奇才",
@@ -485,7 +477,7 @@ window.musicData = [
         author: "柳轻颂",
         size: "2.84 KB",
         date: "2026-04-19",
-        downloadUrl: "music/柳轻颂向日葵.zip"
+        downloadUrl: "music/柳轻颂 - 向日葵.zip"
     },
     {
         id: 62,
@@ -565,7 +557,7 @@ window.musicData = [
         author: "郑佳磊",
         size: "759 B",
         date: "2026-04-19",
-        downloadUrl: "music/回来吧刺激战场.zip"
+        downloadUrl: "music/回来吧，刺激战场.zip"
     },
     {
         id: 72,
@@ -605,7 +597,7 @@ window.musicData = [
         author: "王欣宇",
         size: "2.47 KB",
         date: "2026-04-19",
-        downloadUrl: "music/告白.zip"
+        downloadUrl: "music/告白气球.txt"
     },
     {
         id: 77,
@@ -805,7 +797,7 @@ window.musicData = [
         author: "佐佐木惠梨",
         size: "2.82 KB",
         date: "2026-04-22",
-        downloadUrl: "music/Ring of Fortune.zip"
+        downloadUrl: "music/Ring df Fortune.zip"
     },
     {
         id: 102,
@@ -877,7 +869,7 @@ window.musicData = [
         author: "m-taku",
         size: "5.58 KB",
         date: "2026-04-22",
-        downloadUrl: "music/Komoreb(叶隙间洒落的阳光)i.zip"
+        downloadUrl: "music/Komorebi（木漏れ日）.txt"
     },
     {
         id: 111,
@@ -893,7 +885,7 @@ window.musicData = [
         author: "陈冠希 / MC 仁 / 厨房仔 / 应采儿",
         size: "2.57 KB",
         date: "2026-04-22",
-        downloadUrl: "music/everywhere we go.zip"
+        downloadUrl: "music/Everywhere Wo Go.zip"
     },
     {
         id: 113,
@@ -1285,7 +1277,7 @@ window.musicData = [
         author: "Hillsong Young & Free",
         size: "27.85 KB",
         date: "2026-08-24",
-        downloadUrl: "music/wake.txt"
+        downloadUrl: "music/Wake.txt"
     },
     {
         id: 162,
@@ -1341,7 +1333,7 @@ window.musicData = [
         author: "Valentin (纯音乐)",
         size: "29.35 KB",
         date: "2026-08-24",
-        downloadUrl: "music/A Little Story.txt"
+        downloadUrl: "music/A Little Story（一个小故事）.txt"
     },
     {
         id: 169,
@@ -1349,7 +1341,7 @@ window.musicData = [
         author: "RADWIMPS (电影《天气之子》原声)",
         size: "9.52 KB",
         date: "2026-08-24",
-        downloadUrl: "music/天气之子.幻.txt"
+        downloadUrl: "music/天气之子·幻.txt"
     },
     {
         id: 170,
