@@ -17,7 +17,7 @@ window.musicData = [
     },
     {
         id: 3,
-        title: "China_X",
+        title: "China_X（中国_X）",
         author: "徐梦圆",
         size: "4.25 KB",
         date: "2026-04-18",
@@ -729,7 +729,7 @@ window.musicData = [
     },
     {
         id: 93,
-        title: "Wonderful U",
+        title: "Wonderful U（美妙的你）",
         author: "AGA (江海迦)",
         size: "5.65 KB",
         date: "2026-04-22",
@@ -737,7 +737,7 @@ window.musicData = [
     },
     {
         id: 94,
-        title: "Way Back Home",
+        title: "Way Back Home（归家之路）",
         author: "SHAUN (숀)",
         size: "1.2 KB",
         date: "2026-04-22",
@@ -745,7 +745,7 @@ window.musicData = [
     },
     {
         id: 95,
-        title: "Umbrella",
+        title: "Umbrella（雨伞）",
         author: "Rihanna (蕾哈娜) ft. Jay-Z",
         size: "2.53 KB",
         date: "2026-04-22",
@@ -753,7 +753,7 @@ window.musicData = [
     },
     {
         id: 96,
-        title: "Ticking",
+        title: "Ticking（滴答作响）",
         author: "TIN",
         size: "7.38 KB",
         date: "2026-04-22",
@@ -761,7 +761,7 @@ window.musicData = [
     },
     {
         id: 97,
-        title: "The Truth That You Leave",
+        title: "The Truth That You Leave（你留下的真相）",
         author: "Pianoboy (高至豪)",
         size: "4.74 KB",
         date: "2026-04-22",
@@ -769,7 +769,7 @@ window.musicData = [
     },
     {
         id: 98,
-        title: "The Entertainer",
+        title: "The Entertainer（演奏者）",
         author: "Scott Joplin (斯科特·乔普林)",
         size: "1.77 KB",
         date: "2026-04-22",
@@ -777,7 +777,7 @@ window.musicData = [
     },
     {
         id: 99,
-        title: "Stay Alive",
+        title: "Stay Alive（保持活着）",
         author: "José González",
         size: "6.39 KB",
         date: "2026-04-22",
@@ -785,7 +785,7 @@ window.musicData = [
     },
     {
         id: 100,
-        title: "See You Again",
+        title: "See You Again（再见）",
         author: "Wiz Khalifa ft. Charlie Puth",
         size: "2.77 KB",
         date: "2026-04-22",
@@ -793,7 +793,7 @@ window.musicData = [
     },
     {
         id: 101,
-        title: "Ring of Fortune",
+        title: "Ring of Fortune（命运之环）",
         author: "佐佐木惠梨",
         size: "2.82 KB",
         date: "2026-04-22",
@@ -801,7 +801,7 @@ window.musicData = [
     },
     {
         id: 102,
-        title: "Normal No More",
+        title: "Normal No More（不再正常）",
         author: "TYNAN & Laxcity",
         size: "2.4 KB",
         date: "2026-04-22",
@@ -809,7 +809,7 @@ window.musicData = [
     },
     {
         id: 103,
-        title: "nop",
+        title: "nop（无操作）",
         author: "陈越龙",
         size: "811 B",
         date: "2026-04-22",
@@ -825,7 +825,7 @@ window.musicData = [
     },
     {
         id: 105,
-        title: "Nevada",
+        title: "Nevada（内华达）",
         author: "Vicetone ft. Cozi Zuehlsdorff",
         size: "5.26 KB",
         date: "2026-04-22",
@@ -833,7 +833,7 @@ window.musicData = [
     },
     {
         id: 106,
-        title: "Mine",
+        title: "Mine（我的）",
         author: "Taylor Swift (泰勒·斯威夫特)",
         size: "3.22 KB",
         date: "2026-04-22",
@@ -841,7 +841,7 @@ window.musicData = [
     },
     {
         id: 107,
-        title: "Love Story",
+        title: "Love Story（爱情故事）",
         author: "Taylor Swift (泰勒·斯威夫特)",
         size: "2.36 KB",
         date: "2026-04-22",
@@ -857,7 +857,7 @@ window.musicData = [
     },
     {
         id: 109,
-        title: "Lemon",
+        title: "Lemon（柠檬）",
         author: "米津玄师",
         size: "2.27 KB",
         date: "2026-04-22",
@@ -873,7 +873,7 @@ window.musicData = [
     },
     {
         id: 111,
-        title: "His Theme",
+        title: "His Theme（他的主题曲）",
         author: "Toby Fox",
         size: "2.12 KB",
         date: "2026-04-22",
@@ -881,7 +881,7 @@ window.musicData = [
     },
     {
         id: 112,
-        title: "Everywhere We Go",
+        title: "Everywhere We Go（我们去往的每一个地方）",
         author: "陈冠希 / MC 仁 / 厨房仔 / 应采儿",
         size: "2.57 KB",
         date: "2026-04-22",
@@ -905,7 +905,7 @@ window.musicData = [
     },
     {
         id: 115,
-        title: "Aria Math",
+        title: "Aria Math（咏叹调）",
         author: "C418",
         size: "4.41 KB",
         date: "2026-04-26",
@@ -913,7 +913,7 @@ window.musicData = [
     },
     {
         id: 116,
-        title: "Automaton Waltz",
+        title: "Automaton Waltz（自动人偶圆舞曲）",
         author: "PLUM",
         size: "4.41 KB",
         date: "2026-04-26",
@@ -921,7 +921,7 @@ window.musicData = [
     },
     {
         id: 117,
-        title: "Billie Jean",
+        title: "Billie Jean（比莉·简）",
         author: "Michael Jackson",
         size: "11.13 KB",
         date: "2026-04-26",
@@ -929,7 +929,7 @@ window.musicData = [
     },
     {
         id: 118,
-        title: "Episode 33",
+        title: "Episode 33（第33话）",
         author: "She Her Her Hers",
         size: "6.66 KB",
         date: "2026-04-26",
@@ -945,7 +945,7 @@ window.musicData = [
     },
     {
         id: 120,
-        title: "On My Eay",
+        title: "On My Eay（在我耳边）",
         author: "Eminem/Rihanna",
         size: "3.18 KB",
         date: "2026-04-26",
@@ -953,15 +953,15 @@ window.musicData = [
     },
     {
         id: 121,
-        title: "Rrhar'il",
+        title: "Rrhar'il（扭曲世界）",
         author: "Camellia",
         size: "14.88 KB",
         date: "2026-04-26",
-        downloadUrl: "music/Rrhar'il.zip"
+        downloadUrl: "music/Rrhar'il（扭曲世界）.zip"
     },
     {
         id: 122,
-        title: "Wellerman",
+        title: "Wellerman（威勒曼）",
         author: "Nathan Evans",
         size: "2.26 KB",
         date: "2026-04-26",
@@ -1193,11 +1193,11 @@ window.musicData = [
     },
     {
         id: 151,
-        title: "520AM",
+        title: "520AM（凌晨五点二十）",
         author: "soldier（原唱）/ 队长AIa（翻唱）",
         size: "18.61 KB",
         date: "2026-08-24",
-        downloadUrl: "music/520AM.txt"
+        downloadUrl: "music/520AM（凌晨五点二十）.txt"
     },
     {
         id: 152,
@@ -1273,11 +1273,11 @@ window.musicData = [
     },
     {
         id: 161,
-        title: "wake",
+        title: "wake（醒来）",
         author: "Hillsong Young & Free",
         size: "27.85 KB",
         date: "2026-08-24",
-        downloadUrl: "music/Wake.txt"
+        downloadUrl: "music/Wake（醒来）.txt"
     },
     {
         id: 162,
@@ -1329,7 +1329,7 @@ window.musicData = [
     },
     {
         id: 168,
-        title: "A Little Story",
+        title: "A Little Story（一个小故事）",
         author: "Valentin (纯音乐)",
         size: "29.35 KB",
         date: "2026-08-24",
@@ -1361,15 +1361,15 @@ window.musicData = [
     },
     {
         id: 172,
-        title: "7 Weeks And 3 Days",
+        title: "7 Weeks And 3 Days（七周又三天）",
         author: "Evan Call",
         size: "19.43 KB",
         date: "2026-11-03",
-        downloadUrl: "music/7 Weeks And 3 Days.txt"
+        downloadUrl: "music/7 Weeks And 3 Days（七周又三天）.txt"
     },
     {
         id: 173,
-        title: "A Little Story",
+        title: "A Little Story（一个小故事）",
         author: "Valentin",
         size: "28.66 KB",
         date: "2026-11-03",
@@ -1377,71 +1377,71 @@ window.musicData = [
     },
     {
         id: 174,
-        title: "A Rush of Time V1",
+        title: "A Rush of Time V1（时光飞逝 V1）",
         author: "Akira Yamaoka",
         size: "97.94 KB",
         date: "2026-11-03",
-        downloadUrl: "music/A Rush of Time V1.txt"
+        downloadUrl: "music/A Rush of Time V1（时光飞逝 V1）.txt"
     },
     {
         id: 175,
-        title: "AI Bomb",
+        title: "AI Bomb（AI炸弹）",
         author: "见参（音游歌曲）",
         size: "67.11 KB",
         date: "2026-11-03",
-        downloadUrl: "music/AI Bomb.txt"
+        downloadUrl: "music/AI Bomb（AI炸弹）.txt"
     },
     {
         id: 176,
-        title: "APPLE FUNK",
+        title: "APPLE FUNK（苹果放克）",
         author: "phonk",
         size: "39.23 KB",
         date: "2026-11-03",
-        downloadUrl: "music/APPLE FUNK.txt"
+        downloadUrl: "music/APPLE FUNK（苹果放克）.txt"
     },
     {
         id: 177,
-        title: "ATYCHIMANIA",
+        title: "ATYCHIMANIA（狂躁症）",
         author: "phonk / 见参",
         size: "600.96 KB",
         date: "2026-11-03",
-        downloadUrl: "music/ATYCHIMANIA.txt"
+        downloadUrl: "music/ATYCHIMANIA（狂躁症）.txt"
     },
     {
         id: 178,
-        title: "Aaron Smith",
+        title: "Aaron Smith（亚伦·史密斯）",
         author: "Aaron Smith",
         size: "17.76 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Aaron Smith.txt"
+        downloadUrl: "music/Aaron Smith（亚伦·史密斯）.txt"
     },
     {
         id: 179,
-        title: "Abyss",
+        title: "Abyss（深渊）",
         author: "Phonk / 见参",
         size: "32.51 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Abyss.txt"
+        downloadUrl: "music/Abyss（深渊）.txt"
     },
     {
         id: 180,
-        title: "Alan Walker - All Falls Down",
+        title: "Alan Walker - All Falls Down（艾伦·沃克 - 一切都会崩塌）",
         author: "Alan Walker",
         size: "62.17 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Alan Walker - All Falls Down.txt"
+        downloadUrl: "music/Alan Walker - All Falls Down（艾伦·沃克 - 一切都会崩塌）.txt"
     },
     {
         id: 181,
-        title: "Aleph",
+        title: "Aleph（阿莱夫）",
         author: "phonk / Tamás Katona",
         size: "74.04 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Aleph.txt"
+        downloadUrl: "music/Aleph（阿莱夫）.txt"
     },
     {
         id: 182,
-        title: "Alkaline Tears",
+        title: "Alkaline Tears（碱性眼泪）",
         author: "Dirtyphonics / 见参",
         size: "12.48 KB",
         date: "2026-11-03",
@@ -1449,31 +1449,31 @@ window.musicData = [
     },
     {
         id: 183,
-        title: "All star",
+        title: "All star（全明星）",
         author: "Smash Mouth",
         size: "22.72 KB",
         date: "2026-11-03",
-        downloadUrl: "music/All star.txt"
+        downloadUrl: "music/All star（全明星）.txt"
     },
     {
         id: 184,
-        title: "Ana",
+        title: "Ana（安娜）",
         author: "phonk / 见参",
         size: "17.79 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Ana.txt"
+        downloadUrl: "music/Ana（安娜）.txt"
     },
     {
         id: 185,
-        title: "Another Medium",
+        title: "Another Medium（另一个媒介）",
         author: "Toby Fox",
         size: "37.88 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Another Medium.txt"
+        downloadUrl: "music/Another Medium（另一个媒介）.txt"
     },
     {
         id: 186,
-        title: "Aphasia",
+        title: "Aphasia（失语症）",
         author: "Cheryl Cole / 见参",
         size: "14.05 KB",
         date: "2026-11-03",
@@ -1481,15 +1481,15 @@ window.musicData = [
     },
     {
         id: 187,
-        title: "Aph",
+        title: "Aph（失语症）",
         author: "C418",
         size: "89.42 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Aph（C418）.txt"
+        downloadUrl: "music/Aph（失语症）.txt"
     },
     {
         id: 188,
-        title: "April Encounter",
+        title: "April Encounter（四月邂逅）",
         author: "见参",
         size: "10.17 KB",
         date: "2026-11-03",
@@ -1497,31 +1497,31 @@ window.musicData = [
     },
     {
         id: 189,
-        title: "Arcaea–World Vanquisher",
+        title: "Arcaea–World Vanquisher（世界征服者）",
         author: "t+pazolite（Arcaea）",
         size: "23.99 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Arcaea–World Vanquisher.txt"
+        downloadUrl: "music/Arcaea–World Vanquisher（世界征服者）.txt"
     },
     {
         id: 190,
-        title: "Are you lost",
+        title: "Are you lost（你迷路了吗）",
         author: "M2U / 见参",
         size: "16.55 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Are you lost.txt"
+        downloadUrl: "music/Are you lost（你迷路了吗）.txt"
     },
     {
         id: 191,
-        title: "As it was",
+        title: "As it was（一如既往）",
         author: "Harry Styles",
         size: "17.95 KB",
         date: "2026-11-03",
-        downloadUrl: "music/As it was.txt"
+        downloadUrl: "music/As it was（一如既往）.txt"
     },
     {
         id: 192,
-        title: "Asgore",
+        title: "Asgore（艾斯戈尔）",
         author: "Toby Fox",
         size: "23.37 KB",
         date: "2026-11-03",
@@ -1529,7 +1529,7 @@ window.musicData = [
     },
     {
         id: 193,
-        title: "Astronomia",
+        title: "Astronomia（黑人抬棺）",
         author: "Tony Igy / 魔性抬棺BGM",
         size: "11.08 KB",
         date: "2026-11-03",
@@ -1537,87 +1537,87 @@ window.musicData = [
     },
     {
         id: 194,
-        title: "BATIDAO FUNK",
+        title: "BATIDAO FUNK（巴蒂达奥放克）",
         author: "DJ LK da Escócia / 巴西phonk",
         size: "33.37 KB",
         date: "2026-11-03",
-        downloadUrl: "music/BATIDAO FUNK.txt"
+        downloadUrl: "music/BATIDAO FUNK（巴蒂达奥放克）.txt"
     },
     {
         id: 195,
-        title: "BRIGHT RISE",
+        title: "BRIGHT RISE（光明升起）",
         author: "phonk",
         size: "67.90 KB",
         date: "2026-11-03",
-        downloadUrl: "music/BRIGHT RISE.txt"
+        downloadUrl: "music/BRIGHT RISE（光明升起）.txt"
     },
     {
         id: 196,
-        title: "Backstreet_Candystore",
+        title: "Backstreet_Candystore（街角糖果店）",
         author: "FNF（Friday Night Funkin'）",
         size: "44.34 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Backstreet_Candystore.txt"
+        downloadUrl: "music/Backstreet_Candystore（街角糖果店）.txt"
     },
     {
         id: 197,
-        title: "Bad Apple",
+        title: "Bad Apple（坏苹果）",
         author: "Alstroemeria Records / Masayoshi Minoshima",
         size: "164.38 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Bad Apple（审判曲）.txt"
+        downloadUrl: "music/Bad Apple（坏苹果）.txt"
     },
     {
         id: 198,
-        title: "Bad Apple",
+        title: "Bad Apple（坏苹果）",
         author: "Alstroemeria Records / Masayoshi Minoshima",
         size: "72.09 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Bad Apple（极简）.txt"
+        downloadUrl: "music/Bad Apple（坏苹果）.txt"
     },
     {
         id: 199,
-        title: "Bad Apple",
+        title: "Bad Apple（坏苹果）",
         author: "Alstroemeria Records / Masayoshi Minoshima",
         size: "148.15 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Bad Apple（正常）.txt"
+        downloadUrl: "music/Bad Apple（坏苹果）.txt"
     },
     {
         id: 200,
-        title: "Bad style - Time back",
+        title: "Bad style - Time back（坏风格 - 时间倒流）",
         author: "见参",
         size: "30.40 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Bad style - Time back.txt"
+        downloadUrl: "music/Bad style - Time back（坏风格 - 时间倒流）.txt"
     },
     {
         id: 201,
-        title: "Baldi's Basics Song - You're mine",
+        title: "Baldi's Basics Song - You're mine（你是我的）",
         author: "Mister VA",
         size: "51.26 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Baldi's Basics Song - You're mine.txt"
+        downloadUrl: "music/Baldi's Basics Song - You're mine（你是我的）.txt"
     },
     {
         id: 202,
-        title: "BattleAgainstaTrueHero",
+        title: "BattleAgainstaTrueHero（挑战真正的英雄）",
         author: "Toby Fox",
         size: "51.94 KB",
         date: "2026-11-03",
-        downloadUrl: "music/BattleAgainstaTrueHero.txt"
+        downloadUrl: "music/BattleAgainstaTrueHero（挑战真正的英雄）.txt"
     },
     {
         id: 203,
-        title: "Before The Story",
+        title: "Before The Story（故事之前）",
         author: "Toby Fox",
         size: "7.55 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Before The Story（德尔塔传说序曲）.txt"
+        downloadUrl: "music/Before The Story（故事之前）.txt"
     },
     {
         id: 204,
-        title: "Better Now",
+        title: "Better Now（更好了）",
         author: "Post Malone",
         size: "12.30 KB",
         date: "2026-11-03",
@@ -1625,23 +1625,23 @@ window.musicData = [
     },
     {
         id: 205,
-        title: "Beyond two souls theme",
+        title: "Beyond two souls theme（超越：灵魂主题）",
         author: "Lorne Balfe (Beyond: Two Souls OST)",
         size: "20.01 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Beyond two souls theme.txt"
+        downloadUrl: "music/Beyond two souls theme（超越：灵魂主题）.txt"
     },
     {
         id: 206,
-        title: "Bloody Stream",
+        title: "Bloody Stream（血色之流）",
         author: "菅野祐悟（JOJO's Bizarre Adventure）",
         size: "9.48 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Bloody Stream.txt"
+        downloadUrl: "music/Bloody Stream（血色之流）.txt"
     },
     {
         id: 207,
-        title: "Bonetrousle",
+        title: "Bonetrousle（骨头麻烦）",
         author: "Toby Fox",
         size: "46.86 KB",
         date: "2026-11-03",
@@ -1649,7 +1649,7 @@ window.musicData = [
     },
     {
         id: 208,
-        title: "Born a Stranger",
+        title: "Born a Stranger（生于异乡）",
         author: "见参",
         size: "4.72 KB",
         date: "2026-11-03",
@@ -1657,7 +1657,7 @@ window.musicData = [
     },
     {
         id: 209,
-        title: "Brainiac Maniac",
+        title: "Brainiac Maniac（疯狂天才）",
         author: "Michele Lurquin / 见参",
         size: "18.68 KB",
         date: "2026-11-03",
@@ -1665,23 +1665,23 @@ window.musicData = [
     },
     {
         id: 210,
-        title: "Brodyaga Phonk",
+        title: "Brodyaga Phonk（布罗迪亚加放克）",
         author: "BRODYAGA",
         size: "63.50 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Brodyaga Phonk.txt"
+        downloadUrl: "music/Brodyaga Phonk（布罗迪亚加放克）.txt"
     },
     {
         id: 211,
-        title: "Burn",
+        title: "Burn（燃烧）",
         author: "NceS",
         size: "18.25 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Burn-NceS.txt"
+        downloadUrl: "music/Burn（燃烧）.txt"
     },
     {
         id: 212,
-        title: "By Your Side",
+        title: "By Your Side（在你身边）",
         author: "Sade",
         size: "25.14 KB",
         date: "2026-11-03",
@@ -1689,7 +1689,7 @@ window.musicData = [
     },
     {
         id: 213,
-        title: "Camping",
+        title: "Camping（露营）",
         author: "见参",
         size: "21.88 KB",
         date: "2026-11-03",
@@ -1697,7 +1697,7 @@ window.musicData = [
     },
     {
         id: 214,
-        title: "Canon",
+        title: "Canon（卡农）",
         author: "帕赫贝尔（Pachelbel）",
         size: "26.50 KB",
         date: "2026-11-03",
@@ -1705,15 +1705,15 @@ window.musicData = [
     },
     {
         id: 215,
-        title: "Castle crashera Theme",
+        title: "Castle crashera Theme（城堡破坏者主题曲）",
         author: "未知（Castle Crashers）",
         size: "9.13 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Castle crashera Theme.txt"
+        downloadUrl: "music/Castle crashera Theme（城堡破坏者主题曲）.txt"
     },
     {
         id: 216,
-        title: "Centuries",
+        title: "Centuries（世纪）",
         author: "Fall Out Boy",
         size: "39.95 KB",
         date: "2026-11-03",
@@ -1721,23 +1721,23 @@ window.musicData = [
     },
     {
         id: 217,
-        title: "Chronomia",
+        title: "Chronomia（时间）",
         author: "t+pazolite",
         size: "14.83 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Chronomia.txt"
+        downloadUrl: "music/Chronomia（时间）.txt"
     },
     {
         id: 218,
-        title: "Clear Morning",
+        title: "Clear Morning（晴朗的早晨）",
         author: "未知（蔚蓝档案OST）",
         size: "10.01 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Clear Morning.txt"
+        downloadUrl: "music/Clear Morning（晴朗的早晨）.txt"
     },
     {
         id: 219,
-        title: "Come And Get Your Love",
+        title: "Come And Get Your Love（来拿你的爱）",
         author: "Redbone",
         size: "116.39 KB",
         date: "2026-11-03",
@@ -1745,15 +1745,15 @@ window.musicData = [
     },
     {
         id: 220,
-        title: "ConstantModerato",
+        title: "ConstantModerato（恒定中板）",
         author: "未知（蔚蓝档案OST）",
         size: "19.96 KB",
         date: "2026-11-03",
-        downloadUrl: "music/ConstantModerato.txt"
+        downloadUrl: "music/ConstantModerato（恒定中板）.txt"
     },
     {
         id: 221,
-        title: "Counting Stars",
+        title: "Counting Stars（数星星）",
         author: "OneRepublic",
         size: "81.07 KB",
         date: "2026-11-03",
@@ -1761,15 +1761,15 @@ window.musicData = [
     },
     {
         id: 222,
-        title: "Cradles",
+        title: "Cradles（摇篮）",
         author: "Sub Urban",
         size: "8.73 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Cradles.txt"
+        downloadUrl: "music/Cradles（摇篮）.txt"
     },
     {
         id: 223,
-        title: "Creation And Beyond",
+        title: "Creation And Beyond（创世之上）",
         author: "见参",
         size: "8.26 KB",
         date: "2026-11-03",
@@ -1777,23 +1777,23 @@ window.musicData = [
     },
     {
         id: 224,
-        title: "Criminals",
+        title: "Criminals（罪人）",
         author: "Britney Spears",
         size: "56.52 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Criminals.txt"
+        downloadUrl: "music/Criminals（罪人）.txt"
     },
     {
         id: 225,
-        title: "Cross Soul",
+        title: "Cross Soul（跨越灵魂）",
         author: "HyuN",
         size: "25.35 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Cross Soul.txt"
+        downloadUrl: "music/Cross Soul（跨越灵魂）.txt"
     },
     {
         id: 226,
-        title: "Cry For Me",
+        title: "Cry For Me（为我哭泣）",
         author: "Michele Morrone / 见参",
         size: "47.54 KB",
         date: "2026-11-03",
@@ -1801,7 +1801,7 @@ window.musicData = [
     },
     {
         id: 227,
-        title: "Crystals",
+        title: "Crystals（水晶）",
         author: "PR1SVX",
         size: "16.04 KB",
         date: "2026-11-03",
@@ -1809,15 +1809,15 @@ window.musicData = [
     },
     {
         id: 228,
-        title: "DIVE INTO SUMMER",
+        title: "DIVE INTO SUMMER（潜入夏天）",
         author: "见参",
         size: "19.60 KB",
         date: "2026-11-03",
-        downloadUrl: "music/DIVE INTO SUMMER.txt"
+        downloadUrl: "music/DIVE INTO SUMMER（潜入夏天）.txt"
     },
     {
         id: 229,
-        title: "Daylight",
+        title: "Daylight（日光）",
         author: "Taylor Swift",
         size: "33.70 KB",
         date: "2026-11-03",
@@ -1825,7 +1825,7 @@ window.musicData = [
     },
     {
         id: 230,
-        title: "Dead Inside",
+        title: "Dead Inside（内心已死）",
         author: "Bring Me the Horizon",
         size: "34.08 KB",
         date: "2026-11-03",
@@ -1833,55 +1833,55 @@ window.musicData = [
     },
     {
         id: 231,
-        title: "Death Bed",
+        title: "Death Bed（死亡之床）",
         author: "Powfu ft. beabadoobee",
         size: "6.59 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Death Bed.txt"
+        downloadUrl: "music/Death Bed（死亡之床）.txt"
     },
     {
         id: 232,
-        title: "Death by Glamour",
+        title: "Death by Glamour（华丽之死）",
         author: "Toby Fox",
         size: "18.84 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Death by Glamour.txt"
+        downloadUrl: "music/Death by Glamour（华丽之死）.txt"
     },
     {
         id: 233,
-        title: "Die Young",
+        title: "Die Young（英年早逝）",
         author: "Kesha",
         size: "22.76 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Die Young.txt"
+        downloadUrl: "music/Die Young（英年早逝）.txt"
     },
     {
         id: 234,
-        title: "Disorder",
+        title: "Disorder（紊乱）",
         author: "HyuN",
         size: "25.54 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Disorder.txt"
+        downloadUrl: "music/Disorder（紊乱）.txt"
     },
     {
         id: 235,
-        title: "Don't Starve Theme",
+        title: "Don't Starve Theme（饥荒主题曲）",
         author: "Vince de Vera / Jason Ritter",
         size: "9.61 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Don't Starve Theme.txt"
+        downloadUrl: "music/Don't Starve Theme（饥荒主题曲）.txt"
     },
     {
         id: 236,
-        title: "Dont't Strave_Together",
+        title: "Dont't Strave_Together（饥荒联机版）",
         author: "Vince de Vera / Jason Ritter",
         size: "9.10 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Dont't Strave_Together.txt"
+        downloadUrl: "music/Dont't Strave_Together（饥荒联机版）.txt"
     },
     {
         id: 237,
-        title: "Doodle",
+        title: "Doodle（涂鸦）",
         author: "Potter Payper / 见参",
         size: "40.08 KB",
         date: "2026-11-03",
@@ -1889,71 +1889,71 @@ window.musicData = [
     },
     {
         id: 238,
-        title: "Dropdead",
+        title: "Dropdead（坠落）",
         author: "Frums",
         size: "42.33 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Dropdead - Frums.txt"
+        downloadUrl: "music/Dropdead（坠落）.txt"
     },
     {
         id: 239,
-        title: "Dubidubidu----Christell",
+        title: "Dubidubidu----Christell（奇皮奇普恰帕）",
         author: "Christell",
         size: "51.15 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Dubidubidu----Christell.txt"
+        downloadUrl: "music/Dubidubidu----Christell（奇皮奇普恰帕）.txt"
     },
     {
         id: 240,
-        title: "Dubidubidu",
+        title: "Dubidubidu（奇皮奇普恰帕）",
         author: "Christell",
         size: "51.15 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Dubidubidu.txt"
+        downloadUrl: "music/Dubidubidu（奇皮奇普恰帕）.txt"
     },
     {
         id: 241,
-        title: "Dungeon Drama",
+        title: "Dungeon Drama（地牢戏剧）",
         author: "Hypixel Minecraft OST / Hypixel Studios",
         size: "112.18 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Dungeon Drama.txt"
+        downloadUrl: "music/Dungeon Drama（地牢戏剧）.txt"
     },
     {
         id: 242,
-        title: "EEYUH!",
+        title: "EEYUH!（干杯）",
         author: "H.R.",
         size: "21.45 KB",
         date: "2026-11-03",
-        downloadUrl: "music/EEYUH!.txt"
+        downloadUrl: "music/EEYUH!（干杯）.txt"
     },
     {
         id: 243,
-        title: "Else",
+        title: "Else（其他）",
         author: "Paris",
         size: "26.40 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Else - Paris.txt"
+        downloadUrl: "music/Else（其他）.txt"
     },
     {
         id: 244,
-        title: "Empty Dreams",
+        title: "Empty Dreams（空洞的梦）",
         author: "见参",
         size: "32.64 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Empty Dreams.txt"
+        downloadUrl: "music/Empty Dreams（空洞的梦）.txt"
     },
     {
         id: 245,
-        title: "EpicTech",
+        title: "EpicTech（史诗科技）",
         author: "见参",
         size: "39.60 KB",
         date: "2026-11-03",
-        downloadUrl: "music/EpicTech.txt"
+        downloadUrl: "music/EpicTech（史诗科技）.txt"
     },
     {
         id: 246,
-        title: "Exitium",
+        title: "Exitium（毁灭现实）",
         author: "Unknown",
         size: "46.66 KB",
         date: "2026-11-03",
@@ -1977,7 +1977,7 @@ window.musicData = [
     },
     {
         id: 249,
-        title: "Faded",
+        title: "Faded（褪色）",
         author: "Alan Walker / Iselin Solheim",
         size: "67.22 KB",
         date: "2026-11-03",
@@ -1985,7 +1985,7 @@ window.musicData = [
     },
     {
         id: 250,
-        title: "Faint Courage",
+        title: "Faint Courage（微弱勇气）",
         author: "F-777（节奏医生）",
         size: "8.55 KB",
         date: "2026-11-03",
@@ -2001,47 +2001,47 @@ window.musicData = [
     },
     {
         id: 252,
-        title: "Fallen_Down",
+        title: "Fallen_Down（倒下）",
         author: "Toby Fox",
         size: "8.14 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Fallen_Down.txt"
+        downloadUrl: "music/Fallen_Down（倒下）.txt"
     },
     {
         id: 253,
-        title: "Fallout Theme",
+        title: "Fallout Theme（辐射主题曲）",
         author: "Inon Zur",
         size: "12.32 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Fallout Theme.txt"
+        downloadUrl: "music/Fallout Theme（辐射主题曲）.txt"
     },
     {
         id: 254,
-        title: "Felicity",
+        title: "Felicity（幸福）",
         author: "未知",
         size: "18.98 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Felicity.txt"
+        downloadUrl: "music/Felicity（幸福）.txt"
     },
     {
         id: 255,
-        title: "Finale",
+        title: "Finale（终章）",
         author: "Toby Fox",
         size: "13.29 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Finale.txt"
+        downloadUrl: "music/Finale（终章）.txt"
     },
     {
         id: 256,
-        title: "Flamingo",
+        title: "Flamingo（火烈鸟）",
         author: "米津玄師",
         size: "33.33 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Flamingo.txt"
+        downloadUrl: "music/Flamingo（火烈鸟）.txt"
     },
     {
         id: 257,
-        title: "Flourish",
+        title: "Flourish（盛放）",
         author: "见参",
         size: "37.38 KB",
         date: "2026-11-03",
@@ -2049,7 +2049,7 @@ window.musicData = [
     },
     {
         id: 258,
-        title: "Flower Dance",
+        title: "Flower Dance（花之舞）",
         author: "DJ Okawari",
         size: "29.29 KB",
         date: "2026-11-03",
@@ -2057,11 +2057,11 @@ window.musicData = [
     },
     {
         id: 259,
-        title: "Focalors Sacrifice Theme",
+        title: "Focalors Sacrifice Theme（芙卡洛斯的献祭）",
         author: "陈致逸（Yu-Peng Chen, Genshin Impact）",
         size: "41.57 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Focalors Sacrifice Theme.txt"
+        downloadUrl: "music/Focalors Sacrifice Theme（芙卡洛斯的献祭）.txt"
     },
     {
         id: 260,
@@ -2081,7 +2081,7 @@ window.musicData = [
     },
     {
         id: 262,
-        title: "Force",
+        title: "Force（力量）",
         author: "BTS (Agust D)",
         size: "46.61 KB",
         date: "2026-11-03",
@@ -2089,7 +2089,7 @@ window.musicData = [
     },
     {
         id: 263,
-        title: "Free Loop",
+        title: "Free Loop（自由循环）",
         author: "Daniel Powter",
         size: "26.84 KB",
         date: "2026-11-03",
@@ -2097,7 +2097,7 @@ window.musicData = [
     },
     {
         id: 264,
-        title: "Free Lucky",
+        title: "Free Lucky（自由幸运）",
         author: "Daniel Powter",
         size: "9.86 KB",
         date: "2026-11-03",
@@ -2105,31 +2105,31 @@ window.musicData = [
     },
     {
         id: 265,
-        title: "Funky Stars",
+        title: "Funky Stars（放克之星）",
         author: "Vulfpeck / 见参",
         size: "141.30 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Funky Stars.txt"
+        downloadUrl: "music/Funky Stars（放克之星）.txt"
     },
     {
         id: 266,
-        title: "Ghost fight",
+        title: "Ghost fight（幽灵之战）",
         author: "Toby Fox",
         size: "16.04 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Ghost fight.txt"
+        downloadUrl: "music/Ghost fight（幽灵之战）.txt"
     },
     {
         id: 267,
-        title: "Gigachad Theme",
+        title: "Gigachad Theme（超级硬汉主题曲）",
         author: "GigaChad Theme / 见参",
         size: "27.83 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Gigachad Theme（超级硬汉）.txt"
+        downloadUrl: "music/Gigachad Theme（超级硬汉主题曲）.txt"
     },
     {
         id: 268,
-        title: "Good Time",
+        title: "Good Time（美好时光）",
         author: "Carly Rae Jepsen / Owl City",
         size: "26.62 KB",
         date: "2026-11-03",
@@ -2137,31 +2137,31 @@ window.musicData = [
     },
     {
         id: 269,
-        title: "Great Days",
+        title: "Great Days（美好时光）",
         author: "菅野祐悟（JOJO）",
         size: "11.81 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Great Days.txt"
+        downloadUrl: "music/Great Days（美好时光）.txt"
     },
     {
         id: 270,
-        title: "GuildWars-FactionsTheme",
+        title: "GuildWars-FactionsTheme（激战先锋阵营主题曲）",
         author: "未知",
         size: "5.05 KB",
         date: "2026-11-03",
-        downloadUrl: "music/GuildWars-FactionsTheme.txt"
+        downloadUrl: "music/GuildWars-FactionsTheme（激战先锋阵营主题曲）.txt"
     },
     {
         id: 271,
-        title: "Guruguru Usagi",
+        title: "Guruguru Usagi（转圈圈兔子）",
         author: "未知（蔚蓝档案OST）",
         size: "39.86 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Guruguru Usagi.txt"
+        downloadUrl: "music/Guruguru Usagi（转圈圈兔子）.txt"
     },
     {
         id: 272,
-        title: "Heal the World",
+        title: "Heal the World（治愈世界）",
         author: "Michael Jackson",
         size: "19.02 KB",
         date: "2026-11-03",
@@ -2169,7 +2169,7 @@ window.musicData = [
     },
     {
         id: 273,
-        title: "Heartache",
+        title: "Heartache（心痛）",
         author: "Toby Fox",
         size: "59.39 KB",
         date: "2026-11-03",
@@ -2177,55 +2177,47 @@ window.musicData = [
     },
     {
         id: 274,
-        title: "Heavenly caress",
+        title: "Heavenly caress（天堂的抚触）",
         author: "Arcaea OST",
         size: "44.89 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Heavenly caress.txt"
+        downloadUrl: "music/Heavenly caress（天堂的抚触）.txt"
     },
     {
         id: 275,
-        title: "Hensonn",
+        title: "Hensonn（亨森）",
         author: "Sahara",
         size: "6.16 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Hensonn - Sahara.txt"
-    },
-    {
-        id: 276,
-        title: "Hifumi Daisuki",
-        author: "未知（蔚蓝档案OST）",
-        size: "14.49 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Hifumi Daisuki.txt"
+        downloadUrl: "music/Hensonn（亨森）.txt"
     },
     {
         id: 277,
-        title: "Higher",
+        title: "Higher（更高）",
         author: "Clean Bandit",
         size: "48.85 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Higher.txt"
+        downloadUrl: "music/Higher（更高）.txt"
     },
     {
         id: 278,
-        title: "His Theme",
+        title: "His Theme（他的主题曲）",
         author: "Toby Fox",
         size: "10.20 KB",
         date: "2026-11-03",
-        downloadUrl: "music/His Theme.txt"
+        downloadUrl: "music/His Theme（他的主题曲）.txt"
     },
     {
         id: 279,
-        title: "His Theme",
+        title: "His Theme（他的主题曲）",
         author: "Toby Fox",
         size: "39.56 KB",
         date: "2026-11-03",
-        downloadUrl: "music/His Theme（他的主题）.txt"
+        downloadUrl: "music/His Theme（他的主题曲）.txt"
     },
     {
         id: 280,
-        title: "Home",
+        title: "Home（家）",
         author: "Michael Bublé / 见参",
         size: "13.16 KB",
         date: "2026-11-03",
@@ -2233,7 +2225,7 @@ window.musicData = [
     },
     {
         id: 281,
-        title: "Hopes And Dreams",
+        title: "Hopes And Dreams（希望与梦想）",
         author: "Toby Fox",
         size: "65.03 KB",
         date: "2026-11-03",
@@ -2241,7 +2233,7 @@ window.musicData = [
     },
     {
         id: 282,
-        title: "Hopes and Dreams",
+        title: "Hopes and Dreams（希望与梦想）",
         author: "Toby Fox",
         size: "28.77 KB",
         date: "2026-11-03",
@@ -2249,7 +2241,7 @@ window.musicData = [
     },
     {
         id: 283,
-        title: "Hope",
+        title: "Hope（希望）",
         author: "见参",
         size: "79.59 KB",
         date: "2026-11-03",
@@ -2257,15 +2249,15 @@ window.musicData = [
     },
     {
         id: 284,
-        title: "Human Fall Flat",
+        title: "Human Fall Flat（人类跌落梦境）",
         author: "见参",
         size: "10.25 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Human Fall Flat.txt"
+        downloadUrl: "music/Human Fall Flat（人类跌落梦境）.txt"
     },
     {
         id: 285,
-        title: "Human Legacy",
+        title: "Human Legacy（人类遗产）",
         author: "见参",
         size: "66.14 KB",
         date: "2026-11-03",
@@ -2273,7 +2265,7 @@ window.musicData = [
     },
     {
         id: 286,
-        title: "Hymn For The Weekend",
+        title: "Hymn For The Weekend（周末圣歌）",
         author: "Coldplay",
         size: "45.92 KB",
         date: "2026-11-03",
@@ -2281,7 +2273,7 @@ window.musicData = [
     },
     {
         id: 287,
-        title: "I Wanted You",
+        title: "I Wanted You（我想要你）",
         author: "Ina Wroldsen / 见参",
         size: "15.27 KB",
         date: "2026-11-03",
@@ -2289,23 +2281,23 @@ window.musicData = [
     },
     {
         id: 288,
-        title: "Igallta",
+        title: "Igallta（伊迦尔塔）",
         author: "Se-U-Ga",
         size: "39.62 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Igallta.txt"
+        downloadUrl: "music/Igallta（伊迦尔塔）.txt"
     },
     {
         id: 289,
-        title: "Il Vento D'oro",
+        title: "Il Vento D'oro（金色的风）",
         author: "Yugo Kanno（JOJO Part 5 OST）",
         size: "17.70 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Il Vento D'oro.txt"
+        downloadUrl: "music/Il Vento D'oro（金色的风）.txt"
     },
     {
         id: 290,
-        title: "Illusionary Daytime",
+        title: "Illusionary Daytime（白昼幻象）",
         author: "见参",
         size: "16.48 KB",
         date: "2026-11-03",
@@ -2313,15 +2305,15 @@ window.musicData = [
     },
     {
         id: 291,
-        title: "In The End",
+        title: "In The End（尽头）",
         author: "Linkin Park",
         size: "33.96 KB",
         date: "2026-11-03",
-        downloadUrl: "music/In The End.txt"
+        downloadUrl: "music/In The End（尽头）.txt"
     },
     {
         id: 292,
-        title: "Inverted World",
+        title: "Inverted World（颠倒世界）",
         author: "未知",
         size: "50.40 KB",
         date: "2026-11-03",
@@ -2329,23 +2321,23 @@ window.musicData = [
     },
     {
         id: 293,
-        title: "Kaleidoscope",
+        title: "Kaleidoscope（万花筒）",
         author: "Frums（Arcaea）/ 见参",
         size: "61.70 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Kaleidoscope.txt"
+        downloadUrl: "music/Kaleidoscope（万花筒）.txt"
     },
     {
         id: 294,
-        title: "Knights - Fight for Judge",
+        title: "Knights - Fight for Judge（骑士 - 为法官而战）",
         author: "Toby Fox (Deltarune)",
         size: "31.37 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Knights - Fight for Judge.txt"
+        downloadUrl: "music/Knights - Fight for Judge（骑士 - 为法官而战）.txt"
     },
     {
         id: 295,
-        title: "Komorebi",
+        title: "Komorebi（木漏れ日）",
         author: "Pegboard Nerds",
         size: "25.86 KB",
         date: "2026-11-03",
@@ -2353,7 +2345,7 @@ window.musicData = [
     },
     {
         id: 296,
-        title: "Last Day of The Weekend",
+        title: "Last Day of The Weekend（周末最后一天）",
         author: "见参",
         size: "11.60 KB",
         date: "2026-11-03",
@@ -2361,15 +2353,15 @@ window.musicData = [
     },
     {
         id: 297,
-        title: "Last Goodbye",
+        title: "Last Goodbye（最后告别）",
         author: "Toby Fox",
         size: "16.83 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Last Goodbye.txt"
+        downloadUrl: "music/Last Goodbye（最后告别）.txt"
     },
     {
         id: 298,
-        title: "Legends Never Die",
+        title: "Legends Never Die（传奇不朽）",
         author: "Against The Current (LOL Worlds 2017)",
         size: "31.14 KB",
         date: "2026-11-03",
@@ -2377,7 +2369,7 @@ window.musicData = [
     },
     {
         id: 299,
-        title: "Let Her Go",
+        title: "Let Her Go（放手）",
         author: "Passenger",
         size: "10.89 KB",
         date: "2026-11-03",
@@ -2385,47 +2377,47 @@ window.musicData = [
     },
     {
         id: 300,
-        title: "Level!",
+        title: "Level!（关卡！）",
         author: "BTS / 见参",
         size: "28.36 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Level!.txt"
+        downloadUrl: "music/Level!（关卡！）.txt"
     },
     {
         id: 301,
-        title: "Lifeline",
+        title: "Lifeline（生命线）",
         author: "Zack Hemsey",
         size: "104.64 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Lifeline.txt"
+        downloadUrl: "music/Lifeline（生命线）.txt"
     },
     {
         id: 302,
-        title: "Lifeline",
+        title: "Lifeline（生命线）",
         author: "Zack Hemsey (电音remix)",
         size: "51.89 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Lifeline（生命线电音版）.txt"
+        downloadUrl: "music/Lifeline（生命线）.txt"
     },
     {
         id: 303,
-        title: "Little Nightmares II Theme",
+        title: "Little Nightmares II Theme（小噩梦2主题曲）",
         author: "Tobias Lilja",
         size: "8.86 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Little Nightmares II Theme.txt"
+        downloadUrl: "music/Little Nightmares II Theme（小噩梦2主题曲）.txt"
     },
     {
         id: 304,
-        title: "Love Is Gone",
+        title: "Love Is Gone（爱已消逝）",
         author: "SLANDER",
         size: "30.22 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Love Is Gone - SLANDER.txt"
+        downloadUrl: "music/Love Is Gone（爱已消逝）.txt"
     },
     {
         id: 305,
-        title: "Love Yourself",
+        title: "Love Yourself（爱自己）",
         author: "Justin Bieber",
         size: "15.60 KB",
         date: "2026-11-03",
@@ -2433,7 +2425,7 @@ window.musicData = [
     },
     {
         id: 306,
-        title: "Lovely",
+        title: "Lovely（可爱）",
         author: "Billie Eilish ft. Khalid",
         size: "17.96 KB",
         date: "2026-11-03",
@@ -2441,15 +2433,15 @@ window.musicData = [
     },
     {
         id: 307,
-        title: "Lovve",
+        title: "Lovve（情书变体）",
         author: "DJ Okawari (Luv Letter remix)",
         size: "55.07 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Lovve.txt"
+        downloadUrl: "music/Lovve（情书变体）.txt"
     },
     {
         id: 308,
-        title: "Luv Letter",
+        title: "Luv Letter（情书）",
         author: "DJ Okawari",
         size: "40.53 KB",
         date: "2026-11-03",
@@ -2457,15 +2449,15 @@ window.musicData = [
     },
     {
         id: 309,
-        title: "M3",
+        title: "M3（M3 型）",
         author: "见参",
         size: "44.91 KB",
         date: "2026-11-03",
-        downloadUrl: "music/M3.txt"
+        downloadUrl: "music/M3（M3 型）.txt"
     },
     {
         id: 310,
-        title: "Malicious Mischance",
+        title: "Malicious Mischance（恶意）",
         author: "未知",
         size: "55.25 KB",
         date: "2026-11-03",
@@ -2473,7 +2465,7 @@ window.musicData = [
     },
     {
         id: 311,
-        title: "Masquerade",
+        title: "Masquerade（假面舞会）",
         author: "未知",
         size: "27.37 KB",
         date: "2026-11-03",
@@ -2481,7 +2473,7 @@ window.musicData = [
     },
     {
         id: 312,
-        title: "Matrix",
+        title: "Matrix（矩阵）",
         author: "未知",
         size: "36.33 KB",
         date: "2026-11-03",
@@ -2489,55 +2481,55 @@ window.musicData = [
     },
     {
         id: 313,
-        title: "Megalovania",
+        title: "Megalovania（传说之下）",
         author: "Toby Fox",
         size: "77.04 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Megalovania.txt"
+        downloadUrl: "music/Megalovania（传说之下）.txt"
     },
     {
         id: 314,
-        title: "Megalovania_2",
+        title: "Megalovania_2（传说之下 2）",
         author: "Toby Fox",
         size: "55.14 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Megalovania_2.txt"
+        downloadUrl: "music/Megalovania_2（传说之下 2）.txt"
     },
     {
         id: 315,
-        title: "Megalovania",
+        title: "Megalovania（传说之下）",
         author: "Toby Fox",
         size: "18.62 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Megalovania（完整版）.txt"
+        downloadUrl: "music/Megalovania（传说之下）.txt"
     },
     {
         id: 316,
-        title: "Megamix_1",
+        title: "Megamix_1（Mega 混音 1）",
         author: "未知",
         size: "194.36 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Megamix_1.txt"
+        downloadUrl: "music/Megamix_1（Mega 混音 1）.txt"
     },
     {
         id: 317,
-        title: "Megamix_2",
+        title: "Megamix_2（Mega 混音 2）",
         author: "未知",
         size: "173.28 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Megamix_2.txt"
+        downloadUrl: "music/Megamix_2（Mega 混音 2）.txt"
     },
     {
         id: 318,
-        title: "Memphis Doom",
+        title: "Memphis Doom（孟菲斯末日）",
         author: "未知",
         size: "37.64 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Memphis Doom.txt"
+        downloadUrl: "music/Memphis Doom（孟菲斯末日）.txt"
     },
     {
         id: 319,
-        title: "Merry Christmas Mr. Lawrence",
+        title: "Merry Christmas Mr. Lawrence（圣诞快乐劳伦斯先生）",
         author: "坂本龙一",
         size: "24.59 KB",
         date: "2026-11-03",
@@ -2545,19 +2537,19 @@ window.musicData = [
     },
     {
         id: 320,
-        title: "Milky Fields",
+        title: "Milky Fields（奶白田野）",
         author: "Arcaea OST",
         size: "90.32 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Milky Fields.txt"
+        downloadUrl: "music/Milky Fields（奶白田野）.txt"
     },
     {
         id: 321,
-        title: "Mischievous Step",
+        title: "Mischievous Step（恶作剧之步）",
         author: "未知（蔚蓝档案OST）",
         size: "21.22 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Mischievous Step.txt"
+        downloadUrl: "music/Mischievous Step（恶作剧之步）.txt"
     },
     {
         id: 322,
@@ -2569,15 +2561,15 @@ window.musicData = [
     },
     {
         id: 323,
-        title: "Money In My Pocket Part 2",
+        title: "Money In My Pocket Part 2（口袋里的钱 2）",
         author: "phonk / 见参",
         size: "58.86 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Money In My Pocket Part 2.txt"
+        downloadUrl: "music/Money In My Pocket Part 2（口袋里的钱 2）.txt"
     },
     {
         id: 324,
-        title: "Money In My Pocket",
+        title: "Money In My Pocket（口袋里的钱）",
         author: "phonk / 见参",
         size: "62.17 KB",
         date: "2026-11-03",
@@ -2585,15 +2577,15 @@ window.musicData = [
     },
     {
         id: 325,
-        title: "Montagem Miau",
+        title: "Montagem Miau（喵喵组装）",
         author: "未知",
         size: "31.80 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Montagem Miau.txt"
+        downloadUrl: "music/Montagem Miau（喵喵组装）.txt"
     },
     {
         id: 326,
-        title: "Mood",
+        title: "Mood（心情）",
         author: "24kGoldn ft. Iann Dior",
         size: "17.93 KB",
         date: "2026-11-03",
@@ -2601,7 +2593,7 @@ window.musicData = [
     },
     {
         id: 327,
-        title: "Morose Dreamer",
+        title: "Morose Dreamer（忧郁梦者）",
         author: "未知（蔚蓝档案OST）",
         size: "9.06 KB",
         date: "2026-11-03",
@@ -2609,7 +2601,7 @@ window.musicData = [
     },
     {
         id: 328,
-        title: "My Happy Song",
+        title: "My Happy Song（我的快乐歌）",
         author: "Taylor Swift / 未知",
         size: "7.14 KB",
         date: "2026-11-03",
@@ -2617,7 +2609,7 @@ window.musicData = [
     },
     {
         id: 329,
-        title: "My Sunset",
+        title: "My Sunset（我的日落）",
         author: "未知",
         size: "20.74 KB",
         date: "2026-11-03",
@@ -2625,55 +2617,55 @@ window.musicData = [
     },
     {
         id: 330,
-        title: "NIGHT DANCER",
+        title: "NIGHT DANCER（夜舞者）",
         author: "imase",
         size: "70.77 KB",
         date: "2026-11-03",
-        downloadUrl: "music/NIGHT DANCER（完整鼓组）.txt"
+        downloadUrl: "music/NIGHT DANCER（夜舞者）.txt"
     },
     {
         id: 331,
-        title: "NIGHT DANCER",
+        title: "NIGHT DANCER（夜舞者）",
         author: "imase",
         size: "20.32 KB",
         date: "2026-11-03",
-        downloadUrl: "music/NIGHT DANCER（纯钢琴）.txt"
+        downloadUrl: "music/NIGHT DANCER（夜舞者）.txt"
     },
     {
         id: 332,
-        title: "NIGHT DANCER",
+        title: "NIGHT DANCER（夜舞者）",
         author: "imase",
         size: "33.09 KB",
         date: "2026-11-03",
-        downloadUrl: "music/NIGHT DANCER（轻量鼓组）.txt"
+        downloadUrl: "music/NIGHT DANCER（夜舞者）.txt"
     },
     {
         id: 333,
-        title: "Nekopara_ED",
+        title: "Nekopara_ED（猫丸占领记 ED）",
         author: "未知",
         size: "26.54 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Nekopara_ED.txt"
+        downloadUrl: "music/Nekopara_ED（猫丸占领记 ED）.txt"
     },
     {
         id: 334,
-        title: "Nesno Wons",
+        title: "Nesno Wons（Nesno 温斯）",
         author: "未知（蔚蓝档案OST）",
         size: "16.11 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Nesno Wons.txt"
+        downloadUrl: "music/Nesno Wons（Nesno 温斯）.txt"
     },
     {
         id: 335,
-        title: "New Year 20XX",
+        title: "New Year 20XX（新年 20XX）",
         author: "未知",
         size: "9.64 KB",
         date: "2026-11-03",
-        downloadUrl: "music/New Year 20XX（新年）.txt"
+        downloadUrl: "music/New Year 20XX（新年 20XX）.txt"
     },
     {
         id: 336,
-        title: "Night Drive",
+        title: "Night Drive（夜驾）",
         author: "未知",
         size: "14.28 KB",
         date: "2026-11-03",
@@ -2681,7 +2673,7 @@ window.musicData = [
     },
     {
         id: 337,
-        title: "Ninja Gaiden",
+        title: "Ninja Gaiden（忍者龙剑传）",
         author: "未知",
         size: "40.26 KB",
         date: "2026-11-03",
@@ -2689,31 +2681,31 @@ window.musicData = [
     },
     {
         id: 338,
-        title: "Nothing But Requiem",
+        title: "Nothing But Requiem（只有安魂曲）",
         author: "HyuN",
         size: "48.88 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Nothing But Requiem（安魂曲）.txt"
+        downloadUrl: "music/Nothing But Requiem（只有安魂曲）.txt"
     },
     {
         id: 339,
-        title: "Nyeh Heh Heh!",
+        title: "Nyeh Heh Heh!（嘻哈笑声）",
         author: "Toby Fox",
         size: "10.21 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Nyeh Heh Heh!.txt"
+        downloadUrl: "music/Nyeh Heh Heh!（嘻哈笑声）.txt"
     },
     {
         id: 340,
-        title: "ON TOP",
+        title: "ON TOP（在顶端）",
         author: "未知",
         size: "14.13 KB",
         date: "2026-11-03",
-        downloadUrl: "music/ON TOP.txt"
+        downloadUrl: "music/ON TOP（在顶端）.txt"
     },
     {
         id: 341,
-        title: "Old Doll",
+        title: "Old Doll（旧娃娃）",
         author: "未知",
         size: "8.14 KB",
         date: "2026-11-03",
@@ -2721,7 +2713,7 @@ window.musicData = [
     },
     {
         id: 342,
-        title: "Once Upon A Time",
+        title: "Once Upon A Time（从前）",
         author: "Toby Fox",
         size: "17.01 KB",
         date: "2026-11-03",
@@ -2729,15 +2721,15 @@ window.musicData = [
     },
     {
         id: 343,
-        title: "Operation DOTABATA",
+        title: "Operation DOTABATA（作战指令）",
         author: "未知（蔚蓝档案OST）",
         size: "17.86 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Operation DOTABATA.txt"
+        downloadUrl: "music/Operation DOTABATA（作战指令）.txt"
     },
     {
         id: 344,
-        title: "Overdose",
+        title: "Overdose（过量）",
         author: "中田ヤスタカ（Yasutaka Nakata, Perfume）",
         size: "23.92 KB",
         date: "2026-11-03",
@@ -2745,7 +2737,7 @@ window.musicData = [
     },
     {
         id: 345,
-        title: "Passion",
+        title: "Passion（激情）",
         author: "未知",
         size: "45.67 KB",
         date: "2026-11-03",
@@ -2753,7 +2745,7 @@ window.musicData = [
     },
     {
         id: 346,
-        title: "Passo Bem Solto",
+        title: "Passo Bem Solto（轻松步伐）",
         author: "未知",
         size: "40.25 KB",
         date: "2026-11-03",
@@ -2761,7 +2753,7 @@ window.musicData = [
     },
     {
         id: 347,
-        title: "Pixel Time",
+        title: "Pixel Time（像素时间）",
         author: "未知（蔚蓝档案OST）",
         size: "43.59 KB",
         date: "2026-11-03",
@@ -2769,43 +2761,43 @@ window.musicData = [
     },
     {
         id: 348,
-        title: "Plum_R",
+        title: "Plum_R（Plum R 版）",
         author: "未知",
         size: "28.50 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Plum_R.txt"
+        downloadUrl: "music/Plum_R（Plum R 版）.txt"
     },
     {
         id: 349,
-        title: "Plum_Timeline",
+        title: "Plum_Timeline（Plum 时间线）",
         author: "未知",
         size: "19.40 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Plum_Timeline.txt"
+        downloadUrl: "music/Plum_Timeline（Plum 时间线）.txt"
     },
     {
         id: 350,
-        title: "Poco A Poco",
+        title: "Poco A Poco（一点一点）",
         author: "未知",
         size: "15.81 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Poco A Poco.txt"
+        downloadUrl: "music/Poco A Poco（一点一点）.txt"
     },
     {
         id: 351,
-        title: "Pool",
+        title: "Pool（泳池）",
         author: "未知",
         size: "31.56 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Pool.txt"
+        downloadUrl: "music/Pool（泳池）.txt"
     },
     {
         id: 352,
-        title: "RE Aoharu",
+        title: "RE Aoharu（RE 逢魔时刻）",
         author: "未知（蔚蓝档案OST）",
         size: "73.08 KB",
         date: "2026-11-03",
-        downloadUrl: "music/RE Aoharu.txt"
+        downloadUrl: "music/RE Aoharu（RE 逢魔时刻）.txt"
     },
     {
         id: 353,
@@ -2817,23 +2809,23 @@ window.musicData = [
     },
     {
         id: 354,
-        title: "RabbIt Dance",
+        title: "RabbIt Dance（兔子舞）",
         author: "未知（蔚蓝档案OST）",
         size: "23.06 KB",
         date: "2026-11-03",
-        downloadUrl: "music/RabbIt Dance.txt"
+        downloadUrl: "music/RabbIt Dance（兔子舞）.txt"
     },
     {
         id: 355,
-        title: "Radiant",
+        title: "Radiant（光辉）",
         author: "明日方舟",
         size: "23.48 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Radiant-明日方舟.txt"
+        downloadUrl: "music/Radiant（光辉）.txt"
     },
     {
         id: 356,
-        title: "Raindrops",
+        title: "Raindrops（雨滴）",
         author: "见参",
         size: "9.61 KB",
         date: "2026-11-03",
@@ -2841,19 +2833,19 @@ window.musicData = [
     },
     {
         id: 357,
-        title: "Rave",
+        title: "Rave（狂舞）",
         author: "未知",
         size: "16.93 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Rave.txt"
+        downloadUrl: "music/Rave（狂舞）.txt"
     },
     {
         id: 358,
-        title: "Reanimate",
+        title: "Reanimate（苏醒）",
         author: "未知",
         size: "24.07 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Reanimate.txt"
+        downloadUrl: "music/Reanimate（苏醒）.txt"
     },
     {
         id: 359,
@@ -2865,15 +2857,15 @@ window.musicData = [
     },
     {
         id: 360,
-        title: "Revenge",
+        title: "Revenge（复仇）",
         author: "未知",
         size: "27.70 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Revenge.txt"
+        downloadUrl: "music/Revenge（复仇）.txt"
     },
     {
         id: 361,
-        title: "Ringing Bloom",
+        title: "Ringing Bloom（鸣铃花开）",
         author: "未知",
         size: "49.53 KB",
         date: "2026-11-03",
@@ -2881,39 +2873,39 @@ window.musicData = [
     },
     {
         id: 362,
-        title: "Rise",
+        title: "Rise（升起）",
         author: "John Dreamer",
         size: "26.58 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Rise.txt"
+        downloadUrl: "music/Rise（升起）.txt"
     },
     {
         id: 363,
-        title: "River Flows In You",
+        title: "River Flows In You（河水流过）",
         author: "Yiruma",
         size: "11.09 KB",
         date: "2026-11-03",
-        downloadUrl: "music/River Flows In You.txt"
+        downloadUrl: "music/River Flows In You（河水流过）.txt"
     },
     {
         id: 364,
-        title: "Rivers Flow In You",
+        title: "Rivers Flow In You（河水流过）",
         author: "Yiruma",
         size: "10.76 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Rivers Flow In You.txt"
+        downloadUrl: "music/Rivers Flow In You（河水流过）.txt"
     },
     {
         id: 365,
-        title: "Rubia",
+        title: "Rubia（露比）",
         author: "未知",
         size: "13.11 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Rubia.txt"
+        downloadUrl: "music/Rubia（露比）.txt"
     },
     {
         id: 366,
-        title: "Ruins",
+        title: "Ruins（废墟）",
         author: "Toby Fox",
         size: "18.54 KB",
         date: "2026-11-03",
@@ -2921,59 +2913,59 @@ window.musicData = [
     },
     {
         id: 367,
-        title: "Rush_E",
+        title: "Rush_E（疾驰_E）",
         author: "未知",
         size: "26.51 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Rush_E.txt"
+        downloadUrl: "music/Rush_E（疾驰_E）.txt"
     },
     {
         id: 368,
-        title: "SAVE the World",
+        title: "SAVE the World（拯救世界）",
         author: "Toby Fox",
         size: "20.12 KB",
         date: "2026-11-03",
-        downloadUrl: "music/SAVE the World.txt"
+        downloadUrl: "music/SAVE the World（拯救世界）.txt"
     },
     {
         id: 369,
-        title: "SO TIRED",
+        title: "SO TIRED（太累了）",
         author: "未知",
         size: "8.21 KB",
         date: "2026-11-03",
-        downloadUrl: "music/SO TIRED.txt"
+        downloadUrl: "music/SO TIRED（太累了）.txt"
     },
     {
         id: 370,
-        title: "STAY",
+        title: "STAY（停留）",
         author: "未知",
         size: "21.43 KB",
         date: "2026-11-03",
-        downloadUrl: "music/STAY.txt"
+        downloadUrl: "music/STAY（停留）.txt"
     },
     {
         id: 371,
-        title: "Sacred Play Secret Place",
+        title: "Sacred Play Secret Place（神圣的秘密之地）",
         author: "未知",
         size: "22.41 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Sacred Play Secret Place（神圣秘密之地）.txt"
+        downloadUrl: "music/Sacred Play Secret Place（神圣的秘密之地）.txt"
     },
     {
         id: 372,
-        title: "Sairai",
+        title: "Sairai（再会）",
         author: "未知",
         size: "16.12 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Sairai.txt"
+        downloadUrl: "music/Sairai（再会）.txt"
     },
     {
         id: 373,
-        title: "Sans Hard Mode",
+        title: "Sans Hard Mode（Sans 困难模式）",
         author: "Toby Fox",
         size: "73.37 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Sans Hard Mode（困难模式）.txt"
+        downloadUrl: "music/Sans Hard Mode（Sans 困难模式）.txt"
     },
     {
         id: 374,
@@ -2985,15 +2977,15 @@ window.musicData = [
     },
     {
         id: 375,
-        title: "Sans",
+        title: "Sans（桑斯）",
         author: "Toby Fox",
         size: "12.83 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Sans.txt"
+        downloadUrl: "music/Sans（桑斯）.txt"
     },
     {
         id: 376,
-        title: "Schoolhouse Trouble",
+        title: "Schoolhouse Trouble（校园风波）",
         author: "未知",
         size: "115.09 KB",
         date: "2026-11-03",
@@ -3001,7 +2993,7 @@ window.musicData = [
     },
     {
         id: 377,
-        title: "Sea of Tranquility",
+        title: "Sea of Tranquility（静海）",
         author: "Janji / 见参",
         size: "23.59 KB",
         date: "2026-11-03",
@@ -3009,7 +3001,7 @@ window.musicData = [
     },
     {
         id: 378,
-        title: "Shape of You",
+        title: "Shape of You（爱你形状）",
         author: "Ed Sheeran",
         size: "15.17 KB",
         date: "2026-11-03",
@@ -3017,7 +3009,7 @@ window.musicData = [
     },
     {
         id: 379,
-        title: "Shootout",
+        title: "Shootout（枪战）",
         author: "F-777（节奏医生）",
         size: "38.70 KB",
         date: "2026-11-03",
@@ -3025,15 +3017,15 @@ window.musicData = [
     },
     {
         id: 380,
-        title: "Sleeping City Funk",
+        title: "Sleeping City Funk（沉睡之城放克）",
         author: "phonk",
         size: "20.86 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Sleeping City Funk.txt"
+        downloadUrl: "music/Sleeping City Funk（沉睡之城放克）.txt"
     },
     {
         id: 381,
-        title: "Sleepwalker",
+        title: "Sleepwalker（梦游者）",
         author: "Awolnation",
         size: "53.51 KB",
         date: "2026-11-03",
@@ -3041,7 +3033,7 @@ window.musicData = [
     },
     {
         id: 382,
-        title: "Slow Down",
+        title: "Slow Down（放慢）",
         author: "Chase Atlantic",
         size: "16.42 KB",
         date: "2026-11-03",
@@ -3049,7 +3041,7 @@ window.musicData = [
     },
     {
         id: 383,
-        title: "Snowdin Town",
+        title: "Snowdin Town（雪镇）",
         author: "Toby Fox",
         size: "9.75 KB",
         date: "2026-11-03",
@@ -3057,7 +3049,7 @@ window.musicData = [
     },
     {
         id: 384,
-        title: "Snow",
+        title: "Snow（雪）",
         author: "Toby Fox",
         size: "93.10 KB",
         date: "2026-11-03",
@@ -3065,39 +3057,39 @@ window.musicData = [
     },
     {
         id: 385,
-        title: "Song That Might Play When You Fight Sans",
+        title: "Song That Might Play When You Fight Sans（打 Sans 时可能播放的歌）",
         author: "Toby Fox",
         size: "11.08 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Song That Might Play When You Fight Sans.txt"
+        downloadUrl: "music/Song That Might Play When You Fight Sans（打 Sans 时可能播放的歌）.txt"
     },
     {
         id: 386,
-        title: "Spasmodic",
+        title: "Spasmodic（痉挛）",
         author: "姜米條（Phigros）",
         size: "42.10 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Spasmodic.txt"
+        downloadUrl: "music/Spasmodic（痉挛）.txt"
     },
     {
         id: 387,
-        title: "Spider Dance",
+        title: "Spider Dance（蜘蛛舞）",
         author: "Toby Fox",
         size: "15.20 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Spider Dance.txt"
+        downloadUrl: "music/Spider Dance（蜘蛛舞）.txt"
     },
     {
         id: 388,
-        title: "Spring Day",
+        title: "Spring Day（春日）",
         author: "BTS（防弹少年团）",
         size: "14.83 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Spring Day（BTS春天）.txt"
+        downloadUrl: "music/Spring Day（春日）.txt"
     },
     {
         id: 389,
-        title: "Step By Step",
+        title: "Step By Step（一步一步）",
         author: "未知（蔚蓝档案OST）",
         size: "19.74 KB",
         date: "2026-11-03",
@@ -3105,7 +3097,7 @@ window.musicData = [
     },
     {
         id: 390,
-        title: "Stranger Think",
+        title: "Stranger Think（陌生人）",
         author: "见参",
         size: "58.46 KB",
         date: "2026-11-03",
@@ -3113,7 +3105,7 @@ window.musicData = [
     },
     {
         id: 391,
-        title: "Stronger Than You",
+        title: "Stronger Than You（比你更强大）",
         author: "Toby Fox / 粉丝改编",
         size: "17.50 KB",
         date: "2026-11-03",
@@ -3121,11 +3113,11 @@ window.musicData = [
     },
     {
         id: 392,
-        title: "Suffocating",
+        title: "Suffocating（窒息）",
         author: "见参",
         size: "29.06 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Suffocating.txt"
+        downloadUrl: "music/Suffocating（窒息）.txt"
     },
     {
         id: 393,
@@ -3137,7 +3129,7 @@ window.musicData = [
     },
     {
         id: 394,
-        title: "Summertime",
+        title: "Summertime（夏日）",
         author: "Cyndi Lauper / 见参",
         size: "17.98 KB",
         date: "2026-11-03",
@@ -3145,15 +3137,15 @@ window.musicData = [
     },
     {
         id: 395,
-        title: "Sunburst",
+        title: "Sunburst（日冕）",
         author: "Tobu",
         size: "93.89 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Sunburst（Tobu）.txt"
+        downloadUrl: "music/Sunburst（日冕）.txt"
     },
     {
         id: 396,
-        title: "Sunburst",
+        title: "Sunburst（日冕）",
         author: "Tobu",
         size: "60.52 KB",
         date: "2026-11-03",
@@ -3161,11 +3153,11 @@ window.musicData = [
     },
     {
         id: 397,
-        title: "TAKEDISKRUSH!",
+        title: "TAKEDISKRUSH!（击败磁盘！）",
         author: "Laur",
         size: "39.87 KB",
         date: "2026-11-03",
-        downloadUrl: "music/TAKEDISKRUSH!.txt"
+        downloadUrl: "music/TAKEDISKRUSH!（击败磁盘！）.txt"
     },
     {
         id: 398,
@@ -3177,7 +3169,7 @@ window.musicData = [
     },
     {
         id: 399,
-        title: "Take My Hand",
+        title: "Take My Hand（握住我的手）",
         author: "DAISHI DANCE / 见参",
         size: "16.60 KB",
         date: "2026-11-03",
@@ -3185,7 +3177,7 @@ window.musicData = [
     },
     {
         id: 400,
-        title: "Tamo Daleko",
+        title: "Tamo Daleko（遥远的地方）",
         author: "未知",
         size: "16.17 KB",
         date: "2026-11-03",
@@ -3193,7 +3185,7 @@ window.musicData = [
     },
     {
         id: 401,
-        title: "Target For Love",
+        title: "Target For Love（爱的目标）",
         author: "未知（蔚蓝档案OST）",
         size: "10.58 KB",
         date: "2026-11-03",
@@ -3201,23 +3193,23 @@ window.musicData = [
     },
     {
         id: 402,
-        title: "Tassel",
+        title: "Tassel（流苏）",
         author: "未知",
         size: "31.16 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Tassel.txt"
+        downloadUrl: "music/Tassel（流苏）.txt"
     },
     {
         id: 403,
-        title: "TemShop",
+        title: "TemShop（Temmie 的商店）",
         author: "Temmie Chang",
         size: "10.94 KB",
         date: "2026-11-03",
-        downloadUrl: "music/TemShop.txt"
+        downloadUrl: "music/TemShop（Temmie 的商店）.txt"
     },
     {
         id: 404,
-        title: "Thats Sad",
+        title: "Thats Sad（真遗憾）",
         author: "未知",
         size: "32.33 KB",
         date: "2026-11-03",
@@ -3225,7 +3217,7 @@ window.musicData = [
     },
     {
         id: 405,
-        title: "The Amazing Digital Circus",
+        title: "The Amazing Digital Circus（神奇数字马戏团）",
         author: "未知",
         size: "6.07 KB",
         date: "2026-11-03",
@@ -3233,11 +3225,11 @@ window.musicData = [
     },
     {
         id: 406,
-        title: "The King",
+        title: "The King（国王）",
         author: "见参",
         size: "40.82 KB",
         date: "2026-11-03",
-        downloadUrl: "music/The King.txt"
+        downloadUrl: "music/The King（国王）.txt"
     },
     {
         id: 407,
@@ -3249,7 +3241,7 @@ window.musicData = [
     },
     {
         id: 408,
-        title: "Thousand Miles",
+        title: "Thousand Miles（千里）",
         author: "Brenda Lee / The Calling",
         size: "14.81 KB",
         date: "2026-11-03",
@@ -3257,7 +3249,7 @@ window.musicData = [
     },
     {
         id: 409,
-        title: "Town",
+        title: "Town（小镇）",
         author: "未知",
         size: "26.52 KB",
         date: "2026-11-03",
@@ -3265,7 +3257,7 @@ window.musicData = [
     },
     {
         id: 410,
-        title: "Track In Time",
+        title: "Track In Time（时光轨迹）",
         author: "未知",
         size: "24.78 KB",
         date: "2026-11-03",
@@ -3273,7 +3265,7 @@ window.musicData = [
     },
     {
         id: 411,
-        title: "Try Everything",
+        title: "Try Everything（尝试一切）",
         author: "Shakira",
         size: "23.34 KB",
         date: "2026-11-03",
@@ -3281,19 +3273,19 @@ window.musicData = [
     },
     {
         id: 412,
-        title: "UNDERTALEREUNITED",
+        title: "UNDERTALEREUNITED（传说之下重新联合）",
         author: "未知",
         size: "38.69 KB",
         date: "2026-11-03",
-        downloadUrl: "music/UNDERTALEREUNITED.txt"
+        downloadUrl: "music/UNDERTALEREUNITED（传说之下重新联合）.txt"
     },
     {
         id: 413,
-        title: "UT",
+        title: "UT（UT - 新奇之物）",
         author: "新奇之物",
         size: "38.33 KB",
         date: "2026-11-03",
-        downloadUrl: "music/UT-新奇之物.txt"
+        downloadUrl: "music/UT（UT - 新奇之物）.txt"
     },
     {
         id: 414,
@@ -3313,7 +3305,7 @@ window.musicData = [
     },
     {
         id: 416,
-        title: "Underground",
+        title: "Underground（地下）",
         author: "Toby Fox",
         size: "31.62 KB",
         date: "2026-11-03",
@@ -3321,7 +3313,7 @@ window.musicData = [
     },
     {
         id: 417,
-        title: "Undertale Ruins",
+        title: "Undertale Ruins（传说之下废墟）",
         author: "Toby Fox",
         size: "18.54 KB",
         date: "2026-11-03",
@@ -3329,11 +3321,11 @@ window.musicData = [
     },
     {
         id: 418,
-        title: "Undertale",
+        title: "Undertale（传说之下）",
         author: "Toby Fox",
         size: "98.57 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Undertale.txt"
+        downloadUrl: "music/Undertale（传说之下）.txt"
     },
     {
         id: 419,
@@ -3353,79 +3345,79 @@ window.musicData = [
     },
     {
         id: 421,
-        title: "Untitled 13",
+        title: "Untitled 13（无题 13）",
         author: "未知",
         size: "58.98 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Untitled 13.txt"
+        downloadUrl: "music/Untitled 13（无题 13）.txt"
     },
     {
         id: 422,
-        title: "UnwelcomeSchool",
+        title: "UnwelcomeSchool（不受欢迎的学校）",
         author: "未知（蔚蓝档案OST）",
         size: "82.03 KB",
         date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool.txt"
+        downloadUrl: "music/UnwelcomeSchool（不受欢迎的学校）.txt"
     },
     {
         id: 423,
-        title: "UnwelcomeSchool",
+        title: "UnwelcomeSchool（不受欢迎的学校）",
         author: "未知（蔚蓝档案OST）",
         size: "112.86 KB",
         date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（完美版）.txt"
+        downloadUrl: "music/UnwelcomeSchool（不受欢迎的学校）.txt"
     },
     {
         id: 424,
-        title: "UnwelcomeSchool",
+        title: "UnwelcomeSchool（不受欢迎的学校）",
         author: "未知（蔚蓝档案OST）",
         size: "27.64 KB",
         date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（极简版）.txt"
+        downloadUrl: "music/UnwelcomeSchool（不受欢迎的学校）.txt"
     },
     {
         id: 425,
-        title: "UnwelcomeSchool",
+        title: "UnwelcomeSchool（不受欢迎的学校）",
         author: "未知（蔚蓝档案OST）",
         size: "62.10 KB",
         date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（正常版）.txt"
+        downloadUrl: "music/UnwelcomeSchool（不受欢迎的学校）.txt"
     },
     {
         id: 426,
-        title: "UnwelcomeSchool",
+        title: "UnwelcomeSchool（不受欢迎的学校）",
         author: "未知（蔚蓝档案OST）",
         size: "34.67 KB",
         date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（纯钢琴版）.txt"
+        downloadUrl: "music/UnwelcomeSchool（不受欢迎的学校）.txt"
     },
     {
         id: 427,
-        title: "Usagi Flap",
+        title: "Usagi Flap（兔子拍打）",
         author: "未知（蔚蓝档案OST）",
         size: "14.41 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Usagi Flap.txt"
+        downloadUrl: "music/Usagi Flap（兔子拍打）.txt"
     },
     {
         id: 428,
-        title: "Uwa So Temperate",
+        title: "Uwa So Temperate（如此平静）",
         author: "Toby Fox",
         size: "24.25 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Uwa So Temperate.txt"
+        downloadUrl: "music/Uwa So Temperate（如此平静）.txt"
     },
     {
         id: 429,
-        title: "VanillaFlavoredSoda",
+        title: "VanillaFlavoredSoda（香草味汽水）",
         author: "未知",
         size: "73.69 KB",
         date: "2026-11-03",
-        downloadUrl: "music/VanillaFlavoredSoda.txt"
+        downloadUrl: "music/VanillaFlavoredSoda（香草味汽水）.txt"
     },
     {
         id: 430,
-        title: "Vicious Heroism",
+        title: "Vicious Heroism（凶勇）",
         author: "Arcaea OST",
         size: "39.04 KB",
         date: "2026-11-03",
@@ -3433,7 +3425,7 @@ window.musicData = [
     },
     {
         id: 431,
-        title: "Victory",
+        title: "Victory（胜利）",
         author: "Two Steps From Hell",
         size: "53.42 KB",
         date: "2026-11-03",
@@ -3441,15 +3433,15 @@ window.musicData = [
     },
     {
         id: 432,
-        title: "Visions Acreix",
+        title: "Visions Acreix（愿景 Acreix）",
         author: "Arcaea OST",
         size: "59.86 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Visions Acreix（愿景）.txt"
+        downloadUrl: "music/Visions Acreix（愿景 Acreix）.txt"
     },
     {
         id: 433,
-        title: "Wake Up",
+        title: "Wake Up（醒来）",
         author: "Arcade",
         size: "50.26 KB",
         date: "2026-11-03",
@@ -3457,15 +3449,15 @@ window.musicData = [
     },
     {
         id: 434,
-        title: "Wake",
+        title: "Wake（醒来）",
         author: "Arcade / 未知",
         size: "27.20 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Wake.txt"
+        downloadUrl: "music/Wake（醒来）.txt"
     },
     {
         id: 435,
-        title: "Walk Thru Fire",
+        title: "Walk Thru Fire（火中行走）",
         author: "Vicetone",
         size: "12.30 KB",
         date: "2026-11-03",
@@ -3481,15 +3473,15 @@ window.musicData = [
     },
     {
         id: 437,
-        title: "Waterfall",
+        title: "Waterfall（瀑布）",
         author: "Toby Fox",
         size: "14.15 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Waterfall.txt"
+        downloadUrl: "music/Waterfall（瀑布）.txt"
     },
     {
         id: 438,
-        title: "Why Not",
+        title: "Why Not（为何不）",
         author: "Vincent",
         size: "24.66 KB",
         date: "2026-11-03",
@@ -3497,67 +3489,67 @@ window.musicData = [
     },
     {
         id: 439,
-        title: "Windows11",
+        title: "Windows11（Windows 11 系统）",
         author: "未知",
         size: "0.47 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Windows11.txt"
+        downloadUrl: "music/Windows11（Windows 11 系统）.txt"
     },
     {
         id: 440,
-        title: "Windows7",
+        title: "Windows7（Windows 7 系统）",
         author: "未知",
         size: "1.17 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Windows7.txt"
+        downloadUrl: "music/Windows7（Windows 7 系统）.txt"
     },
     {
         id: 441,
-        title: "Windy Hill",
+        title: "Windy Hill（风之丘）",
         author: "见参",
         size: "21.40 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Windy Hill（风之谷）.txt"
+        downloadUrl: "music/Windy Hill（风之丘）.txt"
     },
     {
         id: 442,
-        title: "YMCA",
+        title: "YMCA（青年基督教青年会）",
         author: "未知",
         size: "12.61 KB",
         date: "2026-11-03",
-        downloadUrl: "music/YMCA（ YMCA）.txt"
+        downloadUrl: "music/YMCA（青年基督教青年会）.txt"
     },
     {
         id: 443,
-        title: "Ylang Ylang",
+        title: "Ylang Ylang（依兰花）",
         author: "FKJ",
         size: "11.26 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Ylang Ylang.txt"
+        downloadUrl: "music/Ylang Ylang（依兰花）.txt"
     },
     {
         id: 444,
-        title: "You're a woman",
+        title: "You're a woman（你是个女人）",
         author: "Bad Boys Blue",
         size: "101.75 KB",
         date: "2026-11-03",
-        downloadUrl: "music/You're a woman.txt"
+        downloadUrl: "music/You're a woman（你是个女人）.txt"
     },
     {
         id: 445,
-        title: "Your Best Nightmare",
+        title: "Your Best Nightmare（最坏的噩梦）",
         author: "Toby Fox",
         size: "26.83 KB",
         date: "2026-11-03",
-        downloadUrl: "music/Your Best Nightmare（最坏噩梦）.txt"
+        downloadUrl: "music/Your Best Nightmare（最坏的噩梦）.txt"
     },
     {
         id: 446,
-        title: "baby_i_love_your_way",
+        title: "baby_i_love_your_way（宝贝，我爱你的方式）",
         author: "未知",
         size: "54.57 KB",
         date: "2026-11-03",
-        downloadUrl: "music/baby_i_love_your_way.txt"
+        downloadUrl: "music/baby_i_love_your_way（宝贝，我爱你的方式）.txt"
     },
     {
         id: 447,
@@ -3569,11 +3561,11 @@ window.musicData = [
     },
     {
         id: 448,
-        title: "faded",
+        title: "faded（褪色）",
         author: "未知",
         size: "22.51 KB",
         date: "2026-11-03",
-        downloadUrl: "music/faded.txt"
+        downloadUrl: "music/faded（褪色）.txt"
     },
     {
         id: 449,
@@ -3585,11 +3577,11 @@ window.musicData = [
     },
     {
         id: 450,
-        title: "inkar usi",
+        title: "inkar usi（伊卡尔 乌西）",
         author: "未知",
         size: "17.62 KB",
         date: "2026-11-03",
-        downloadUrl: "music/inkar usi.txt"
+        downloadUrl: "music/inkar usi（伊卡尔 乌西）.txt"
     },
     {
         id: 451,
@@ -3601,27 +3593,19 @@ window.musicData = [
     },
     {
         id: 452,
-        title: "masquerade legion",
+        title: "masquerade legion（假面军团）",
         author: "未知",
         size: "61.63 KB",
         date: "2026-11-03",
-        downloadUrl: "music/masquerade legion.txt"
+        downloadUrl: "music/masquerade legion（假面军团）.txt"
     },
     {
         id: 453,
-        title: "stray",
+        title: "stray（流浪）",
         author: "未知",
         size: "29.70 KB",
         date: "2026-11-03",
-        downloadUrl: "music/stray.txt"
-    },
-    {
-        id: 454,
-        title: "Егемен қазақстан",
-        author: "未知",
-        size: "21.39 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Егемен қазақстан.txt"
+        downloadUrl: "music/stray（流浪）.txt"
     },
     {
         id: 455,
@@ -5369,11 +5353,11 @@ window.musicData = [
     },
     {
         id: 673,
-        title: "鸡你太美",
-        author: "未知",
+        title: "只因你太美",
+        author: "蔡徐坤",
         size: "34.19 KB",
         date: "2026-11-03",
-        downloadUrl: "music/鸡你太美.txt"
+        downloadUrl: "music/只因你太美.txt"
     },
     {
         id: 674,
