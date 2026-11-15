@@ -1536,22 +1536,6 @@ window.musicData = [
         downloadUrl: "music/Bad Apple（坏苹果）.txt"
     },
     {
-        id: 198,
-        title: "Bad Apple（极简）",
-        author: "Alstroemeria Records / Masayoshi Minoshima",
-        size: "72.09 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Bad Apple（极简）.txt"
-    },
-    {
-        id: 199,
-        title: "Bad Apple（正常）",
-        author: "Alstroemeria Records / Masayoshi Minoshima",
-        size: "148.15 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Bad Apple（正常）.txt"
-    },
-    {
         id: 200,
         title: "Bad style - Time back（坏风格 - 时间倒流）",
         author: "见参",
@@ -2168,22 +2152,6 @@ window.musicData = [
         downloadUrl: "music/Higher（更高）.txt"
     },
     {
-        id: 278,
-        title: "His Theme（他的主题曲）",
-        author: "Toby Fox",
-        size: "10.20 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/His Theme（他的主题曲）.txt"
-    },
-    {
-        id: 279,
-        title: "His Theme（他的主题）",
-        author: "Toby Fox",
-        size: "39.56 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/His Theme（他的主题）.txt"
-    },
-    {
         id: 280,
         title: "Home（家）",
         author: "Michael Bublé / 见参",
@@ -2304,14 +2272,6 @@ window.musicData = [
         downloadUrl: "music/Knights - Fight for Judge（骑士 - 为法官而战）.txt"
     },
     {
-        id: 295,
-        title: "Komorebi（木漏れ日）",
-        author: "Pegboard Nerds",
-        size: "25.86 KB",
-        date: "2026-11-15",
-        downloadUrl: "music/Komorebi（木漏れ日）.txt"
-    },
-    {
         id: 296,
         title: "Last Day of The Weekend（周末最后一天）",
         author: "见参",
@@ -2358,14 +2318,6 @@ window.musicData = [
         size: "104.64 KB",
         date: "2026-11-03",
         downloadUrl: "music/Lifeline（生命线）.txt"
-    },
-    {
-        id: 302,
-        title: "Lifeline（生命线电音版）",
-        author: "Zeraphym 六翼使徒",
-        size: "51.89 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Lifeline（生命线电音版）.txt"
     },
     {
         id: 303,
@@ -2462,14 +2414,6 @@ window.musicData = [
         size: "55.14 KB",
         date: "2026-11-03",
         downloadUrl: "music/Megalovania_2（传说之下 2）.txt"
-    },
-    {
-        id: 315,
-        title: "Megalovania（完整版）",
-        author: "Toby Fox",
-        size: "18.62 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Megalovania（完整版）.txt"
     },
     {
         id: 316,
@@ -2584,28 +2528,12 @@ window.musicData = [
         downloadUrl: "music/My Sunset（我的日落）.txt"
     },
     {
-        id: 330,
-        title: "NIGHT DANCER（夜舞者）",
-        author: "imase",
-        size: "70.77 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/NIGHT DANCER（夜舞者）.txt"
-    },
-    {
         id: 331,
         title: "NIGHT DANCER（纯钢琴）",
         author: "imase",
         size: "20.32 KB",
         date: "2026-11-03",
         downloadUrl: "music/NIGHT DANCER（纯钢琴）.txt"
-    },
-    {
-        id: 332,
-        title: "NIGHT DANCER（轻量鼓组）",
-        author: "imase",
-        size: "33.09 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/NIGHT DANCER（轻量鼓组）.txt"
     },
     {
         id: 333,
@@ -3104,22 +3032,6 @@ window.musicData = [
         downloadUrl: "music/Summertime（夏日）.txt"
     },
     {
-        id: 395,
-        title: "Sunburst（日冕·Tobu版）",
-        author: "Tobu",
-        size: "93.89 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Sunburst（日冕·Tobu版）.txt"
-    },
-    {
-        id: 396,
-        title: "Sunburst（日冕）",
-        author: "Tobu",
-        size: "60.52 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Sunburst（日冕）.txt"
-    },
-    {
         id: 397,
         title: "TAKEDISKRUSH!（击败磁盘！）",
         author: "Laur",
@@ -3190,14 +3102,6 @@ window.musicData = [
         size: "6.07 KB",
         date: "2026-11-03",
         downloadUrl: "music/The Amazing Digital Circus（神奇数字马戏团）.txt"
-    },
-    {
-        id: 406,
-        title: "The King（国王）",
-        author: "Paperman",
-        size: "40.82 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/The King（国王）.txt"
     },
     {
         id: 407,
@@ -3318,38 +3222,6 @@ window.musicData = [
         size: "58.98 KB",
         date: "2026-11-03",
         downloadUrl: "music/Untitled 13（无题 13）.txt"
-    },
-    {
-        id: 422,
-        title: "UnwelcomeSchool（不受欢迎的学校）",
-        author: "ミツキヨ",
-        size: "82.03 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（不受欢迎的学校）.txt"
-    },
-    {
-        id: 423,
-        title: "UnwelcomeSchool（完美版）",
-        author: "ミツキヨ",
-        size: "112.86 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（完美版）.txt"
-    },
-    {
-        id: 424,
-        title: "UnwelcomeSchool（极简版）",
-        author: "ミツキヨ",
-        size: "27.64 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（极简版）.txt"
-    },
-    {
-        id: 425,
-        title: "UnwelcomeSchool（正常版）",
-        author: "ミツキヨ",
-        size: "62.10 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（正常版）.txt"
     },
     {
         id: 426,
@@ -3592,14 +3464,6 @@ window.musicData = [
         downloadUrl: "music/一花依世界.txt"
     },
     {
-        id: 458,
-        title: "七里香",
-        author: "周杰伦",
-        size: "25.99 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/七里香.txt"
-    },
-    {
         id: 459,
         title: "三月雨",
         author: "洛天依",
@@ -3712,14 +3576,6 @@ window.musicData = [
         downloadUrl: "music/伍六七之暗影宿命-空白.txt"
     },
     {
-        id: 478,
-        title: "你从未离去",
-        author: "白挺",
-        size: "19.10 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/你从未离去.txt"
-    },
-    {
         id: 479,
         title: "你呀你呀",
         author: "王子健/十八薰",
@@ -3752,14 +3608,6 @@ window.musicData = [
         downloadUrl: "music/借.txt"
     },
     {
-        id: 483,
-        title: "偏爱",
-        author: "张芸京",
-        size: "49.06 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/偏爱.txt"
-    },
-    {
         id: 484,
         title: "光头强来了，快跑！",
         author: "未知（熊出没）",
@@ -3782,14 +3630,6 @@ window.musicData = [
         size: "32.67 KB",
         date: "2026-11-03",
         downloadUrl: "music/兔子舞.txt"
-    },
-    {
-        id: 487,
-        title: "兰亭序",
-        author: "周杰伦",
-        size: "15.42 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/兰亭序.txt"
     },
     {
         id: 488,
@@ -3880,22 +3720,6 @@ window.musicData = [
         downloadUrl: "music/原神-晚安，璃月.txt"
     },
     {
-        id: 501,
-        title: "反乌托邦",
-        author: "星尘、诗岸",
-        size: "90.31 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/反乌托邦.txt"
-    },
-    {
-        id: 502,
-        title: "反方向的钟",
-        author: "周杰伦",
-        size: "17.60 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/反方向的钟.txt"
-    },
-    {
         id: 503,
         title: "反方向的钟_罗曼耶卓 · oskar",
         author: "FF14",
@@ -3942,14 +3766,6 @@ window.musicData = [
         size: "9.14 KB",
         date: "2026-11-03",
         downloadUrl: "music/吓到了吗？- 胡桃角色预告曲.txt"
-    },
-    {
-        id: 510,
-        title: "听妈妈的话",
-        author: "周杰伦",
-        size: "12.49 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/听妈妈的话.txt"
     },
     {
         id: 511,
@@ -4224,14 +4040,6 @@ window.musicData = [
         downloadUrl: "music/带你看风景.txt"
     },
     {
-        id: 546,
-        title: "弥渡山歌",
-        author: "云南民歌 / 阿音坊组合",
-        size: "37.13 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/弥渡山歌.txt"
-    },
-    {
         id: 547,
         title: "强敌之战",
         author: "未知",
@@ -4296,14 +4104,6 @@ window.musicData = [
         downloadUrl: "music/悬溺一原琴版.txt"
     },
     {
-        id: 557,
-        title: "情绪回收站",
-        author: "失落花园_",
-        size: "37.18 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/情绪回收站.txt"
-    },
-    {
         id: 558,
         title: "愤怒的小鸟",
         author: "Ari Pulkkinen",
@@ -4358,14 +4158,6 @@ window.musicData = [
         size: "11.80 KB",
         date: "2026-11-03",
         downloadUrl: "music/我知道.txt"
-    },
-    {
-        id: 565,
-        title: "打上花火",
-        author: "DAOKO×米津玄師",
-        size: "83.02 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/打上花火.txt"
     },
     {
         id: 566,
@@ -4440,14 +4232,6 @@ window.musicData = [
         downloadUrl: "music/明天会更好.txt"
     },
     {
-        id: 575,
-        title: "春娇与志明",
-        author: "街道办GDC/欧阳耀莹",
-        size: "31.10 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/春娇与志明.txt"
-    },
-    {
         id: 576,
         title: "春节序曲",
         author: "李焕之",
@@ -4488,14 +4272,6 @@ window.musicData = [
         downloadUrl: "music/晚安大小姐.txt"
     },
     {
-        id: 581,
-        title: "晴天",
-        author: "周杰伦",
-        size: "30.11 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/晴天.txt"
-    },
-    {
         id: 582,
         title: "暗度陈仓",
         author: "未知（熊出没）",
@@ -4518,14 +4294,6 @@ window.musicData = [
         size: "13.76 KB",
         date: "2026-11-03",
         downloadUrl: "music/最佳损友.txt"
-    },
-    {
-        id: 586,
-        title: "最后一页",
-        author: "江语晨",
-        size: "8.15 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/最后一页.txt"
     },
     {
         id: 587,
@@ -4584,14 +4352,6 @@ window.musicData = [
         downloadUrl: "music/没有星星的夜晚.txt"
     },
     {
-        id: 596,
-        title: "海阔天空",
-        author: "Beyond",
-        size: "90.94 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/海阔天空.txt"
-    },
-    {
         id: 597,
         title: "消愁",
         author: "毛不易",
@@ -4622,14 +4382,6 @@ window.musicData = [
         size: "20.41 KB",
         date: "2026-11-03",
         downloadUrl: "music/深蓝雨.txt"
-    },
-    {
-        id: 603,
-        title: "演员",
-        author: "薛之谦",
-        size: "15.70 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/演员.txt"
     },
     {
         id: 605,
@@ -4760,14 +4512,6 @@ window.musicData = [
         downloadUrl: "music/第一次.txt"
     },
     {
-        id: 624,
-        title: "精卫",
-        author: "陈粒",
-        size: "12.33 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/精卫.txt"
-    },
-    {
         id: 625,
         title: "素颜",
         author: "许嵩/何曼婷",
@@ -4848,14 +4592,6 @@ window.musicData = [
         downloadUrl: "music/舌尖上的哈基咪.txt"
     },
     {
-        id: 637,
-        title: "花海",
-        author: "周杰伦",
-        size: "32.91 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/花海.txt"
-    },
-    {
         id: 638,
         title: "花海_周杰伦",
         author: "周杰伦",
@@ -4886,14 +4622,6 @@ window.musicData = [
         size: "5.86 KB",
         date: "2026-11-03",
         downloadUrl: "music/蒙德城-夜晚.txt"
-    },
-    {
-        id: 642,
-        title: "蒲公英的约定",
-        author: "周杰伦",
-        size: "29.32 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/蒲公英的约定.txt"
     },
     {
         id: 643,
@@ -4928,22 +4656,6 @@ window.musicData = [
         downloadUrl: "music/西班牙斗牛曲.txt"
     },
     {
-        id: 647,
-        title: "诀别书",
-        author: "邓垚",
-        size: "27.91 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/诀别书.txt"
-    },
-    {
-        id: 648,
-        title: "说了再见",
-        author: "周杰伦",
-        size: "17.62 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/说了再见.txt"
-    },
-    {
         id: 649,
         title: "诺基亚",
         author: "Francisco Tárrega",
@@ -4958,14 +4670,6 @@ window.musicData = [
         size: "7.79 KB",
         date: "2026-11-03",
         downloadUrl: "music/谁.txt"
-    },
-    {
-        id: 651,
-        title: "起风了",
-        author: "买辣椒也用券",
-        size: "54.57 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/起风了.txt"
     },
     {
         id: 652,
@@ -5094,14 +4798,6 @@ window.musicData = [
         size: "9.10 KB",
         date: "2026-11-03",
         downloadUrl: "music/青花.txt"
-    },
-    {
-        id: 669,
-        title: "青花瓷",
-        author: "周杰伦",
-        size: "17.26 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/青花瓷.txt"
     },
     {
         id: 670,
