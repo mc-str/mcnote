@@ -1,0 +1,11 @@
+execute as @a at @s unless entity @s[scores={time=!16}] run playsound note.harp @s ~~~ 1 0.28062
+execute as @a at @s unless entity @s[scores={time=!13,time=!22}] run playsound note.harp @s ~~~ 1 0.42045
+execute as @a at @s unless entity @s[scores={time=!4}] run playsound note.harp @s ~~~ 1 0.44545
+execute as @a at @s unless entity @s[scores={time=!34,time=!42}] run playsound note.harp @s ~~~ 1 0.62996
+execute as @a at @s unless entity @s[scores={time=!17,time=!23,time=!34}] run playsound note.harp @s ~~~ 1 0.8409
+execute as @a at @s unless entity @s[scores={time=!4,time=!9,time=!14,time=!16,time=!20,time=!23}] run playsound note.harp @s ~~~ 1 1.12246
+execute as @a at @s unless entity @s[scores={time=!4,time=!6,time=!16,time=!23,time=!28}] run playsound note.harp @s ~~~ 1 1.68179
+execute as @a at @s unless entity @s[scores={time=!16}] run playsound note.harp @s ~~~ 1 2.24492
+execute as @a at @s unless entity @s[scores={time=!9,time=!34}] run playsound note.harp @s ~~~ 1 2.51984
+execute as @a at @s unless entity @s[scores={time=!0,time=!28,time=!34}] run playsound note.harp @s ~~~ 1 3.36359
+execute as @a at @s unless entity @s[scores={time=!34}] run playsound note.harp @s ~~~ 1 5.03968

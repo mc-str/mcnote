@@ -1,0 +1,5 @@
+execute as @a at @s unless entity @s[scores={time=!0}] run playsound note.harp @s ~~~ 1 0.47194
+execute as @a at @s unless entity @s[scores={time=!14}] run playsound note.harp @s ~~~ 1 0.70711
+execute as @a at @s unless entity @s[scores={time=!10}] run playsound note.harp @s ~~~ 1 1.88775
+execute as @a at @s unless entity @s[scores={time=!0}] run playsound note.harp @s ~~~ 1 2.11893
+execute as @a at @s unless entity @s[scores={time=!14}] run playsound note.harp @s ~~~ 1 2.82843
