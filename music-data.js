@@ -3016,14 +3016,6 @@ window.musicData = [
         downloadUrl: "music/Suffocating（窒息）.zip"
     },
     {
-        id: 393,
-        title: "Summertime（夏日時光)",
-        author: "cinnamons",
-        size: "2.72 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Summertime（夏日時光).zip"
-    },
-    {
         id: 394,
         title: "Summertime（夏日）",
         author: "Cyndi Lauper / 见参",
