@@ -1832,14 +1832,6 @@ window.musicData = [
         downloadUrl: "music/Dropdead（坠落）.zip"
     },
     {
-        id: 239,
-        title: "Dubidubidu----Christell（奇皮奇普恰帕）",
-        author: "Christell",
-        size: "8.30 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Dubidubidu----Christell（奇皮奇普恰帕）.zip"
-    },
-    {
         id: 240,
         title: "Dubidubidu（奇皮奇普恰帕）",
         author: "Christell",
@@ -3008,14 +3000,6 @@ window.musicData = [
         downloadUrl: "music/Underground（地下）.zip"
     },
     {
-        id: 417,
-        title: "Undertale Ruins（传说之下废墟）",
-        author: "Toby Fox",
-        size: "2.85 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Undertale Ruins（传说之下废墟）.zip"
-    },
-    {
         id: 418,
         title: "Undertale（传说之下）",
         author: "Toby Fox",
@@ -3464,14 +3448,6 @@ window.musicData = [
         downloadUrl: "music/别让我担心.zip"
     },
     {
-        id: 496,
-        title: "剪刀刺客—刺客伍六七主题曲",
-        author: "未知（刺客伍六七）",
-        size: "5.41 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/剪刀刺客—刺客伍六七主题曲.zip"
-    },
-    {
         id: 497,
         title: "勾指起誓",
         author: "洛天依",
@@ -3502,14 +3478,6 @@ window.musicData = [
         size: "1.07 KB",
         date: "2026-11-03",
         downloadUrl: "music/原神-晚安，璃月.zip"
-    },
-    {
-        id: 505,
-        title: "只要平凡 派蒙赞助",
-        author: "张杰/张碧晨",
-        size: "2.47 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/只要平凡 派蒙赞助.zip"
     },
     {
         id: 507,
