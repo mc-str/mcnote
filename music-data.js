@@ -880,14 +880,6 @@ window.musicData = [
         downloadUrl: "music/Dawn(黎明将至).zip"
     },
     {
-        id: 114,
-        title: "Are You Lost (你迷失了吗)",
-        author: "Park Bird",
-        size: "1.00 KB",
-        date: "2026-04-22",
-        downloadUrl: "music/Are You Lost(你迷失了吗).zip"
-    },
-    {
         id: 115,
         title: "Aria Math（咏叹调）",
         author: "C418",
@@ -2136,14 +2128,6 @@ window.musicData = [
         downloadUrl: "music/Hopes And Dreams（希望与梦想）.zip"
     },
     {
-        id: 282,
-        title: "Hopes and Dreams（希望与梦想）",
-        author: "Toby Fox",
-        size: "4.60 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Hopes and Dreams（希望与梦想）.zip"
-    },
-    {
         id: 284,
         title: "Human Fall Flat（人类跌落梦境）",
         author: "Tomas Sakalauskas",
@@ -3216,14 +3200,6 @@ window.musicData = [
         downloadUrl: "music/beyound the timeline穿越时间线.zip"
     },
     {
-        id: 448,
-        title: "faded（褪色）",
-        author: "Alan Walker / Iselin Solheim",
-        size: "3.89 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/faded（褪色）.zip"
-    },
-    {
         id: 449,
         title: "granny(恐怖奶奶）",
         author: "DVloper（Dennis Vukanovic）",
@@ -3534,14 +3510,6 @@ window.musicData = [
         size: "1.07 KB",
         date: "2026-11-03",
         downloadUrl: "music/原神-晚安，璃月.zip"
-    },
-    {
-        id: 503,
-        title: "反方向的钟_罗曼耶卓 · oskar",
-        author: "FF14",
-        size: "5.29 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/反方向的钟_罗曼耶卓 · oskar - FF14.zip"
     },
     {
         id: 505,
