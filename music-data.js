@@ -1537,8 +1537,8 @@ window.musicData = [
     },
     {
         id: 200,
-        title: "Bad style - Time back（坏风格 - 时间倒流）",
-        author: "见参",
+        title: "Time back",
+        author: "Bad style",
         size: "4.76 KB",
         date: "2026-11-03",
         downloadUrl: "music/Bad style - Time back（坏风格 - 时间倒流）.zip"
@@ -1638,14 +1638,6 @@ window.musicData = [
         size: "3.39 KB",
         date: "2026-11-03",
         downloadUrl: "music/By Your Side（在你身边）.zip"
-    },
-    {
-        id: 213,
-        title: "Camping（露营）",
-        author: "见参",
-        size: "3.26 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Camping（露营）.zip"
     },
     {
         id: 214,
@@ -1888,22 +1880,6 @@ window.musicData = [
         downloadUrl: "music/Else（其他）.zip"
     },
     {
-        id: 244,
-        title: "Empty Dreams（空洞的梦）",
-        author: "见参",
-        size: "3.91 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Empty Dreams（空洞的梦）.zip"
-    },
-    {
-        id: 245,
-        title: "EpicTech（史诗科技）",
-        author: "见参",
-        size: "7.09 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/EpicTech（史诗科技）.zip"
-    },
-    {
         id: 246,
         title: "Exitium（毁灭现实）",
         author: "Laur",
@@ -1990,14 +1966,6 @@ window.musicData = [
         size: "5.36 KB",
         date: "2026-11-03",
         downloadUrl: "music/Flamingo（火烈鸟）.zip"
-    },
-    {
-        id: 257,
-        title: "Flourish（盛放）",
-        author: "见参",
-        size: "5.68 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Flourish（盛放）.zip"
     },
     {
         id: 258,
@@ -2176,17 +2144,9 @@ window.musicData = [
         downloadUrl: "music/Hopes and Dreams（希望与梦想）.zip"
     },
     {
-        id: 283,
-        title: "Hope（希望）",
-        author: "见参",
-        size: "10.39 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Hope（希望）.zip"
-    },
-    {
         id: 284,
         title: "Human Fall Flat（人类跌落梦境）",
-        author: "见参",
+        author: "Tomas Sakalauskas",
         size: "1.93 KB",
         date: "2026-11-03",
         downloadUrl: "music/Human Fall Flat（人类跌落梦境）.zip"
@@ -2270,14 +2230,6 @@ window.musicData = [
         size: "4.29 KB",
         date: "2026-11-03",
         downloadUrl: "music/Knights - Fight for Judge（骑士 - 为法官而战）.zip"
-    },
-    {
-        id: 296,
-        title: "Last Day of The Weekend（周末最后一天）",
-        author: "见参",
-        size: "1.75 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Last Day of The Weekend（周末最后一天）.zip"
     },
     {
         id: 297,
@@ -2368,14 +2320,6 @@ window.musicData = [
         downloadUrl: "music/Luv Letter（情书）.zip"
     },
     {
-        id: 309,
-        title: "M3（M3 型）",
-        author: "见参",
-        size: "5.71 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/M3（M3 型）.zip"
-    },
-    {
         id: 310,
         title: "Malicious Mischance（恶意）",
         author: "s-don",
@@ -2390,14 +2334,6 @@ window.musicData = [
         size: "4.90 KB",
         date: "2026-11-03",
         downloadUrl: "music/Masquerade（假面舞会）.zip"
-    },
-    {
-        id: 312,
-        title: "Matrix（矩阵）",
-        author: "未知",
-        size: "2.84 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Matrix（矩阵）.zip"
     },
     {
         id: 313,
@@ -2552,14 +2488,6 @@ window.musicData = [
         downloadUrl: "music/Nesno Wons（Nesno 温斯）.zip"
     },
     {
-        id: 335,
-        title: "New Year 20XX（新年 20XX）",
-        author: "未知",
-        size: "1.69 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/New Year 20XX（新年 20XX）.zip"
-    },
-    {
         id: 336,
         title: "Night Drive（夜驾）",
         author: "Wilee",
@@ -2602,7 +2530,7 @@ window.musicData = [
     {
         id: 341,
         title: "Old Doll（旧娃娃）",
-        author: "未知",
+        author: "Bluerra-sai",
         size: "1.50 KB",
         date: "2026-11-03",
         downloadUrl: "music/Old Doll（旧娃娃）.zip"
@@ -2630,14 +2558,6 @@ window.musicData = [
         size: "3.87 KB",
         date: "2026-11-03",
         downloadUrl: "music/Overdose（过量）.zip"
-    },
-    {
-        id: 345,
-        title: "Passion（激情）",
-        author: "未知",
-        size: "4.92 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Passion（激情）.zip"
     },
     {
         id: 346,
@@ -2672,22 +2592,6 @@ window.musicData = [
         downloadUrl: "music/Plum_Timeline（Plum 时间线）.zip"
     },
     {
-        id: 350,
-        title: "Poco A Poco（一点一点）",
-        author: "未知",
-        size: "2.93 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Poco A Poco（一点一点）.zip"
-    },
-    {
-        id: 351,
-        title: "Pool（泳池）",
-        author: "未知",
-        size: "4.77 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Pool（泳池）.zip"
-    },
-    {
         id: 352,
         title: "RE Aoharu（RE 逢魔时刻）",
         author: "Nor",
@@ -2718,14 +2622,6 @@ window.musicData = [
         size: "4.39 KB",
         date: "2026-11-03",
         downloadUrl: "music/Radiant（光辉）.zip"
-    },
-    {
-        id: 356,
-        title: "Raindrops（雨滴）",
-        author: "见参",
-        size: "1.84 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Raindrops（雨滴）.zip"
     },
     {
         id: 357,
@@ -3008,14 +2904,6 @@ window.musicData = [
         downloadUrl: "music/Stronger Than You（比你更强大）.zip"
     },
     {
-        id: 392,
-        title: "Suffocating（窒息）",
-        author: "见参",
-        size: "3.94 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Suffocating（窒息）.zip"
-    },
-    {
         id: 394,
         title: "Summertime（夏日）",
         author: "Cyndi Lauper / 见参",
@@ -3050,7 +2938,7 @@ window.musicData = [
     {
         id: 400,
         title: "Tamo Daleko（遥远的地方）",
-        author: "未知",
+        author: "Đorđe Marinković",
         size: "2.80 KB",
         date: "2026-11-03",
         downloadUrl: "music/Tamo Daleko（遥远的地方）.zip"
@@ -3080,14 +2968,6 @@ window.musicData = [
         downloadUrl: "music/TemShop（Temmie 的商店）.zip"
     },
     {
-        id: 404,
-        title: "Thats Sad（真遗憾）",
-        author: "未知",
-        size: "4.26 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Thats Sad（真遗憾）.zip"
-    },
-    {
         id: 405,
         title: "The Amazing Digital Circus（神奇数字马戏团）",
         author: "Gooseworx",
@@ -3096,28 +2976,12 @@ window.musicData = [
         downloadUrl: "music/The Amazing Digital Circus（神奇数字马戏团）.zip"
     },
     {
-        id: 407,
-        title: "Theme主题曲",
-        author: "未知",
-        size: "0.99 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Theme主题曲.zip"
-    },
-    {
         id: 408,
         title: "Thousand Miles（千里）",
         author: "Brenda Lee / The Calling",
         size: "3.16 KB",
         date: "2026-11-03",
         downloadUrl: "music/Thousand Miles（千里）.zip"
-    },
-    {
-        id: 409,
-        title: "Town（小镇）",
-        author: "未知",
-        size: "4.17 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Town（小镇）.zip"
     },
     {
         id: 410,
@@ -3152,14 +3016,6 @@ window.musicData = [
         downloadUrl: "music/UT（UT - 新奇之物）.zip"
     },
     {
-        id: 414,
-        title: "Ultimate Times 审判曲",
-        author: "未知",
-        size: "2.55 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Ultimate Times 审判曲.zip"
-    },
-    {
         id: 415,
         title: "Undercure 无言之诫",
         author: "十九sinon",
@@ -3190,14 +3046,6 @@ window.musicData = [
         size: "14.82 KB",
         date: "2026-11-03",
         downloadUrl: "music/Undertale（传说之下）.zip"
-    },
-    {
-        id: 419,
-        title: "UndertaleKarmasAB1#ch传说之下：因果报应Phase1-TheDevilStillWaiting",
-        author: "未知",
-        size: "7.18 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/UndertaleKarmasAB1#ch传说之下：因果报应Phase1-TheDevilStillWaiting.zip"
     },
     {
         id: 420,
@@ -3312,22 +3160,6 @@ window.musicData = [
         downloadUrl: "music/Why Not（为何不）.zip"
     },
     {
-        id: 439,
-        title: "Windows11（Windows 11 系统）",
-        author: "未知",
-        size: "0.30 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Windows11（Windows 11 系统）.zip"
-    },
-    {
-        id: 440,
-        title: "Windows7（Windows 7 系统）",
-        author: "未知",
-        size: "0.38 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Windows7（Windows 7 系统）.zip"
-    },
-    {
         id: 441,
         title: "Windy Hill（风之丘）",
         author: "羽肿",
@@ -3394,7 +3226,7 @@ window.musicData = [
     {
         id: 449,
         title: "granny(恐怖奶奶）",
-        author: "未知",
+        author: "DVloper（Dennis Vukanovic）",
         size: "1.81 KB",
         date: "2026-11-03",
         downloadUrl: "music/granny(恐怖奶奶）.zip"
@@ -3542,14 +3374,6 @@ window.musicData = [
         size: "4.77 KB",
         date: "2026-11-03",
         downloadUrl: "music/丽芙极昼主题曲.zip"
-    },
-    {
-        id: 473,
-        title: "二创sans中立线审判二阶段曲",
-        author: "未知",
-        size: "4.47 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/二创sans中立线审判二阶段曲.zip"
     },
     {
         id: 475,
@@ -3720,14 +3544,6 @@ window.musicData = [
         downloadUrl: "music/反方向的钟_罗曼耶卓 · oskar - FF14.zip"
     },
     {
-        id: 504,
-        title: "发光记忆",
-        author: "未知",
-        size: "3.36 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/发光记忆.zip"
-    },
-    {
         id: 505,
         title: "只要平凡 派蒙赞助",
         author: "张杰/张碧晨",
@@ -3830,22 +3646,6 @@ window.musicData = [
         size: "1.19 KB",
         date: "2026-11-03",
         downloadUrl: "music/在你的身边.zip"
-    },
-    {
-        id: 520,
-        title: "地下之风XJOJO",
-        author: "未知",
-        size: "8.20 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/地下之风XJOJO.zip"
-    },
-    {
-        id: 521,
-        title: "堕天使 丽露露",
-        author: "未知",
-        size: "1.54 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/堕天使 丽露露.zip"
     },
     {
         id: 522,
@@ -4008,14 +3808,6 @@ window.musicData = [
         downloadUrl: "music/小小的我.zip"
     },
     {
-        id: 543,
-        title: "希卡尔审判曲",
-        author: "未知",
-        size: "1.82 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/希卡尔审判曲.zip"
-    },
-    {
         id: 544,
         title: "希望有羽毛和翅膀",
         author: "知更鸟/HOYO-MiX",
@@ -4030,14 +3822,6 @@ window.musicData = [
         size: "1.99 KB",
         date: "2026-11-03",
         downloadUrl: "music/带你看风景.zip"
-    },
-    {
-        id: 547,
-        title: "强敌之战",
-        author: "未知",
-        size: "2.55 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/强敌之战.zip"
     },
     {
         id: 548,
@@ -4062,14 +3846,6 @@ window.musicData = [
         size: "2.08 KB",
         date: "2026-11-03",
         downloadUrl: "music/彩虹.zip"
-    },
-    {
-        id: 553,
-        title: "总战力BOSS",
-        author: "未知",
-        size: "3.67 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/总战力BOSS.zip"
     },
     {
         id: 554,
@@ -4110,14 +3886,6 @@ window.musicData = [
         size: "4.30 KB",
         date: "2026-11-03",
         downloadUrl: "music/我好像在哪见过你.zip"
-    },
-    {
-        id: 561,
-        title: "我的世界动画联盟Merry go",
-        author: "未知",
-        size: "4.80 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/我的世界动画联盟Merry go.zip"
     },
     {
         id: 562,
@@ -4304,14 +4072,6 @@ window.musicData = [
         downloadUrl: "music/未完成的歌.zip"
     },
     {
-        id: 590,
-        title: "未知搓谱",
-        author: "未知",
-        size: "2.88 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/未知搓谱.zip"
-    },
-    {
         id: 591,
         title: "桥边姑娘",
         author: "海伦",
@@ -4454,14 +4214,6 @@ window.musicData = [
         size: "2.97 KB",
         date: "2026-11-03",
         downloadUrl: "music/真的爱你.zip"
-    },
-    {
-        id: 619,
-        title: "福利燃曲重音加速版",
-        author: "未知",
-        size: "16.81 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/福利燃曲重音加速版.zip"
     },
     {
         id: 620,
@@ -4734,14 +4486,6 @@ window.musicData = [
         size: "4.98 KB",
         date: "2026-11-03",
         downloadUrl: "music/银花玉鉴逐人来.zip"
-    },
-    {
-        id: 663,
-        title: "镜面世界的反击",
-        author: "未知",
-        size: "2.86 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/镜面世界的反击.zip"
     },
     {
         id: 664,
