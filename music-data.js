@@ -3,7 +3,7 @@ window.musicData = [
         id: 1,
         title: "义勇军进行曲",
         author: "聂耳/田汉/中国音乐学院合唱团、中国交响乐团、解放军军乐团",
-        size: "2.75 KB",
+        size: "3.70 KB",
         date: "2026-04-18",
         downloadUrl: "music/义勇军进行曲.zip"
     },
@@ -11,7 +11,7 @@ window.musicData = [
         id: 2,
         title: "歌唱祖国",
         author: "王莘/中央乐团合唱团",
-        size: "6.54 KB",
+        size: "7.70 KB",
         date: "2026-04-19",
         downloadUrl: "music/歌唱祖国.zip"
     },
@@ -1131,7 +1131,7 @@ window.musicData = [
         id: 145,
         title: "海屿你",
         author: "马也_Crabbit / Cole先生",
-        size: "5.72 KB",
+        size: "5.81 KB",
         date: "2026-08-24",
         downloadUrl: "music/海屿你.zip"
     },
