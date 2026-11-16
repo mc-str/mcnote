@@ -2584,14 +2584,6 @@ window.musicData = [
         downloadUrl: "music/RE Aoharu（RE 逢魔时刻）.zip"
     },
     {
-        id: 353,
-        title: "RE Aoharu轻量版",
-        author: "Nor",
-        size: "2.40 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/RE Aoharu轻量版.zip"
-    },
-    {
         id: 354,
         title: "RabbIt Dance（兔子舞）",
         author: "未知（蔚蓝档案OST）",
@@ -3864,14 +3856,6 @@ window.musicData = [
         downloadUrl: "music/我的悲伤是水做的.zip"
     },
     {
-        id: 563,
-        title: "我的悲伤是水做的_鼓组",
-        author: "ChiliChill乐团",
-        size: "5.68 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/我的悲伤是水做的_鼓组.zip"
-    },
-    {
         id: 564,
         title: "我知道",
         author: "By2",
@@ -4296,14 +4280,6 @@ window.musicData = [
         downloadUrl: "music/舌尖上的哈基咪.zip"
     },
     {
-        id: 638,
-        title: "花海_周杰伦",
-        author: "周杰伦",
-        size: "2.03 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/花海_周杰伦.zip"
-    },
-    {
         id: 639,
         title: "苦痛",
         author: "易耀申",
@@ -4422,14 +4398,6 @@ window.musicData = [
         size: "9.92 KB",
         date: "2026-11-03",
         downloadUrl: "music/酒醉的蝴蝶.zip"
-    },
-    {
-        id: 659,
-        title: "酒醉的蝴蝶_孙艺琪",
-        author: "崔伟立",
-        size: "5.43 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/酒醉的蝴蝶_孙艺琪.zip"
     },
     {
         id: 660,
