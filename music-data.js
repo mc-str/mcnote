@@ -225,19 +225,11 @@ window.musicData = [
     },
     {
         id: 29,
-        title: "银行不妙曲",
+        title: "UnwelcomeSchool（不受欢迎的学校）",
         author: "ミツキヨ",
         size: "6.66 KB",
         date: "2026-04-19",
         downloadUrl: "music/银行不妙曲.zip"
-    },
-    {
-        id: 30,
-        title: "悬溺 - 原琴版",
-        author: "葛东琪",
-        size: "2.85 KB",
-        date: "2026-04-19",
-        downloadUrl: "music/悬溺一原琴版.zip"
     },
     {
         id: 31,
@@ -313,7 +305,7 @@ window.musicData = [
     },
     {
         id: 40,
-        title: "圣诞快乐劳伦斯先生",
+        title: "Merry Christmas Mr. Lawrence（圣诞快乐劳伦斯先生）",
         author: "坂本龙一",
         size: "6.04 KB",
         date: "2026-04-19",
@@ -425,7 +417,7 @@ window.musicData = [
     },
     {
         id: 55,
-        title: "你离开的事实",
+        title: "The Truth That You Leave（你离开的事实）",
         author: "高至豪",
         size: "4.00 KB",
         date: "2026-04-19",
@@ -577,7 +569,7 @@ window.musicData = [
     },
     {
         id: 75,
-        title: "花之舞",
+        title: "Flower Dance（花之舞）",
         author: "DJ Okawari",
         size: "7.72 KB",
         date: "2026-04-19",
@@ -742,14 +734,6 @@ window.musicData = [
         size: "7.21 KB",
         date: "2026-04-22",
         downloadUrl: "music/Ticking.zip"
-    },
-    {
-        id: 97,
-        title: "The Truth That You Leave（你留下的真相）",
-        author: "Pianoboy (高至豪)",
-        size: "4.63 KB",
-        date: "2026-04-22",
-        downloadUrl: "music/The Truth That You Leave.zip"
     },
     {
         id: 98,
@@ -974,14 +958,6 @@ window.musicData = [
         size: "5.68 KB",
         date: "2026-04-26",
         downloadUrl: "music/春娇与志明.zip"
-    },
-    {
-        id: 127,
-        title: "春节序曲片段",
-        author: "李焕之",
-        size: "1.20 KB",
-        date: "2026-04-26",
-        downloadUrl: "music/春节序曲片段.zip"
     },
     {
         id: 128,
@@ -1952,14 +1928,6 @@ window.musicData = [
         downloadUrl: "music/Flamingo（火烈鸟）.zip"
     },
     {
-        id: 258,
-        title: "Flower Dance（花之舞）",
-        author: "DJ Okawari",
-        size: "6.03 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Flower Dance（花之舞）.zip"
-    },
-    {
         id: 259,
         title: "Focalors Sacrifice Theme（芙卡洛斯的献祭）",
         author: "陈致逸（Yu-Peng Chen, Genshin Impact）",
@@ -2320,14 +2288,6 @@ window.musicData = [
         downloadUrl: "music/Megalovania（传说之下）.zip"
     },
     {
-        id: 314,
-        title: "Megalovania_2（传说之下 2）",
-        author: "Toby Fox",
-        size: "10.32 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Megalovania_2（传说之下 2）.zip"
-    },
-    {
         id: 316,
         title: "Megamix_1（Mega 混音 1）",
         author: "Plum",
@@ -2350,14 +2310,6 @@ window.musicData = [
         size: "5.84 KB",
         date: "2026-11-03",
         downloadUrl: "music/Memphis Doom（孟菲斯末日）.zip"
-    },
-    {
-        id: 319,
-        title: "Merry Christmas Mr. Lawrence（圣诞快乐劳伦斯先生）",
-        author: "坂本龙一",
-        size: "3.63 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Merry Christmas Mr. Lawrence（圣诞快乐劳伦斯先生）.zip"
     },
     {
         id: 320,
@@ -2646,14 +2598,6 @@ window.musicData = [
         size: "2.43 KB",
         date: "2026-11-03",
         downloadUrl: "music/River Flows In You（河水流过）.zip"
-    },
-    {
-        id: 364,
-        title: "Rivers Flow In You（河水流过）",
-        author: "Yiruma",
-        size: "2.33 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/Rivers Flow In You（河水流过）.zip"
     },
     {
         id: 365,
@@ -3024,14 +2968,6 @@ window.musicData = [
         downloadUrl: "music/Untitled 13（无题 13）.zip"
     },
     {
-        id: 426,
-        title: "UnwelcomeSchool（纯钢琴版）",
-        author: "ミツキヨ",
-        size: "5.71 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/UnwelcomeSchool（纯钢琴版）.zip"
-    },
-    {
         id: 427,
         title: "Usagi Flap（兔子拍打）",
         author: "Nor",
@@ -3304,14 +3240,6 @@ window.musicData = [
         downloadUrl: "music/两只老虎爱跳舞.zip"
     },
     {
-        id: 470,
-        title: "中华人民共和国国歌 义勇军进行曲",
-        author: "聂耳/田汉",
-        size: "2.46 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/中华人民共和国国歌 义勇军进行曲.zip"
-    },
-    {
         id: 471,
         title: "为你痴情",
         author: "暴林",
@@ -3520,14 +3448,6 @@ window.musicData = [
         downloadUrl: "music/告白气球.zip"
     },
     {
-        id: 513,
-        title: "周傑倫",
-        author: "反方向的鐘",
-        size: "20.51 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/周傑倫-反方向的鐘.zip"
-    },
-    {
         id: 514,
         title: "哆啦A梦主题曲",
         author: "哆啦A梦",
@@ -3600,28 +3520,12 @@ window.musicData = [
         downloadUrl: "music/大东北我的家乡.zip"
     },
     {
-        id: 525,
-        title: "大香焦",
-        author: "龙智祥/吴非华",
-        size: "1.18 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/大香焦.zip"
-    },
-    {
         id: 526,
         title: "大香蕉",
         author: "龙智祥/吴非华",
         size: "4.28 KB",
         date: "2026-11-03",
         downloadUrl: "music/大香蕉.zip"
-    },
-    {
-        id: 527,
-        title: "大鱼-《大鱼海棠》主题曲",
-        author: "周深",
-        size: "3.54 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/大鱼-《大鱼海棠》主题曲.zip"
     },
     {
         id: 528,
@@ -3686,14 +3590,6 @@ window.musicData = [
         size: "1.50 KB",
         date: "2026-11-03",
         downloadUrl: "music/威风堂堂.zip"
-    },
-    {
-        id: 536,
-        title: "孤勇者【好听版】",
-        author: "陈奕迅",
-        size: "4.09 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/孤勇者【好听版】.zip"
     },
     {
         id: 537,
@@ -3910,14 +3806,6 @@ window.musicData = [
         size: "5.93 KB",
         date: "2026-11-03",
         downloadUrl: "music/春节序曲.zip"
-    },
-    {
-        id: 577,
-        title: "春节序曲_2",
-        author: "李焕之",
-        size: "16.74 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/春节序曲_2.zip"
     },
     {
         id: 578,
@@ -4334,14 +4222,6 @@ window.musicData = [
         size: "3.29 KB",
         date: "2026-11-03",
         downloadUrl: "music/轻涟 La vaguelette.zip"
-    },
-    {
-        id: 654,
-        title: "轻涟",
-        author: "苑迪萌 (HOYO-MiX)",
-        size: "2.23 KB",
-        date: "2026-11-03",
-        downloadUrl: "music/轻涟.zip"
     },
     {
         id: 655,
