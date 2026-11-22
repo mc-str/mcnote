@@ -4382,5 +4382,157 @@ window.musicData = [
         size: "2.45 KB",
         date: "2026-11-15",
         downloadUrl: "music/鸟之诗.zip"
+    },
+    {
+        id: 679,
+        title: "If You",
+        author: "BIGBANG",
+        size: "5.94 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/If You.zip"
+    },
+    {
+        id: 680,
+        title: "Noir",
+        author: "Sunmi",
+        size: "10.27 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/Noir.zip"
+    },
+    {
+        id: 681,
+        title: "万疆",
+        author: "李玉刚",
+        size: "3.95 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/万疆.zip"
+    },
+    {
+        id: 682,
+        title: "刀剑如梦",
+        author: "林俊杰",
+        size: "29.82 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/刀剑如梦.zip"
+    },
+    {
+        id: 683,
+        title: "千千万万",
+        author: "深海鱼子酱",
+        size: "7.66 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/千千万万.zip"
+    },
+    {
+        id: 684,
+        title: "夜、萤火虫和你",
+        author: "Aniface",
+        size: "11.99 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/夜、萤火虫和你.zip"
+    },
+    {
+        id: 685,
+        title: "忘情牛肉面",
+        author: "马健涛",
+        size: "14.26 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/忘情牛肉面.zip"
+    },
+    {
+        id: 686,
+        title: "我相信",
+        author: "杨宗纬",
+        size: "46.22 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/我相信.zip"
+    },
+    {
+        id: 687,
+        title: "映山红",
+        author: "傅庚辰/陆柱国",
+        size: "13.50 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/映山红.zip"
+    },
+    {
+        id: 688,
+        title: "朋友的酒",
+        author: "筷子兄弟",
+        size: "4.62 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/朋友的酒.zip"
+    },
+    {
+        id: 689,
+        title: "江南style",
+        author: "PSY",
+        size: "74.72 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/江南style.zip"
+    },
+    {
+        id: 690,
+        title: "灯火里的中国",
+        author: "舒楠/田地",
+        size: "21.21 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/灯火里的中国.zip"
+    },
+    {
+        id: 691,
+        title: "烂奇迹",
+        author: "杨羊烊",
+        size: "29.96 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/烂奇迹.zip"
+    },
+    {
+        id: 692,
+        title: "琵琶曲",
+        author: "郑浩/冰洁",
+        size: "10.46 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/琵琶曲.zip"
+    },
+    {
+        id: 693,
+        title: "琵琶行",
+        author: "奇然/沈谧仁",
+        size: "19.31 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/琵琶行.zip"
+    },
+    {
+        id: 694,
+        title: "茶汤",
+        author: "郁可唯",
+        size: "13.01 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/茶汤.zip"
+    },
+    {
+        id: 695,
+        title: "落了白",
+        author: "蒋雪儿",
+        size: "5.50 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/落了白.zip"
+    },
+    {
+        id: 696,
+        title: "赤伶",
+        author: "HITA",
+        size: "17.05 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/赤伶.zip"
+    },
+    {
+        id: 697,
+        title: "青空",
+        author: "麻枝准",
+        size: "28.25 KB",
+        date: "2026-11-22",
+        downloadUrl: "music/青空.zip"
     }
 ];
