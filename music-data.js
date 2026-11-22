@@ -4394,7 +4394,7 @@ window.musicData = [
     {
         id: 680,
         title: "Noir",
-        author: "Sunmi",
+        author: "anoufie",
         size: "10.27 KB",
         date: "2026-11-22",
         downloadUrl: "music/Noir.zip"
@@ -4410,7 +4410,7 @@ window.musicData = [
     {
         id: 682,
         title: "刀剑如梦",
-        author: "林俊杰",
+        author: "周华健 / 詹德茂",
         size: "29.82 KB",
         date: "2026-11-22",
         downloadUrl: "music/刀剑如梦.zip"
@@ -4458,7 +4458,7 @@ window.musicData = [
     {
         id: 688,
         title: "朋友的酒",
-        author: "筷子兄弟",
+        author: "李晓杰 / 积木鱼",
         size: "4.62 KB",
         date: "2026-11-22",
         downloadUrl: "music/朋友的酒.zip"
